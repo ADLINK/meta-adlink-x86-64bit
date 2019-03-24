@@ -85,10 +85,10 @@ cd ..
 
  3.1  Set up the build environment variables and build directory 
 
-> source poky/oe-init-build-env
+	source poky/oe-init-build-env
 
  3.2 Modify the layers as ADLINK confiuration
-> cp ../meta-adlink-x86-64bit/conf/Adlink-conf/*.conf conf/
+	cp ../meta-adlink-x86-64bit/conf/Adlink-conf/*.conf conf/
 
 **4. Additional configration:**
 
