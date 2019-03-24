@@ -11,6 +11,7 @@
 | COM Express Type 10            | nanoX-AL   |
 | SMARC                            | LEC-AL (under testing) |
 | Qseven                           | Q7-AL (under testing) |
+
 **Note:** This BSP provides hardware specific settings, libraries and applications
 <br>
 ##### This Layer depends on following layers:
