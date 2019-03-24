@@ -137,7 +137,8 @@ Provide four types of imags and please select one of commands:
 
 <br>
 
-**6.To deploy the image you can install the following storage:
+**6. To deploy the image you can install the following storage**
+
 
 - [USB Drive](#40) 
 - [SD Card](#41)
