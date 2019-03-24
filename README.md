@@ -42,43 +42,49 @@
 
 1.2 Required Packages to install on the host :
 
-> sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm
+	sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm
 
 **2. Fetch the source from various git location and checkout the specific commit as below:**
 
 2.1 Poky Layer:
-> git clone git://git.yoctoproject.org/poky.git poky 
-cd poky 
-git checkout fe0fda6d371967f1b28cd8e4d3b3aad997676af0
-cd ..
+
+	git clone git://git.yoctoproject.org/poky.git poky 
+	cd poky
+	git checkout fe0fda6d371967f1b28cd8e4d3b3aad997676af0
+	cd ..
 
 2.2 meta-openmbedded Layer:
-> git clone git://git.openembedded.org/meta-openembedded
-cd meta-openembedded
-git checkout 8760facba1bceb299b3613b8955621ddaa3d4c3f
-cd ..
+
+	git clone git://git.openembedded.org/meta-openembedded
+	cd meta-openembedded
+	git checkout 8760facba1bceb299b3613b8955621ddaa3d4c3f
+	cd ..
 
 2.3 meta-intel Layer:
->git clone git://git.yoctoproject.org/meta-intel -b sumo
-cd meta-intel
-git checkout 90af97d23fb2a56187c2fe2a3f4f4190d7cc2605
-cd ..
+
+	git clone git://git.yoctoproject.org/meta-intel -b sumo
+	cd meta-intel
+	git checkout 90af97d23fb2a56187c2fe2a3f4f4190d7cc2605
+	cd ..
 
 2.4 ADLINK Layers:
->git clone http://git.adlinktech.com/yocto/meta-adlink-x86-64bit -b sumo
-git clone http://git.adlinktech.com/sema/meta-adlink-sema
+
+	git clone http://git.adlinktech.com/yocto/meta-adlink-x86-64bit -b sumo
+	git clone http://git.adlinktech.com/sema/meta-adlink-sema
 
 2.5 meta-secure-core Layer:
->git clone https://github.com/jiazhang0/meta-secure-core.git
-cd meta-secure-core
-git checkout 1b35fd45a58ef015b52a3df4b39048f2ac1ffbe3
-cd ..
+
+	git clone https://github.com/jiazhang0/meta-secure-core.git
+	cd meta-secure-core
+	git checkout 1b35fd45a58ef015b52a3df4b39048f2ac1ffbe3
+	cd ..
 
 2.6 meta-virtualization Layer:
->git clone git://git.yoctoproject.org/meta-virtualization -b sumo
-cd meta-virtualization
-git checkout ed2038c935777d1336c17989d454f4e9c95fea7f
-cd ..
+
+	git clone git://git.yoctoproject.org/meta-virtualization -b sumo
+	cd meta-virtualization
+	git checkout ed2038c935777d1336c17989d454f4e9c95fea7f
+	cd ..
 
 
 **3. Configure**
@@ -88,7 +94,8 @@ cd ..
 	source poky/oe-init-build-env
 
  3.2 Modify the layers as ADLINK confiuration
-	cp ../meta-adlink-x86-64bit/conf/Adlink-conf/*.conf conf/
+ 
+ 	cp ../meta-adlink-x86-64bit/conf/Adlink-conf/*.conf conf/
 
 **4. Additional configration:**
 
