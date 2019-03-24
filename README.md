@@ -136,7 +136,8 @@ Provide four types of imags and please select one of commands:
 **Note**: After finished build progress, you can find images at `${BSP_FOLDER}/build/tmp/deploy/image/inte-corei7-64/`
 
 <br>
-**6. To deploy the image you can install the following storage: **
+**6. To deploy the image you can install the following storage:**
+
 - [USB Drive](#40) 
 - [SD Card](#41)
 - [eMMC](#43)
