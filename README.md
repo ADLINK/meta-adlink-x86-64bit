@@ -1,11 +1,11 @@
 <img src="https://www.linaro.org/assets/images/projects/yocto-project.png" width="200" align="right">
 
 <br>
-##### **The ADLINK Yocto x86 64-bit BSP supports all of the following products**
+**The ADLINK Yocto x86 64-bit BSP supports all of the following products**
 
 |      **Module Type**                  |       **Module Name**                    |
 |:---|:--- |
-| COM Express Type 6 - Basic Size  | Express-CF/CFE, Express-KL/KLE, Express-SL/SLE      |
+| Com Express Type 6 - Basic Size  | Express-CF/CFE, Express-KL/KLE, Express-SL/SLE      |
 | COM Express Type 6 - Compact Size | cExpress-KL, cExpress-SL, cExpress-AL |
 | COM Express Type 7               | Express-DN7, Express-DB7 |
 | COM Express Type 10            | nanoX-AL   |
@@ -29,7 +29,7 @@
 
 
 <br>
-##### Guideline ADLINK [Yocto](https://www.yoctoproject.org/ "Yocto") BSP building
+** Guideline ADLINK [Yocto](https://www.yoctoproject.org/ "Yocto") BSP building**
 
 ------------
 
