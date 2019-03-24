@@ -5,14 +5,14 @@
 
 |      **Module Type**                  |       **Module Name**                    |
 |:---|:--- |
-| <span style="font-size: 8pt;">Com Express Type 6 - Basic Size</span>  | Express-CF/CFE, Express-KL/KLE, Express-SL/SLE      |
+|Com Express Type 6 - Basic Size | Express-CF/CFE, Express-KL/KLE, Express-SL/SLE      |
 | COM Express Type 6 - Compact Size | cExpress-KL, cExpress-SL, cExpress-AL |
 | COM Express Type 7               | Express-DN7, Express-DB7 |
 | COM Express Type 10            | nanoX-AL   |
 | SMARC                            | LEC-AL (under testing) |
 | Qseven                           | Q7-AL (under testing) |
 
-**Note:** This BSP provides hardware specific settings, libraries and applications
+ <span style="font-size: 5pt;">**Note:** This BSP provides hardware specific settings, libraries and applications</span> 
 <br>
 
 **This Layer depends on following layers**
