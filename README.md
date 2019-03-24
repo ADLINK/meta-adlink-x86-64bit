@@ -1,4 +1,4 @@
-<div style="text-align:right"><img src ="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj3qMjw1JrhAhWIS7wKHTlLCqoQjRx6BAgBEAU&url=https%3A%2F%2Fwww.linaro.org%2Fengineering%2Fprojects%2Fyocto-project%2F&psig=AOvVaw38j1kfVtyjIZgil8FK5EA9&ust=1553512955283348" width="300" /></div>
+<div style="text-align:right"><img src ="https://www.linaro.org/assets/images/projects/yocto-project.png" width="300" /></div>
    
 # Welcome to ADLINK GitLab
 
