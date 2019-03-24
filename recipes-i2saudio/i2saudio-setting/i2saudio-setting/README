@@ -1,0 +1,30 @@
+# The script provide an example for user to perform
+# simple play and record test with aic3107 codec
+
+BLOB file serve as a reference to debug SSP port setting for customer
+Actual implementation is to build in the BLOB binary into NHLT table
+in BIOS
+
+BLOB Installation:
+BLOB file is to used when the system load lhcrb_aic3107M_i2s machine
+driver. The default setting for the TLV320AIC3107 Codec is set
+to SOC Slave mode.
+To change the SOC into master mode and  TLV320AIC3107 Codec into
+Slave mode. Execute blow command to load the BLOB file:
+
+#echo 'enable' | tee /sys/kernel/debug/snd_soc_skl/nhlt/control
+#cat 2ch_48k_16b_in_32b_i2s1mclk_socmaster.blob | tee /sys/kernel/debug/snd_soc_skl/nhlt/ssp0p > /dev/null
+#cat 2ch_48k_16b_in_32b_i2s1mclk_socmaster.blob | tee /sys/kernel/debug/snd_soc_skl/nhlt/ssp0c > /dev/null
+
+To restore back to the default setting, kindly execute below command
+or reboot the system
+
+#echo 'disable' | tee /sys/kernel/debug/snd_soc_skl/nhlt/control
+
+Blob file file
+2ch_48k_32b_in_32b_i2s1mclk_socmaster.blob
+MD5SUM - cb2c3473377c71d90459e669eb175c92
+
+execute below command for test:
+#./verifyaic3107.sh
+
