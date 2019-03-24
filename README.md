@@ -1,6 +1,6 @@
 <img src="https://www.linaro.org/assets/images/projects/yocto-project.png" width="200" align="right">
 
-<br><br><br>
+<br>
 ##### The ADLINK Yocto x86 64-bit BSP supports all of the following products
 
 |      **Module Type**                  |       **Module Name**                    |
