@@ -73,8 +73,8 @@
 
 2.4 ADLINK Layers:
 
-	git clone http://git.adlinktech.com/yocto/meta-adlink-x86-64bit -b sumo
-	git clone http://git.adlinktech.com/sema/meta-adlink-sema
+	git clone http://github.com/adlinktech/meta-adlink-x86-64bit -b sumo
+	git clone http://github.com/adlinktech/sema/meta-adlink-sema
 
 2.5 meta-secure-core Layer:
 
