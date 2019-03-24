@@ -160,6 +160,7 @@ Enter the following command to deploy the image to your USB drive:
 	sync
 
 **Note**: For example, `sudo dd if=adlink-liveimage-x86-intel-corei7-64.hddimg of=/dev/sdb`
+
 <br>
 <h6 id="41">6.2 SD Card Deployment</h6>
 
@@ -173,7 +174,7 @@ It requires a bootable yocto USB drive (described above in 5.1) because it inclu
 **Note**: Please go BIOS menu to configure USB drive as the bootable device
 
 <br>
-<h6 id="42">6.3 eMMC Deployment</h6>
+<h6 id="43">6.3 eMMC Deployment</h6>
 
 It requires a bootable yocto USB drive (described above in 5.1) because it includes the grub "install" option.
 
@@ -186,7 +187,7 @@ It requires a bootable yocto USB drive (described above in 5.1) because it inclu
 **Note**: Please go BIOS menu to configure USB drive as the bootable device
 
 <br>
-<h6 id="43">6.3 SATA Deployment</h6>
+<h6 id="42">6.3 SATA Deployment</h6>
 
 Please follow the instructions from section "6.2 SD Card Deployment".
 
