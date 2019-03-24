@@ -1,56 +1,7 @@
-<<<<<<< HEAD
-# Project Title
-
-One Paragraph of project description goes here
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-=======
 <img src="https://www.linaro.org/assets/images/projects/yocto-project.png" width="200" align="right">
 
 <br><br>
-The ADLINK Yocto x86 64-bit BSP supports all of the following products **
+**The ADLINK Yocto x86 64-bit BSP supports all of the following products**
 
 |      **Module Type**                  |       **Module Name**                    |
 |:---|:--- |
@@ -63,8 +14,8 @@ The ADLINK Yocto x86 64-bit BSP supports all of the following products **
 
 **Note:** This BSP provides hardware specific settings, libraries and applications
 <br>
-<br>
-##### This Layer depends on following layers:
+
+**This Layer depends on following layers**
 
 |     **meta name**        |             **version**                    |  **commit version**  |
 |:---|:--- |:--- |
@@ -104,29 +55,9 @@ The ADLINK Yocto x86 64-bit BSP supports all of the following products **
 	cd poky
 	git checkout fe0fda6d371967f1b28cd8e4d3b3aad997676af0
 	cd ..
->>>>>>> a373a79e0d852f76fb22acc3f9e1285613a9bdeb
 
-Explain what these tests test and why
+2.2 meta-openmbedded Layer:
 
-<<<<<<< HEAD
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-=======
 	git clone git://git.openembedded.org/meta-openembedded
 	cd meta-openembedded
 	git checkout 8760facba1bceb299b3613b8955621ddaa3d4c3f
@@ -157,27 +88,12 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 	cd meta-virtualization
 	git checkout ed2038c935777d1336c17989d454f4e9c95fea7f
 	cd ..
->>>>>>> a373a79e0d852f76fb22acc3f9e1285613a9bdeb
 
-## Versioning
 
-<<<<<<< HEAD
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-=======
 **3. Configure**
->>>>>>> a373a79e0d852f76fb22acc3f9e1285613a9bdeb
 
-## Authors
+ 3.1  Set up the build environment variables and build directory 
 
-<<<<<<< HEAD
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-=======
 	source poky/oe-init-build-env
 
  3.2 Modify the layers as ADLINK confiuration
@@ -187,16 +103,23 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 **4. Additional configration**
 
 Please type the following commands if build **Express-DN7**:
->>>>>>> a373a79e0d852f76fb22acc3f9e1285613a9bdeb
 
-## Acknowledgments
+    cat >>./conf/local.conf <<-'EOF'
+	# Additional Kernel Features to enable QAT, DPDK and QEMU-KVM
+	KERNEL_FEATURES_append = " features/qat/qat.scc"
+	KERNEL_FEATURES_append = " features/x2apic/x2apic.scc"
+	KERNEL_FEATURES_append = " features/vfio/vfio.scc"
+	KERNEL_FEATURES_append = " features/numa/numa.scc"
+	KERNEL_FEATURES_append = " features/mtd/mtd.scc"
+	KERNEL_FEATURES_append = " features/iommu/iommu.scc"
+	KERNEL_FEATURES_append = " features/intel-txt/intel-txt.scc"
+	KERNEL_FEATURES_append = " features/kvm/qemu-kvm-enable.scc"
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+	# OOT IXGBE & IXGBEVF kernel
+	IMAGE_INSTALL_append = " ixgbe"
+	IMAGE_INSTALL_append = " ixgbevf"
+	EOF
 
-<<<<<<< HEAD
-=======
 
 **5. Start to build the image**
 
@@ -276,4 +199,3 @@ Please follow the instructions from section "6.2 SD Card Deployment".
 
 Please feel free to send us (email: ryanzj.huang@adlinktech.com) patches for this layer and report bugs of this layer. 
 For hardware support, please contact your local representative.
->>>>>>> a373a79e0d852f76fb22acc3f9e1285613a9bdeb
