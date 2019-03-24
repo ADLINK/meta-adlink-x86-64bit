@@ -28,8 +28,7 @@
 |meta-virtualization|Origin/sumo |ed2038c935777d1336c17989d454f4e9c95fea7f|
 
 
-<br>
-Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building
+<br> 
 
 **Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building**
 
