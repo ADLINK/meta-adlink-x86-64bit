@@ -14,6 +14,7 @@
 
 **Note:** This BSP provides hardware specific settings, libraries and applications
 <br>
+<br>
 ##### This Layer depends on following layers:
 
 |     **meta name**        |             **version**                    |  **commit version**  |
