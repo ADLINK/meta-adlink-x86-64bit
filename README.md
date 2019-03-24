@@ -29,6 +29,8 @@
 
 
 <br>
+Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building
+
 **Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building**
 
 ------------
