@@ -52,7 +52,7 @@
 
 2.1 Poky Layer:
 
-	git clone git://git.yoctoproject.org/poky.git poky 
+	git clone git://git.yoctoproject.org/poky.git -b sumo 
 	cd poky
 	git checkout fe0fda6d371967f1b28cd8e4d3b3aad997676af0
 	cd ..
