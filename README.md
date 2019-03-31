@@ -130,7 +130,7 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 &nbsp;&nbsp;Provide four types of imags and please select one of commands:
 
-|      **image**                        |       **command for the build**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|     **account/password**  |
+|      **image**                        |       **command for the build**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|     **account/pwd**  |
 |:--- |:--- |:--- |
 | minimal image (CLI mode)| bitbake core-image-minimal     |  root |
 | minimal image with SEMA (CLI mode)| bitbake core-image-mini-sema   |  root|
