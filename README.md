@@ -3,7 +3,7 @@
 <br>
 <br>
 
-**The ADLINK Yocto x86 64-bit BSP supports all of the following products**
+**The ADLINK Yocto x86 64-bit BSP supports all of the following products:**
 
 |      **Module Type**                  |       **Module Name**                    |
 |:---|:--- |
@@ -18,7 +18,7 @@
 <br>
 <br>
  
-**This Layer depends on following layers**
+**This Layer depends on following layers:**
 
 |     **meta name**        |             **version**                    |  **commit version**  |
 |:---|:--- |:--- |
@@ -33,7 +33,7 @@
 
 <br> 
 
-**Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building**
+**Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:**
 
 **1. Set up a build host environment:**
 
