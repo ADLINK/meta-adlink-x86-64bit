@@ -151,13 +151,13 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 &nbsp;&nbsp;<h5 id="40">6.1  USB Drive Deployment </h5>
 
-Enter the following command and identify your USB drive :
+&nbsp;&nbsp;Enter the following command and identify your USB drive :
 
 	lsblk
 
 &nbsp;&nbsp;**Note**: the device name you are searching for and it should looks like /dev/sdb or /dev/sdc
 
-Enter the following command to deploy the image to your USB drive:
+&nbsp;&nbsp;Enter the following command to deploy the image to your USB drive:
 
 	sudo dd if="image name" of="your device name" 
 	sync
@@ -165,21 +165,21 @@ Enter the following command to deploy the image to your USB drive:
 &nbsp;&nbsp;**Note**: For example, `sudo dd if=adlink-liveimage-x86-intel-corei7-64.hddimg of=/dev/sdb`
 
 <br>
-&nbsp;&nbsp;<h6 id="41">6.2 SD Card Deployment</h6>
+&nbsp;&nbsp;<h5 id="41">6.2 SD Card Deployment</h5>
 
-It requires a bootable yocto USB drive (described above in 5.1) because it includes the grub "install" option.
+&nbsp;&nbsp;It requires a bootable yocto USB drive (described above in 5.1) because it includes the grub "install" option.
 - prepare the Installation USB drive and insert the USB drive into targe platform
 - select the "install" option from grub menu and boot up
 - wait until you see the installation target:
-"Please select an install target or press n to exit:"
+&nbsp;&nbsp;***"Please select an install target or press n to exit:"***
 - During installing, system will allocate paritions automatically
 
 &nbsp;&nbsp;**Note**: Please go BIOS menu to configure USB drive as the bootable device
 
 <br>
-&nbsp;&nbsp;<h6 id="43">6.3 eMMC Deployment</h6>
+&nbsp;&nbsp;<h5 id="43">6.3 eMMC Deployment</h5>
 
-It requires a bootable yocto USB drive (described above in 5.1) because it includes the grub "install" option.
+&nbsp;&nbsp;It requires a bootable yocto USB drive (described above in 5.1) because it includes the grub "install" option.
 
 - prepare the Installation USB drive and insert the USB drive into targe platform
 - select the "install" option from grub menu and boot up
@@ -190,9 +190,9 @@ It requires a bootable yocto USB drive (described above in 5.1) because it inclu
 &nbsp;&nbsp;**Note**: Please go BIOS menu to configure USB drive as the bootable device
 
 <br>
-&nbsp;&nbsp;<h6 id="42">6.3 SATA Deployment</h6>
+&nbsp;&nbsp;<h5 id="42">6.3 SATA Deployment</h5>
 
-Please follow the instructions from section "6.2 SD Card Deployment".
+&nbsp;&nbsp;Please follow the instructions from section "6.2 SD Card Deployment".
 
 <br>
 
