@@ -16,7 +16,7 @@ Yocto x86 64-bit BSP supports all of the following products:
 | SMARC                            | LEC-AL (under testing) |
 | Qseven                           | Q7-AL (under testing) |
 
- <span style="font-size: 5pt;">**Note:** This BSP provides hardware specific settings, libraries and applications</span> 
+&nbsp;&nbsp; **Note:** This BSP provides hardware specific settings, libraries and applications
 <br>
 <br>
  
@@ -138,18 +138,16 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 | Image with <br>&nbsp;- xfce desktop <br>&nbsp;- SEMA| bitbake core-image-xfce | Not required |
 | Image with <br>&nbsp;- xfce desktop <br>&nbsp;- SEMA<br>&nbsp;- Docker| 1. enable Docker feature into conf file: <br>`echo "DOCKER_FEATURES = \"enable\"" >> ./conf/local.conf`<br>2. start to build: <br> `bitbake core-image-docker` |   Not required |
 
-**Note**: After finished build progress, you can find images at `${BSP_FOLDER}/build/tmp/deploy/image/inte-corei7-64/`
+&nbsp;&nbsp;**Note**: After finished build progress, you can find images at `${BSP_FOLDER}/build/tmp/deploy/image/inte-corei7-64/`
 
 <br>
 
 **6. To deploy the image you can install the following storage**
 
-
 - [USB Drive](#40) 
 - [SD Card](#41)
 - [eMMC](#43)
 - [SATA Drive](#42)
-
 
 <br>
 
@@ -159,14 +157,14 @@ Enter the following command and identify your USB drive :
 
 	lsblk
 
-**Note**: the device name you are searching for and it should looks like /dev/sdb or /dev/sdc
+&nbsp;&nbsp;**Note**: the device name you are searching for and it should looks like /dev/sdb or /dev/sdc
 
 Enter the following command to deploy the image to your USB drive:
 
 	sudo dd if="image name" of="your device name" 
 	sync
 
-**Note**: For example, `sudo dd if=adlink-liveimage-x86-intel-corei7-64.hddimg of=/dev/sdb`
+&nbsp;&nbsp;**Note**: For example, `sudo dd if=adlink-liveimage-x86-intel-corei7-64.hddimg of=/dev/sdb`
 
 <br>
 &nbsp;&nbsp;<h6 id="41">6.2 SD Card Deployment</h6>
@@ -178,7 +176,7 @@ It requires a bootable yocto USB drive (described above in 5.1) because it inclu
 "Please select an install target or press n to exit:"
 - During installing, system will allocate paritions automatically
 
-**Note**: Please go BIOS menu to configure USB drive as the bootable device
+&nbsp;&nbsp;**Note**: Please go BIOS menu to configure USB drive as the bootable device
 
 <br>
 &nbsp;&nbsp;<h6 id="43">6.3 eMMC Deployment</h6>
@@ -188,10 +186,10 @@ It requires a bootable yocto USB drive (described above in 5.1) because it inclu
 - prepare the Installation USB drive and insert the USB drive into targe platform
 - select the "install" option from grub menu and boot up
 - wait until you see the installation target:
-***"Please select an install target or press n to exit:"***
+&nbsp;&nbsp;***"Please select an install target or press n to exit:"***
 - During installing, system will allocate paritions automatically
 
-**Note**: Please go BIOS menu to configure USB drive as the bootable device
+&nbsp;&nbsp;**Note**: Please go BIOS menu to configure USB drive as the bootable device
 
 <br>
 &nbsp;&nbsp;<h6 id="42">6.3 SATA Deployment</h6>
@@ -203,7 +201,7 @@ Please follow the instructions from section "6.2 SD Card Deployment".
 
 
 
-------------
+----
 
 
 
