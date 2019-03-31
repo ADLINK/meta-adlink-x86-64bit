@@ -29,7 +29,7 @@
 
 
 <br> 
-<font size="40">This is some text!</font>
+
 **Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building**
 
 ------------
