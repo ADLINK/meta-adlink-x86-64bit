@@ -41,14 +41,14 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 **1. Set up a build host environment:**
 
-1.1 Recommended Hardware for the host
+&nbsp;1.1 Recommended Hardware for the host
 - Intel Core-i7 Processor (>= 4 cores)
 - 8GB Memory
 - 500GB Disk sapce
 - Ubuntu 18.04 64bit for Yocto Project Build
 
 
-1.2 Required Packages to install on the host :
+&nbsp;&nbsp;1.2 Required Packages to install on the host :
 
 	sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm
 
