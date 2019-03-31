@@ -2,7 +2,9 @@
 
 <br><br>
 
-<font size="100"> your text </font>
+h1,h2,h3,h4,h5,h6{
+  font-size: 24pt;
+}
 
 
 **The ADLINK Yocto x86 64-bit BSP supports all of the following products**
