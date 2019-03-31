@@ -171,7 +171,8 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 - prepare the Installation USB drive and insert the USB drive into targe platform
 - select the "install" option from grub menu and boot up
 - wait until you see the installation target:
-&nbsp;&nbsp;***"Please select an install target or press n to exit:"***
+
+&nbsp;&nbsp;**"Please select an install target or press n to exit:"**
 - During installing, system will allocate paritions automatically
 
 &nbsp;&nbsp;**Note**: Please go BIOS menu to configure USB drive as the bootable device
@@ -184,7 +185,8 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 - prepare the Installation USB drive and insert the USB drive into targe platform
 - select the "install" option from grub menu and boot up
 - wait until you see the installation target:
-&nbsp;&nbsp;***"Please select an install target or press n to exit:"***
+
+&nbsp;&nbsp;**"Please select an install target or press n to exit:"**
 - During installing, system will allocate paritions automatically
 
 &nbsp;&nbsp;**Note**: Please go BIOS menu to configure USB drive as the bootable device
