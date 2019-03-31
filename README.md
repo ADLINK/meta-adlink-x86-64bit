@@ -130,12 +130,12 @@ Please type the following commands if build **Express-DN7**:
 
 Provide four types of imags and please select one of commands:
 
-|      **image**                        |       **command for the build**                    |     **account/password**  |
+|      **image**                        |       **command for the build**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|     **account/password**  |
 |:--- |:--- |:--- |
-| minimal image (CLI mode)  | bitbake core-image-minimal  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   |  root |
-| minimal image with SEMA (CLI mode)    | bitbake core-image-mini-sema   |  root|
-| support xfce desktop + SEMA          | bitbake core-image-xfce | Not required |
-| support xfce desktop + SEMA  + Docker               | 1. enable Docker feature into conf file: <br>`echo "DOCKER_FEATURES = \"enable\"" >> ./conf/local.conf`<br>2. start to build: <br> `bitbake core-image-docker` |   Not required |
+| minimal image (CLI mode)| bitbake core-image-minimal     |  root |
+| minimal image with SEMA (CLI mode)| bitbake core-image-mini-sema   |  root|
+| support xfce desktop + SEMA| bitbake core-image-xfce | Not required |
+| support xfce desktop + SEMA  + Docker| 1. enable Docker feature into conf file: <br>`echo "DOCKER_FEATURES = \"enable\"" >> ./conf/local.conf`<br>2. start to build: <br> `bitbake core-image-docker` |   Not required |
 
 **Note**: After finished build progress, you can find images at `${BSP_FOLDER}/build/tmp/deploy/image/inte-corei7-64/`
 
