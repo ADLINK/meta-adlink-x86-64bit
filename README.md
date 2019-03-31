@@ -41,7 +41,7 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 **1. Set up a build host environment:**
 
-&nbsp;1.1 Recommended Hardware for the host
+&nbsp;&nbsp;1.1 Recommended Hardware for the host
 - Intel Core-i7 Processor (>= 4 cores)
 - 8GB Memory
 - 500GB Disk sapce
@@ -54,40 +54,40 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 **2. Fetch the source from various git location and checkout the specific commit as below:**
 
-2.1 Poky Layer:
+&nbsp;&nbsp;2.1 Poky Layer:
 
 	git clone git://git.yoctoproject.org/poky.git -b sumo
 	cd poky
 	git checkout fe0fda6d371967f1b28cd8e4d3b3aad997676af0
 	cd ..
 
-2.2 meta-openmbedded Layer:
+&nbsp;&nbsp;2.2 meta-openmbedded Layer:
 
 	git clone git://git.openembedded.org/meta-openembedded
 	cd meta-openembedded
 	git checkout 8760facba1bceb299b3613b8955621ddaa3d4c3f
 	cd ..
 
-2.3 meta-intel Layer:
+&nbsp;&nbsp;2.3 meta-intel Layer:
 
 	git clone git://git.yoctoproject.org/meta-intel -b sumo
 	cd meta-intel
 	git checkout 90af97d23fb2a56187c2fe2a3f4f4190d7cc2605
 	cd ..
 
-2.4 ADLINK Layers:
+&nbsp;&nbsp;2.4 ADLINK Layers:
 
 	git clone http://github.com/adlinktech/meta-adlink-x86-64bit -b sumo
 	git clone http://github.com/adlinktech/sema/meta-adlink-sema
 
-2.5 meta-secure-core Layer:
+&nbsp;&nbsp;2.5 meta-secure-core Layer:
 
 	git clone https://github.com/jiazhang0/meta-secure-core.git
 	cd meta-secure-core
 	git checkout 1b35fd45a58ef015b52a3df4b39048f2ac1ffbe3
 	cd ..
 
-2.6 meta-virtualization Layer:
+&nbsp;&nbsp;2.6 meta-virtualization Layer:
 
 	git clone git://git.yoctoproject.org/meta-virtualization -b sumo
 	cd meta-virtualization
@@ -97,17 +97,17 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 **3. Configure**
 
- 3.1  Set up the build environment variables and build directory 
+ &nbsp;&nbsp;3.1  Set up the build environment variables and build directory 
 
 	source poky/oe-init-build-env
 
- 3.2 Modify the layers as ADLINK confiuration
+ &nbsp;&nbsp;3.2 Modify the layers as ADLINK confiuration
  
  	cp ../meta-adlink-x86-64bit/conf/Adlink-conf/*.conf conf/
 
 **4. Additional configration**
 
-Please type the following commands if build **Express-DN7**:
+&nbsp;&nbsp;Please type the following commands if build **Express-DN7**:
 
     cat >>./conf/local.conf <<-'EOF'
 	# Additional Kernel Features to enable QAT, DPDK and QEMU-KVM
@@ -128,7 +128,7 @@ Please type the following commands if build **Express-DN7**:
 
 **5. Start to build the image**
 
-Provide four types of imags and please select one of commands:
+&nbsp;&nbsp;Provide four types of imags and please select one of commands:
 
 |      **image**                        |       **command for the build**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|     **account/password**  |
 |:--- |:--- |:--- |
@@ -152,7 +152,7 @@ Provide four types of imags and please select one of commands:
 
 <br>
 
-<h6 id="40">6.1  USB Drive Deployment </h6>
+&nbsp;&nbsp;<h6 id="40">6.1  USB Drive Deployment </h6>
 
 Enter the following command and identify your USB drive :
 
@@ -168,7 +168,7 @@ Enter the following command to deploy the image to your USB drive:
 **Note**: For example, `sudo dd if=adlink-liveimage-x86-intel-corei7-64.hddimg of=/dev/sdb`
 
 <br>
-<h6 id="41">6.2 SD Card Deployment</h6>
+&nbsp;&nbsp;<h6 id="41">6.2 SD Card Deployment</h6>
 
 It requires a bootable yocto USB drive (described above in 5.1) because it includes the grub "install" option.
 - prepare the Installation USB drive and insert the USB drive into targe platform
@@ -180,7 +180,7 @@ It requires a bootable yocto USB drive (described above in 5.1) because it inclu
 **Note**: Please go BIOS menu to configure USB drive as the bootable device
 
 <br>
-<h6 id="43">6.3 eMMC Deployment</h6>
+&nbsp;&nbsp;<h6 id="43">6.3 eMMC Deployment</h6>
 
 It requires a bootable yocto USB drive (described above in 5.1) because it includes the grub "install" option.
 
@@ -193,7 +193,7 @@ It requires a bootable yocto USB drive (described above in 5.1) because it inclu
 **Note**: Please go BIOS menu to configure USB drive as the bootable device
 
 <br>
-<h6 id="42">6.3 SATA Deployment</h6>
+&nbsp;&nbsp;<h6 id="42">6.3 SATA Deployment</h6>
 
 Please follow the instructions from section "6.2 SD Card Deployment".
 
