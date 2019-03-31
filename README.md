@@ -149,9 +149,7 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 - [eMMC](#43)
 - [SATA Drive](#42)
 
-<br>
-
-&nbsp;&nbsp;<h6 id="40">6.1  USB Drive Deployment </h6>
+&nbsp;&nbsp;<h5 id="40">6.1  USB Drive Deployment </h5>
 
 Enter the following command and identify your USB drive :
 
