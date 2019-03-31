@@ -1,11 +1,7 @@
 <img src="https://www.linaro.org/assets/images/projects/yocto-project.png" width="200" align="right">
 
-<br><br>
-
-h1,h2,h3,h4,h5,h6{
-  font-size: 24pt;
-}
-
+<br>
+<br>
 
 **The ADLINK Yocto x86 64-bit BSP supports all of the following products**
 
@@ -20,7 +16,7 @@ h1,h2,h3,h4,h5,h6{
 
  <span style="font-size: 5pt;">**Note:** This BSP provides hardware specific settings, libraries and applications</span> 
 <br>
-
+<br>
 **This Layer depends on following layers**
 
 |     **meta name**        |             **version**                    |  **commit version**  |
