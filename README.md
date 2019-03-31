@@ -207,4 +207,4 @@ Please follow the instructions from section "6.2 SD Card Deployment".
 
 
 Please feel free to send us (email: ryanzj.huang@adlinktech.com) patches for this layer and report bugs of this layer. 
-For hardware support, please contact your local representative.
+<br>For hardware support, please contact your local representative.
