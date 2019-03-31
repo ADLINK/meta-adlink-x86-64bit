@@ -2,7 +2,7 @@
 
 <br><br>
 
-<font size="1"> your text </font>
+<font size="100"> your text </font>
 
 
 **The ADLINK Yocto x86 64-bit BSP supports all of the following products**
