@@ -132,7 +132,7 @@ Provide four types of imags and please select one of commands:
 
 |      **image**                        |       **command for the build**                    |     **account/password**  |
 |:--- |:--- |:--- |
-| minimal image (CLI mode)  | bitbake core-image-minimal     |  root |
+| minimal image (CLI mode)  | bitbake core-image-minimal  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   |  root |
 | minimal image with SEMA (CLI mode)    | bitbake core-image-mini-sema   |  root|
 | support xfce desktop + SEMA          | bitbake core-image-xfce | Not required |
 | support xfce desktop + SEMA  + Docker               | 1. enable Docker feature into conf file: <br>`echo "DOCKER_FEATURES = \"enable\"" >> ./conf/local.conf`<br>2. start to build: <br> `bitbake core-image-docker` |   Not required |
