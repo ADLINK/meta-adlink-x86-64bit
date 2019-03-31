@@ -164,7 +164,7 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 &nbsp;&nbsp;**Note**: For example, `sudo dd if=adlink-liveimage-x86-intel-corei7-64.hddimg of=/dev/sdb`
 
-<br>
+
 &nbsp;&nbsp;<h5 id="41">6.2 SD Card Deployment</h5>
 
 &nbsp;&nbsp;It requires a bootable yocto USB drive (described above in 5.1) because it includes the grub "install" option.
@@ -175,7 +175,7 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 &nbsp;&nbsp;**Note**: Please go BIOS menu to configure USB drive as the bootable device
 
-<br>
+
 &nbsp;&nbsp;<h5 id="43">6.3 eMMC Deployment</h5>
 
 &nbsp;&nbsp;It requires a bootable yocto USB drive (described above in 5.1) because it includes the grub "install" option.
@@ -187,7 +187,7 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 &nbsp;&nbsp;**Note**: Please go BIOS menu to configure USB drive as the bootable device
 
-<br>
+
 &nbsp;&nbsp;<h5 id="42">6.3 SATA Deployment</h5>
 
 &nbsp;&nbsp;Please follow the instructions from section "6.2 SD Card Deployment".
