@@ -17,6 +17,8 @@
  <span style="font-size: 5pt;">**Note:** This BSP provides hardware specific settings, libraries and applications</span> 
 <br>
 <br>
+
+------------
 **This Layer depends on following layers**
 
 |     **meta name**        |             **version**                    |  **commit version**  |
