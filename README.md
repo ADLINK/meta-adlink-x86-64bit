@@ -78,8 +78,8 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 &nbsp;&nbsp;2.4 ADLINK Layers:
 
-	git clone http://github.com/adlink/meta-adlink-x86-64bit -b sumo
-	git clone http://github.com/adlink/meta-adlink-sema
+	git clone https://github.com/adlink/meta-adlink-x86-64bit -b sumo
+	git clone https://github.com/adlink/meta-adlink-sema
 
 &nbsp;&nbsp;2.5 meta-secure-core Layer:
 
