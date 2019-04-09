@@ -188,7 +188,7 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 &nbsp;&nbsp;**Note**: Please go BIOS menu to configure USB drive as the bootable device
 
 
-&nbsp;&nbsp;<h5 id="42">6.3 SATA Deployment</h5>
+&nbsp;&nbsp;<h5 id="42">6.4 SATA Deployment</h5>
 
 &nbsp;&nbsp;Please follow the instructions from section "6.2 SD Card Deployment".
 
