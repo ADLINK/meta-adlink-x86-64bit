@@ -228,21 +228,3 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 Please feel free to send us (email: ryanzj.huang@adlinktech.com) patches for this layer or report any bugs found in this layer. 
 <br>For hardware support, please contact your local representative.
 
-
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Tool</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a>Module Type</a></td>
-<td>Module Name</td>
-</tr>
-
-</tbody>
-</table>
