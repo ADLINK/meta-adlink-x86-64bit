@@ -40,7 +40,7 @@ Yocto x86 64-bit BSP supports all of the following products:
 </tbody>
 </table>
 
-&nbsp;&nbsp; **Note:** This BSP provides hardware specific settings, libraries and applications
+<blockquote>**Note:** This BSP provides hardware specific settings, libraries and applications<blockquote>
 <br>
 <br>
  
