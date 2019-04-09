@@ -203,3 +203,52 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 Please feel free to send us (email: ryanzj.huang@adlinktech.com) patches for this layer or report any bugs found in this layer. 
 <br>For hardware support, please contact your local representative.
+
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Tool</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://badge.fury.io/js/chatdown" rel="nofollow"><img src="https://camo.githubusercontent.com/2ecf971f8874219fc13e39862183243e9d03bda5/68747470733a2f2f62616467652e667572792e696f2f6a732f63686174646f776e2e737667" alt="npm version" data-canonical-src="https://badge.fury.io/js/chatdown.svg" style="max-width:100%;"></a></td>
+<td><a href="/Microsoft/botbuilder-tools/blob/master/packages/Chatdown">Chatdown</a></td>
+<td>Prototype mock conversations in markdown and convert the markdown to transcripts you can load and view in the new V4 Bot Framework Emulator</td>
+</tr>
+<tr>
+<td><a href="https://badge.fury.io/js/msbot" rel="nofollow"><img src="https://camo.githubusercontent.com/a0ead9f767bed87cf2675c719aaaa39599428bf1/68747470733a2f2f62616467652e667572792e696f2f6a732f6d73626f742e737667" alt="npm version" data-canonical-src="https://badge.fury.io/js/msbot.svg" style="max-width:100%;"></a></td>
+<td><a href="/Microsoft/botbuilder-tools/blob/master/packages/MSBot">MSBot</a></td>
+<td>Create and manage connected services in your bot configuration file</td>
+</tr>
+<tr>
+<td><a href="https://badge.fury.io/js/ludown" rel="nofollow"><img src="https://camo.githubusercontent.com/e3d5876fba229c12ce27ec6a3b656cae4decea33/68747470733a2f2f62616467652e667572792e696f2f6a732f6c75646f776e2e737667" alt="npm version" data-canonical-src="https://badge.fury.io/js/ludown.svg" style="max-width:100%;"></a></td>
+<td><a href="/Microsoft/botbuilder-tools/blob/master/packages/Ludown">LUDown</a></td>
+<td>Build LUIS language understanding models using markdown files</td>
+</tr>
+<tr>
+<td><a href="https://badge.fury.io/js/luis-apis" rel="nofollow"><img src="https://camo.githubusercontent.com/ece9c2666dd7ecd55c0f9c427119a77e55c38ebe/68747470733a2f2f62616467652e667572792e696f2f6a732f6c7569732d617069732e737667" alt="npm version" data-canonical-src="https://badge.fury.io/js/luis-apis.svg" style="max-width:100%;"></a></td>
+<td><a href="/Microsoft/botbuilder-tools/blob/master/packages/LUIS">LUIS</a></td>
+<td>Create and manage your <a href="http://luis.ai" rel="nofollow">LUIS.ai</a> applications</td>
+</tr>
+<tr>
+<td><a href="https://badge.fury.io/js/qnamaker" rel="nofollow"><img src="https://camo.githubusercontent.com/8a6756519e16f78b4000b859b182981c6893f137/68747470733a2f2f62616467652e667572792e696f2f6a732f716e616d616b65722e737667" alt="npm version" data-canonical-src="https://badge.fury.io/js/qnamaker.svg" style="max-width:100%;"></a></td>
+<td><a href="/Microsoft/botbuilder-tools/blob/master/packages/QnAMaker">QnAMaker</a></td>
+<td>Create and manage <a href="http://qnamaker.ai" rel="nofollow">QnAMaker.ai</a> Knowledge Bases.</td>
+</tr>
+<tr>
+<td><a href="https://badge.fury.io/js/botdispatch" rel="nofollow"><img src="https://camo.githubusercontent.com/5a8e92ad093cdc406719a7f45c34795f080ca831/68747470733a2f2f62616467652e667572792e696f2f6a732f626f7464697370617463682e737667" alt="npm version" data-canonical-src="https://badge.fury.io/js/botdispatch.svg" style="max-width:100%;"></a></td>
+<td><a href="/Microsoft/botbuilder-tools/blob/master/packages/Dispatch">Dispatch</a></td>
+<td>Build language models allowing you to dispatch between disparate components (such as QnA, LUIS and custom code)</td>
+</tr>
+<tr>
+<td><a href="https://badge.fury.io/js/luisgen" rel="nofollow"><img src="https://camo.githubusercontent.com/3cc17abb1242e678fe3013817d8f22ba6472f2be/68747470733a2f2f62616467652e667572792e696f2f6a732f6c75697367656e2e737667" alt="npm version" data-canonical-src="https://badge.fury.io/js/luisgen.svg" style="max-width:100%;"></a></td>
+<td><a href="/Microsoft/botbuilder-tools/blob/master/packages/LUISGen">LUISGen</a></td>
+<td>Auto generate backing C#/Typescript classes for your LUIS intents and entities.</td>
+</tr>
+</tbody>
+</table>
