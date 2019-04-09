@@ -5,6 +5,7 @@
 <br>
 
 Yocto x86 64-bit BSP supports all of the following products:
+----
 <table style="width: 656px; border: 1px #cccccc solid;">
 <thead>
 <tr style="height: 22px;">
@@ -45,6 +46,7 @@ Yocto x86 64-bit BSP supports all of the following products:
 <br>
  
 This Layer depends on following layers:
+----
 <table style="width: 656px; border: 1px #cccccc solid;">
 <thead>
 <tr style="height: 22px;">
