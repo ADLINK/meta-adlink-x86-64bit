@@ -5,16 +5,40 @@
 <br>
 
 Yocto x86 64-bit BSP supports all of the following products:
------
-
-|      **Module Type**                  |       **Module Name**                    |
-|:---|:--- |
-|Com Express Type 6 - Basic Size | Express-CF/CFE, Express-KL/KLE, Express-SL/SLE      |
-| COM Express Type 6 - Compact Size | cExpress-KL, cExpress-SL, cExpress-AL |
-| COM Express Type 7               | Express-DN7, Express-DB7 |
-| COM Express Type 10            | nanoX-AL   |
-| SMARC                            | LEC-AL (under testing) |
-| Qseven                           | Q7-AL (under testing) |
+<table style="width: 656px; border: 1px #cccccc solid;">
+<thead>
+<tr style="height: 22px;">
+<th style="height: 22px; width: 273.4px; text-align: center; background: black; color: white; border: 1px #cccccc solid;">Module Type</th>
+<th style="height: 22px; width: 380.6px; text-align: center; background: black; color: white; border: 1px #cccccc solid;">Module Name</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 26px; border: 1px solid #cccccc;">
+<td style="height: 26px; width: 273.4px; border: 1px solid #cccccc;">COM Express Type 6 (Basic Szie)</td>
+<td style="height: 26px; width: 380.6px;">Express-CF/CFE, Express-KL/KLE, Express-SL/SLE</td>
+</tr>
+<tr style="height: 26px; background: #f0f0f0; border: 1px solid #cccccc;">
+<td style="height: 26px; width: 273.4px; border: 1px solid #cccccc;">COM Express Type 6 (Compact Size)</td>
+<td style="height: 26px; width: 380.6px;">cExpress-KL, cExpress-SL, cExpress-AL</td>
+</tr>
+<tr style="height: 28px; border: 1px solid #cccccc;">
+<td style="height: 28px; width: 273.4px; border: 1px solid #cccccc;">COM Express Type 7</td>
+<td style="height: 28px; width: 380.6px;">Express-DN7, Express-DB7</td>
+</tr>
+<tr style="height: 27px; background: #f0f0f0; border: 1px solid #cccccc;">
+<td style="height: 27px; width: 273.4px; border: 1px solid #cccccc;">COM Express Type 10</td>
+<td style="height: 27px; width: 380.6px;">nanoX-AL</td>
+</tr>
+<tr style="height: 23px; border: 1px solid #cccccc;">
+<td style="height: 23px; width: 273.4px; border: 1px solid #cccccc;">SMARC</td>
+<td style="height: 23px; width: 380.6px;">LEC-AL (under testing)</td>
+</tr>
+<tr style="height: 26.6px; background: #f0f0f0; border: 1px solid #cccccc;">
+<td style="height: 26.6px; width: 273.4px; border: 1px solid #cccccc;">Qseven</td>
+<td style="height: 26.6px; width: 380.6px;">Q7-AL (under testing)</td>
+</tr>
+</tbody>
+</table>
 
 &nbsp;&nbsp; **Note:** This BSP provides hardware specific settings, libraries and applications
 <br>
