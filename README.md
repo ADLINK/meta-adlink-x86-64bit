@@ -97,7 +97,7 @@ This Layer depends on following layers:
 
 <br> 
 
-Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
+Getting Started with [Yocto](https://www.yoctoproject.org) BSP building:
 ----
 
 **1. Set up a build host environment:**
