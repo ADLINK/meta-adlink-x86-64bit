@@ -129,7 +129,7 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 **5. Start to build the image**
 
-&nbsp;&nbsp;Provide four types of imags and please select one of commands:
+&nbsp;&nbsp;Below are four example of example images, please select one of them:
 
 |      **image**                        |       **command for the build**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|     **account/pwd**  |
 |:--- |:--- |:--- |
@@ -138,11 +138,11 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 | Image with <br>&nbsp;- xfce desktop <br>&nbsp;- SEMA| bitbake core-image-xfce | Not required |
 | Image with <br>&nbsp;- xfce desktop <br>&nbsp;- SEMA<br>&nbsp;- Docker| 1. enable Docker feature into conf file: <br>`echo "DOCKER_FEATURES = \"enable\"" >> ./conf/local.conf`<br>2. start to build: <br> `bitbake core-image-docker` |   Not required |
 
-&nbsp;&nbsp;**Note**: After finished build progress, you can find images at `${BSP_FOLDER}/build/tmp/deploy/image/inte-corei7-64/`
+&nbsp;&nbsp;**Note**: After finishing the build process, you can find the images at `${BSP_FOLDER}/build/tmp/deploy/image/inte-corei7-64/`
 
 <br>
 
-**6. To deploy the image you can install the following storage**
+**6. To deploy the image you can install to the following storage**
 
 - [USB Drive](#40) 
 - [SD Card](#41)
@@ -151,11 +151,11 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 &nbsp;&nbsp;<h5 id="40">6.1  USB Drive Deployment </h5>
 
-&nbsp;&nbsp;Enter the following command and identify your USB drive :
+&nbsp;&nbsp;Enter the following command to identify your USB drive :
 
 	lsblk
 
-&nbsp;&nbsp;**Note**: the device name you are searching for and it should looks like /dev/sdb or /dev/sdc
+&nbsp;&nbsp;**Note**: the device name you are searching for should look like /dev/sdb or /dev/sdc
 
 &nbsp;&nbsp;Enter the following command to deploy the image to your USB drive:
 
@@ -171,21 +171,21 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 - prepare the Installation USB drive and insert the USB drive into targe platform
 - select the "install" option from grub menu and boot up
 - wait until you see the installation target:&nbsp;**"Please select an install target or press n to exit:"**
-- During installing, system will allocate paritions automatically
+- during the installation, the system will allocate paritions automatically
 
-&nbsp;&nbsp;**Note**: Please go BIOS menu to configure USB drive as the bootable device
+&nbsp;&nbsp;**Note**: Please enter the BIOS setup menu to configure the USB drive as boot device
 
 
 &nbsp;&nbsp;<h5 id="43">6.3 eMMC Deployment</h5>
 
-&nbsp;&nbsp;It requires a bootable yocto USB drive (described above in 5.1) because it includes the grub "install" option.
+&nbsp;&nbsp;This method requires a bootable yocto USB drive (described above in 5.1) because it includes the grub "install" option.
 
-- prepare the Installation USB drive and insert the USB drive into targe platform
+- prepare the installation USB drive and insert the USB drive into targe platform
 - select the "install" option from grub menu and boot up
 - wait until you see the installation target:&nbsp;&nbsp;**"Please select an install target or press n to exit:"**
-- During installing, system will allocate paritions automatically
+- During the installation, the system will allocate paritions automatically
 
-&nbsp;&nbsp;**Note**: Please go BIOS menu to configure USB drive as the bootable device
+&nbsp;&nbsp;**Note**: Please enter the BIOS setup menu to configure the USB drive as boot device
 
 
 &nbsp;&nbsp;<h5 id="42">6.3 SATA Deployment</h5>
@@ -201,5 +201,5 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 
 
-Please feel free to send us (email: ryanzj.huang@adlinktech.com) patches for this layer and report bugs of this layer. 
+Please feel free to send us (email: ryanzj.huang@adlinktech.com) patches for this layer or report any bugs found in this layer. 
 <br>For hardware support, please contact your local representative.
