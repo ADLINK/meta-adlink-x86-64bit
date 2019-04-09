@@ -108,7 +108,7 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 **4. Additional configration**
 
-&nbsp;&nbsp;Please type the following commands if build **Express-DN7**:
+&nbsp;&nbsp;Please type the following commands when building **Express-DN7**:
 
     cat >>./conf/local.conf <<-'EOF'
 	# Additional Kernel Features to enable QAT, DPDK and QEMU-KVM
