@@ -193,12 +193,52 @@ Getting Started with Yocto BSP building:
 
 &nbsp;&nbsp;Below are four example of example images, please select one of them:
 
-|      **image**                        |       **command for the build**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|     **account/pwd**  |
+|      **image**                        |       **command to issue**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|     **account/pwd**  |
 |:--- |:--- |:--- |
 | minimal image (CLI mode)| bitbake core-image-minimal     |  root |
 | minimal image with SEMA (CLI mode)| bitbake core-image-mini-sema   |  root|
 | Image with <br>&nbsp;- xfce desktop <br>&nbsp;- SEMA| bitbake core-image-xfce | Not required |
 | Image with <br>&nbsp;- xfce desktop <br>&nbsp;- SEMA<br>&nbsp;- Docker| 1. enable Docker feature into conf file: <br>`echo "DOCKER_FEATURES = \"enable\"" >> ./conf/local.conf`<br>2. start to build: <br> `bitbake core-image-docker` |   Not required |
+
+
+
+<table style="width: 656px; border: 1px #cccccc solid;">
+<thead>
+<tr style="height: 22px;">
+<th style="height: 22px; width: 289px; text-align: center; background: black; color: white; border: 1px solid #cccccc;"><strong>Image Type </strong></th>
+<th style="height: 22px; width: 364.6px; text-align: center; background: black; color: white; border: 1px solid #cccccc;">Command to issue</th>
+<th style="height: 22px; width: 378.4px; text-align: center; background: black; color: white; border: 1px solid #cccccc;">Account/Password</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 26.6px; border: 1px solid #cccccc;">
+<td style="height: 26.6px; width: 289px; border: 1px solid #cccccc;">minimal image (CLI mode)</td>
+<td style="height: 26.6px; width: 364.6px;"> bitbake core-image-minimal </td>
+<td style="height: 26.6px; width: 378.4px;">root</td>
+</tr>
+<tr style="height: 26px; background: #f0f0f0; border: 1px solid #cccccc;">
+<td style="height: 26px; width: 289px; border: 1px solid #cccccc;">minimal image with SEMA (CLI mode)</td>
+<td style="height: 26px; width: 364.6px;">bitbake core-image-mini-sema</td>
+<td style="height: 26px; width: 378.4px;">root</td>
+</tr>
+<tr style="height: 28px; border: 1px solid #cccccc;">
+<td style="height: 28px; width: 289px; border: 1px solid #cccccc;">Image with <br>&nbsp;- xfce desktop <br>&nbsp;- SEMA</td>
+<td style="height: 28px; width: 364.6px;">bitbake core-image-xfce</td>
+<td style="height: 28px; width: 378.4px;">Not required</td>
+</tr>
+<tr style="height: 27px; background: #f0f0f0; border: 1px solid #cccccc;">
+<td style="height: 27px; width: 289px; border: 1px solid #cccccc;">Image with <br>&nbsp;- xfce desktop <br>&nbsp;- SEMA<br>&nbsp;- Docker</td>
+<td style="height: 27px; width: 364.6px;">1. enable Docker feature into conf file: <br>`echo "DOCKER_FEATURES = \"enable\"" >> ./conf/local.conf`<br>2. start to build: <br> `bitbake core-image-docker`</td>
+<td style="height: 27px; width: 378.4px;"> Not required</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
 
 &nbsp;&nbsp;**Note**: After finishing the build process, you can find the images at `${BSP_FOLDER}/build/tmp/deploy/image/inte-corei7-64/`
 
