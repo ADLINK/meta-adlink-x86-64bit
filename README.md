@@ -94,10 +94,12 @@ This Layer depends on following layers:
 </tbody>
 </table>
 
+Refer to [Yocto Project Docs](https://www.yoctoproject.org/docs/) for details.
+
 
 <br> 
 
-Getting Started with [Yocto](https://www.yoctoproject.org) BSP building:
+Getting Started with Yocto BSP building:
 ----
 
 **1. Set up a build host environment:**
