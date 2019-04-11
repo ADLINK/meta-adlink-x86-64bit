@@ -50,8 +50,8 @@ Guideline ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
 
 &nbsp;&nbsp;1.2 Required Packages to install on the host :
 
-	sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib 
-	sudo apt-get install build-essential chrpath socat libsdl1.2-dev xterm
+	sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+	     build-essential chrpath socat libsdl1.2-dev xterm
 
 **2. Fetch the source from various git location and checkout the specific commit as below:**
 
