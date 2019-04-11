@@ -94,9 +94,6 @@ This Layer depends on following layers:
 </tbody>
 </table>
 
-&nbsp;&nbsp;**Note:** Refer to [Yocto Project Docs](https://www.yoctoproject.org/docs/) for details.
-
-
 &nbsp;&nbsp;**Note:** Refer to <a href="https://www.yoctoproject.org/docs/" target="_blank">Yocto Project Docs</a> for details.
 
 <br> 
