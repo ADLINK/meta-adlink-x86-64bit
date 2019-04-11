@@ -33,6 +33,7 @@ This Layer depends on following layers:
 |meta-secure-core|Origin/sumo|1b35fd45a58ef015b52a3df4b39048f2ac1ffbe3|
 |meta-virtualization|Origin/sumo |ed2038c935777d1336c17989d454f4e9c95fea7f|
 
+&nbsp;&nbsp;**Note:** Refer to <a href="https://www.yoctoproject.org/docs/" target="_blank">Yocto Project Docs</a> for details.
 
 <br> 
 
