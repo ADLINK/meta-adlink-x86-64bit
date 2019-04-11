@@ -192,16 +192,6 @@ Getting Started with Yocto BSP building:
 **5. Start to build the image**
 
 &nbsp;&nbsp;Below are four example of example images, please select one of them:
-
-|      **image**                        |       **command to issue**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|     **account/pwd**  |
-|:--- |:--- |:--- |
-| minimal image (CLI mode)| bitbake core-image-minimal     |  root |
-| minimal image with SEMA (CLI mode)| bitbake core-image-mini-sema   |  root|
-| Image with <br>&nbsp;- xfce desktop <br>&nbsp;- SEMA| bitbake core-image-xfce | Not required |
-| Image with <br>&nbsp;- xfce desktop <br>&nbsp;- SEMA<br>&nbsp;- Docker| 1. enable Docker feature into conf file: <br>`echo "DOCKER_FEATURES = \"enable\"" >> ./conf/local.conf`<br>2. start to build: <br> `bitbake core-image-docker` |   Not required |
-
-
-
 <table style="width: 656px; border: 1px #cccccc solid;">
 <thead>
 <tr style="height: 22px;">
@@ -228,7 +218,7 @@ Getting Started with Yocto BSP building:
 </tr>
 <tr style="height: 27px; background: #f0f0f0; border: 1px solid #cccccc;">
 <td style="height: 27px; width: 289px; border: 1px solid #cccccc;">Image with <br>&nbsp;- xfce desktop <br>&nbsp;- SEMA<br>&nbsp;- Docker</td>
-<td style="height: 27px; width: 364.6px;">1. enable Docker feature into conf file: <br>`echo "DOCKER_FEATURES = \"enable\"" >> ./conf/local.conf`<br>2. start to build: <br> `bitbake core-image-docker`</td>
+<td style="height: 27px; width: 364.6px;">1. enable Docker feature into conf file: <br>&nbsp;&nbsp;&nbsp; echo "DOCKER_FEATURES = \"enable\"" >> ./conf/local.conf<br>2. start to build: <br>&nbsp;&nbsp;&nbsp;bitbake core-image-docker</td>
 <td style="height: 27px; width: 378.4px;"> Not required</td>
 </tr>
 </tbody>
