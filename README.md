@@ -224,12 +224,6 @@ Getting Started with Yocto BSP building:
 </tbody>
 </table>
 
-
-<font size="5">這是 size = 5 的文字大小</font>
-
-
-
-
 &nbsp;&nbsp;**Note**: After finishing the build process, you can find the images at `${BSP_FOLDER}/build/tmp/deploy/image/inte-corei7-64/`
 
 <br>
