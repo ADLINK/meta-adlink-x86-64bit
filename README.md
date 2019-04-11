@@ -191,7 +191,7 @@ Getting Started with Yocto BSP building:
 
 **5. Start to build the image**
 
-&nbsp;&nbsp;Below are four example of example images, please select one of them:
+&nbsp;&nbsp;The below are four example images, please select one of them:
 <table style="width: 656px; border: 1px #cccccc solid;">
 <thead>
 <tr style="height: 22px;">
