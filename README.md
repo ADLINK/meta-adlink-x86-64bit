@@ -35,7 +35,7 @@ This Layer depends on following layers:
 
 <br> 
 
-Guideline to ADLINK [Yocto](https://www.yoctoproject.org) BSP building:
+<a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki">Guideline to ADLINK Yocto BSP building</a>:
 ----
 
 **1. Set up a build host environment:**
