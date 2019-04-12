@@ -11,8 +11,8 @@ Supports the following products
 | COM Express Type 6 - Compact Size | cExpress-KL, cExpress-SL, cExpress-AL |
 | COM Express Type 7               | Express-DN7, Express-DB7 |
 | COM Express Type 10            | nanoX-AL   |
-| SMARC                            | LEC-AL (under testing) |
-| Qseven                           | Q7-AL (under testing) |
+| SMARC                            | LEC-AL |
+| Qseven                           | Q7-AL |
 
 &nbsp;&nbsp; **Note:** This BSP provides hardware specific settings, libraries and applications
 <br>
@@ -34,7 +34,7 @@ This Layer depends on following layers
 
 <br> 
 
-<a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki">Guideline to ADLINK Yocto BSP building</a>
+Please refer to [Guideline](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
 ----
 
 <br>
