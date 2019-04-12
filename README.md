@@ -2,7 +2,7 @@
 
 <br>
 
-Yocto x86 64-bit BSP supports all of the following products:
+Supports all of the following products
 -----
 
 |      **Module Type**                  |       **Module Name**                    |
