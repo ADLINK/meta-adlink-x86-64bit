@@ -4,40 +4,21 @@
 <br>
 <br>
 
-Yocto x86 64-bit BSP supports all of the following products:
+Supports all of the following SMARC products:
 ----
 <table style="width: 656px; border: 1px #cccccc solid;">
 <thead>
 <tr style="height: 22px;">
-<th style="height: 22px; width: 273.4px; text-align: center; background: black; color: white; border: 1px #cccccc solid;">Module Type</th>
-<th style="height: 22px; width: 380.6px; text-align: center; background: black; color: white; border: 1px #cccccc solid;">Module Name</th>
+<th style="height: 22px; width: 273.4px; text-align: center; background: black; color: white; border: 1px #cccccc solid;">SMARC Module Name</th>
+<th style="height: 22px; width: 380.6px; text-align: center; background: black; color: white; border: 1px #cccccc solid;">Product information</th>
 </tr>
 </thead>
 <tbody>
 <tr style="height: 26px; border: 1px solid #cccccc;">
-<td style="height: 26px; width: 273.4px; border: 1px solid #cccccc;">COM Express Type 6 (Basic Szie)</td>
-<td style="height: 26px; width: 380.6px;">Express-CF/CFE, Express-KL/KLE, Express-SL/SLE</td>
+<td style="height: 26px; width: 273.4px; border: 1px solid #cccccc;">LEC-imx6</td>
+	<td style="height: 26px; width: 380.6px;"><img src="https://www.linaro.org/assets/images/projects/yocto-project.png" width="50" align="left"><a href="https://www.adlinktech.com/Products/Computer_on_Modules/SMARC/LEC-iMX6?lang=en" target="_blank">Details</a></td>
 </tr>
-<tr style="height: 26px; background: #f0f0f0; border: 1px solid #cccccc;">
-<td style="height: 26px; width: 273.4px; border: 1px solid #cccccc;">COM Express Type 6 (Compact Size)</td>
-<td style="height: 26px; width: 380.6px;">cExpress-KL, cExpress-SL, cExpress-AL</td>
-</tr>
-<tr style="height: 28px; border: 1px solid #cccccc;">
-<td style="height: 28px; width: 273.4px; border: 1px solid #cccccc;">COM Express Type 7</td>
-<td style="height: 28px; width: 380.6px;">Express-DN7, Express-DB7</td>
-</tr>
-<tr style="height: 27px; background: #f0f0f0; border: 1px solid #cccccc;">
-<td style="height: 27px; width: 273.4px; border: 1px solid #cccccc;">COM Express Type 10</td>
-<td style="height: 27px; width: 380.6px;">nanoX-AL</td>
-</tr>
-<tr style="height: 23px; border: 1px solid #cccccc;">
-<td style="height: 23px; width: 273.4px; border: 1px solid #cccccc;">SMARC</td>
-<td style="height: 23px; width: 380.6px;">LEC-AL (under testing)</td>
-</tr>
-<tr style="height: 26.6px; background: #f0f0f0; border: 1px solid #cccccc;">
-<td style="height: 26.6px; width: 273.4px; border: 1px solid #cccccc;">Qseven</td>
-<td style="height: 26.6px; width: 380.6px;">Q7-AL (under testing)</td>
-</tr>
+
 </tbody>
 </table>
 
