@@ -16,7 +16,8 @@ Supports all of the following SMARC products:
 <tbody>
 <tr style="height: 26px; border: 1px solid #cccccc;">
 <td style="height: 26px; width: 273.4px; border: 1px solid #cccccc;">LEC-imx6</td>
-	<td style="height: 26px; width: 380.6px;"><img src="https://material.adlinktech.com/products/images/1344/LEC-iMX6_ProductImage_en_20171201_v1.png" width="100" align="left"><a href="https://www.adlinktech.com/Products/Computer_on_Modules/SMARC/LEC-iMX6?lang=en" target="_blank">Details</a></td>
+	<td style="height: 26px; width: 380.6px;"><img src="https://material.adlinktech.com/products/images/1344/LEC-iMX6_ProductImage_en_20171201_v1.png" width="200" align="left">
+		<a href="https://www.adlinktech.com/Products/Computer_on_Modules/SMARC/LEC-iMX6?lang=en" target="_blank">Details</a></td>
 </tr>
 
 </tbody>
