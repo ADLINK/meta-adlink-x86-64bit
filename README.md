@@ -34,7 +34,7 @@ This Layer depends on following layers
 
 <br> 
 
-<a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki">Guideline to ADLINK Yocto BSP building</a>:
+<a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki">Guideline to ADLINK Yocto BSP building</a>
 ----
 
 <br>
