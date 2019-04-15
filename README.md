@@ -12,7 +12,7 @@ Supports the following products
 </tr>
 <tr style="height: 164px;">
 <td style="border-color: grey; width: 150px; height: 456px;" rowspan="3"><strong>Com Express Type 6 - Basic Size</strong></td>
-<td style="border-color: grey; text-align: center; width: 237.364px;"><img src="https://material.adlinktech.com/products/images/1706/Express-CF-A2-F.jpg" width="154" height="117" /></td>
+<td style="border-color: grey; text-align: center; width: 140px;"><img src="https://material.adlinktech.com/products/images/1706/Express-CF-A2-F.jpg" width="140" height="117" /></td>
 <td style="border-color: grey; width: 218.636px; height: 164px;">
 <p><strong>Express-CF/CFE</strong></p>
 <p>&nbsp; COM Express&reg; Basic Size Type 6 Module with Up to Hexacore 8th Gen Intel Core&trade; 8000 series and Intel Xeon&reg; Processors</p>
