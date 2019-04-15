@@ -7,8 +7,8 @@ Supports the following products
 <table style="height: 96px; width: 619px; border: 1px;">
 <tbody>
 <tr style="height: 24.4545px;">
-<td style="border-color: grey; text-align: center; width: 150px; height: 24.4545px;">Module Type</td>
-<td style="border-color: grey; text-align: center; width: 456px; height: 24.4545px;" colspan="2">Module Name</td>
+<td style="border-color: grey; width: 150px; height: 24.4545px; text-align: center;">Module Type</td>
+<td style="border-color: grey; width: 456px; height: 24.4545px; text-align: center;" colspan="2">Module Name</td>
 </tr>
 <tr style="height: 164px;">
 <td style="border-color: grey; width: 150px; height: 456px;" rowspan="3"><strong>Com Express Type 6 - Basic Size</strong></td>
