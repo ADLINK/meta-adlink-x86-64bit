@@ -5,6 +5,43 @@
 Supports the following products
 -----
 
+
+<table style="height: 96px; width: 592px; border: 1px solid #cccccc;">
+<tbody>
+<tr style="height: 24.4545px;">
+<td style="border-color: grey; text-align: center; width: 153px; height: 24.4545px;">Module Type</td>
+<td style="border-color: grey; text-align: center; width: 423px; height: 24.4545px;" colspan="2">Module Name</td>
+</tr>
+<tr style="height: 164px;">
+<td style="border-color: grey; width: 153px; height: 456px;" rowspan="3"><strong>Com Express Type 6 - Basic Size</strong></td>
+<td style="border-color: grey; width: 136.818px; height: 164px;"><img src="https://material.adlinktech.com/products/images/1706/Express-CF-A2-F.jpg" alt="" width="150" height="112" /></td>
+<td style="border-color: grey; width: 286.182px; height: 164px;">
+<p><strong>Express-CF/CFE</strong></p>
+<p>COM Express&reg; Basic Size Type 6 Module with Up to Hexacore 8th Gen Intel Core&trade; 8000 series and Intel Xeon&reg; Processors</p>
+<p>(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-CF_CFE?lang=en" target="_blank" rel="noopener">more details</a>)</p>
+</td>
+</tr>
+<tr style="height: 146px;">
+<td style="border-color: grey; width: 136.818px; height: 146px;"><img src="https://material.adlinktech.com/products/images/1680/Express-KL_KLE_ProductImage_en_20171201_v1.png" alt="" width="150" height="112" /></td>
+<td style="border-color: grey; width: 286.182px; height: 146px;">
+<p>Express-KL/KLE</p>
+<p>COM Express Basic Size Type 6 Module with 7th Gen Intel&reg; Core&trade; 7000 series and Intel&reg; Xeon&reg; Processors&nbsp;</p>
+<p>(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-KL_KLE?lang=en" target="_blank" rel="noopener">more details</a>)</p>
+</td>
+</tr>
+<tr style="height: 146px;">
+<td style="border-color: grey; width: 136.818px; height: 146px;"><img src="https://material.adlinktech.com/products/images/1591/Express-SL_SLE_ProductImage_en_20171201_v1.png" alt="" width="150" height="112" /></td>
+<td style="border-color: grey; width: 286.182px; height: 146px;">
+<p>Express-SL/SLE</p>
+<p>COM Express Basic Size Type 6 Module with 6th Gen Intel&reg; Core&trade;, Xeon&reg; and Celeron&reg; Processors&nbsp;</p>
+<p>(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-SL_SLE?lang=en" target="_blank" rel="noopener">more details</a>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
 |      **Module Type**                  |       **Module Name**                    |
 |:---|:--- |
 |Com Express Type 6 - Basic Size | Express-CF/CFE, Express-KL/KLE, Express-SL/SLE      |
