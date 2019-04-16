@@ -1,12 +1,15 @@
 <img src="https://www.linaro.org/assets/images/projects/yocto-project.png" width="200" align="right">
 
-<br>
-
-### [Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is giude you how to use meta-adlink-x86-64bit layer to build & deploy image
 
 <br>
+<br>
+<br>
 
-### Supports the following products
+### [Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is giude you how to build & deploy image
+
+<br>
+
+### Following products are supported:
 <table style="width: 652px;" align="center">
 <tbody>
 <tr style="height: 22px;">
