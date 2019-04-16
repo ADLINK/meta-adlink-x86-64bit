@@ -7,11 +7,11 @@ Supports the following products
 <table style="height: 96px; border: 1px;">
 <tbody>
 <tr style="height: 24px;">
-<td style="border-color: grey; width: 150px; height: 24px; text-align: center;">Module Type</td>
-<td style="border-color: grey; width: 454.182px; height: 24px; text-align: center;" colspan="2">Module Name</td>
+<td style=" width: 150px; height: 24px; text-align: center;">Module Type</td>
+<td style=" width: 454.182px; height: 24px; text-align: center;" colspan="2">Module Name</td>
 </tr>
 <tr style="height: 46px;">
-<td style="border-color: grey; width: 150px; height: 144.818px;" rowspan="3">
+<td style=" width: 150px; height: 144.818px;" rowspan="3">
 <strong>Com Express Type 6 (Basic Size)</strong>
  </td>
 <td style="text-align: center; width: 10px; height: 46px;"><img src="https://material.adlinktech.com/products/images/1706/Express-CF-A2-F.jpg" width="140" height="126" /></td>
