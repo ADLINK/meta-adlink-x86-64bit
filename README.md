@@ -2,7 +2,7 @@
 
 <br>
 
-### Please refer to [Guideline](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
+<img src="https://cdn2.iconfinder.com/data/icons/cosmetic-packaging-symbols/128/Cosmetic_Symbols-33-512.png" width="30"> ### Please refer to  [Guideline](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
 
 <br>
 
