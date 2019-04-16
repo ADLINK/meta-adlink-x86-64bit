@@ -11,7 +11,9 @@ Supports the following products
 <td style="border-color: grey; width: 454.182px; height: 24px; text-align: center;" colspan="2">Module Name</td>
 </tr>
 <tr style="height: 46px;">
-<td style="border-color: grey; width: 150px; height: 144.818px;" rowspan="3"><strong>Com Express Type 6 - Basic Size</strong></td>
+<td style="border-color: grey; width: 150px; height: 144.818px;" rowspan="3">
+ <p class="vericaltext"><strong>Com Express Type 6 - Basic Size</strong></p>
+ </td>
 <td style="text-align: center; width: 10px; height: 46px;"><img src="https://material.adlinktech.com/products/images/1706/Express-CF-A2-F.jpg" width="140" height="126" /></td>
 <td style="border-color: grey; width: 444.182px; height: 46px;">
 <p><strong>Express-CF/CFE</strong></p>
