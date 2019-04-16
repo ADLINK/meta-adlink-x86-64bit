@@ -2,11 +2,11 @@
 
 <br>
 
-<img src="https://cdn2.iconfinder.com/data/icons/cosmetic-packaging-symbols/128/Cosmetic_Symbols-33-512.png" width="30"> ### Please refer to  [Guideline](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
+###  1. Please refer to  [Guideline](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
 
 <br>
 
-### Supports the following products
+### 2, Supports the following products
 <table style="width: 652px;" align="center">
 <tbody>
 <tr style="height: 22px;">
