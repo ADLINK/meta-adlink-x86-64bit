@@ -2,7 +2,7 @@
 
 <br>
 
-### Please refer to  [Guideline](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
+### [Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is giude you how to use meta-adlink-x86-64bit layer to build & deploy image
 
 <br>
 
