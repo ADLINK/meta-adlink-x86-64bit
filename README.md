@@ -2,11 +2,11 @@
 
 <br>
 
-###  1. Please refer to  [Guideline](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
+### Please refer to  [Guideline](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
 
 <br>
 
-### 2, Supports the following products
+### Supports the following products
 <table style="width: 652px;" align="center">
 <tbody>
 <tr style="height: 22px;">
