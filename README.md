@@ -2,7 +2,6 @@
 
 <br>
 
-### [Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is giude you how to build & deploy image
 
 <br>
 
@@ -89,6 +88,10 @@
 <br>
 <br>
  
+ 
+### [Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is giude you how to build & deploy image
+----
+
 This Layer depends on following layers
 ----
 
