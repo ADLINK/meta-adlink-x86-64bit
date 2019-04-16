@@ -3,8 +3,6 @@
 <br>
 
 
-<br>
-
 ### Following products are supported:
 <table style="width: 652px;" align="center">
 <tbody>
@@ -88,9 +86,10 @@
 <br>
 <br>
  
- 
-### [Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is giude you how to build & deploy image
+[Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is giude you how to build & deploy image
 ----
+
+<br>
 
 This Layer depends on following layers
 ----
