@@ -86,7 +86,7 @@
 <br>
 <br>
  
-[Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is giude you how to build & deploy image
+[Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is to giude you how to build & deploy image
 ----
 
 <br>
