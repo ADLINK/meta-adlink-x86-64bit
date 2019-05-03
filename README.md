@@ -92,38 +92,16 @@
 
 ## Dowload a Live OS image for USB to quickly evaluate
 
-Note: if you would like to deploy the below YOCTO OS images to USB key, please refer to <a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/02.-How-to-install-Yocto-Linux-to-USB-Drive" target="_blank" rel="noopener">the guideline.</a>
-<table style="width:100%">
-  <tr>
-    <th>image type</th>
-    <th></th> 
-  </tr>
-  <tr>
-    <td>minimal image (CLI mode)	</td>
-    <td><a href="https://drive.google.com/file/d/1bh_AH7W4no2DJvavmWP9UDxaJ0GBnn0Y/view?usp=sharing" target="_blank" rel="noopener"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25"/></a></td> 
-  </tr>
-  <tr>
-    <td>minimal image with SEMA (CLI mode)	</td>
-    <td><a href="https://drive.google.com/file/d/13pJtZcn5QBy_lJGVyP1Ws4dy491MzQy8/view?usp=sharing"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25"/></a></td> 
-  </tr>
-   <tr>
-    <td>Image with 
- <br>- xfce desktop 
- <br>- SEMA	</td>
-    <td><a href="https://drive.google.com/file/d/1nyHvEHqcukYTOrTP8mqAfhH58g5da7KZ/view?usp=sharing" target="_blank" rel="noopener"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25"/></a></td> 
-  </tr>
-   <tr>
-    <td>Image with 
- <br>- xfce desktop 
- <br>- SEMA
- <br>- Docker	</td>
-    <td><a href="https://drive.google.com/file/d/1OjPXihQwvbFlo1lTfrk_rnTdCM8w4e03/view?usp=sharing" target="_blank" rel="noopener"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25"/></a></td> 
-  </tr>
+we provide 4 types of OS images:
+
+<ul>
+<li>minimal image (CLI mode)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://drive.google.com/file/d/1bh_AH7W4no2DJvavmWP9UDxaJ0GBnn0Y/view?usp=sharing" target="_blank" rel="noopener"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></a></li>
+<li>minimal image with SEMA (CLI mode)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://drive.google.com/file/d/13pJtZcn5QBy_lJGVyP1Ws4dy491MzQy8/view?usp=sharing"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></a></li>
+<li>Image with "xfce desktop" &amp; "SEMA"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://drive.google.com/file/d/1nyHvEHqcukYTOrTP8mqAfhH58g5da7KZ/view?usp=sharing" target="_blank" rel="noopener"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></a></li>
+<li>Image with "xfce desktop" &amp; "SEMA" &amp; "Docker"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="https://drive.google.com/file/d/1OjPXihQwvbFlo1lTfrk_rnTdCM8w4e03/view?usp=sharing" target="_blank" rel="noopener"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></a></li>
+</ul>
+      
  
-</table>
-
-
-
 <br>
 
 Please feel free to send us (email: ryanzj.huang@adlinktech.com) patches for this layer and report bugs of this layer. 
