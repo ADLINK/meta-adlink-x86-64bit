@@ -85,10 +85,6 @@
 &nbsp;&nbsp; **Note:** This BSP provides hardware specific settings, libraries and applications
 <br>
 <br>
- 
-## [Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is to giude you how to build & deploy image
-
-<br>
 
 ## Dowload a Live OS image for quick evaluation:
 
@@ -101,6 +97,11 @@ There are four OS images (ISO format) we provided and please refer to <a href="h
 <li>Image with "xfce desktop" &amp; "SEMA" &amp; "Docker"&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="https://drive.google.com/file/d/1OjPXihQwvbFlo1lTfrk_rnTdCM8w4e03/view?usp=sharing" target="_blank" rel="noopener"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></a></li>
 </ul>
       
+<br>
+## [Giude you how to build & deploy image](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) 
+
+<br> 
+ 
  
 <br>
 
