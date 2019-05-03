@@ -73,8 +73,8 @@
 </td>
 </tr>
 <tr style="height: 29.8182px;">
-<td style="width: 10px; height: 29.8182px; text-align: center;"><img src="https://material.adlinktech.com/products/images/1645/LEC-AL_ProductImage_en_20171201_v2.png" alt="" width="130" /></td>
-<td style="width: 444.182px; height: 29.8182px;">
+<td style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://material.adlinktech.com/products/images/1645/LEC-AL_ProductImage_en_20171201_v2.png" alt="" width="110" /></td>
+<td>
 <p><strong>LEC-AL</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/SMARC/LEC-AL?lang=en" target="_blank" rel="noopener">more details</a>)</p>
 <p>SMARC&reg; Short Size Module with Intel Atom&reg; E3900 Series, Pentium&trade; N4200 or Celeron&trade; N3350 Processor&nbsp;</p>
 </td>
