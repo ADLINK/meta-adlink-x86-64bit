@@ -90,9 +90,9 @@
 
 <br>
 
-## OS Live image we built for the quick evaluation
+## Dowload a Live OS image for USB to quickly evaluate
 
-Note: if you would like to deploy OS image to USB drive, please refer to <a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/02.-How-to-install-Yocto-Linux-to-USB-Drive" target="_blank" rel="noopener">the guideline.</a>
+Note: if you would like to deploy the below YOCTO OS images to USB key, please refer to <a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/02.-How-to-install-Yocto-Linux-to-USB-Drive" target="_blank" rel="noopener">the guideline.</a>
 <table style="width:100%">
   <tr>
     <th>image type</th>
