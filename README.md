@@ -90,7 +90,7 @@
 
 <br>
 
-## please download OS Live image we built for the quick evaluation: 
+## you can download OS Live image we built for the quick evaluation: 
 
 <table style="width:100%">
   <tr>
