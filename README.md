@@ -100,7 +100,7 @@ Note: if you would like to deploy the below YOCTO OS images to USB key, please r
   </tr>
   <tr>
     <td>minimal image (CLI mode)	</td>
-    <td><a href="https://drive.google.com/file/d/1bh_AH7W4no2DJvavmWP9UDxaJ0GBnn0Y/view?usp=sharing" target="_blank" rel="noopener">link</a></td> 
+    <td><a href="https://drive.google.com/file/d/1bh_AH7W4no2DJvavmWP9UDxaJ0GBnn0Y/view?usp=sharing" target="_blank" rel="noopener"><img src="http://en.greenidvietnam.org.vn//app/Theme/greenid/img/icon-do.png" width="25"/></a></td> 
   </tr>
   <tr>
     <td>minimal image with SEMA (CLI mode)	</td>
@@ -110,14 +110,14 @@ Note: if you would like to deploy the below YOCTO OS images to USB key, please r
     <td>Image with 
  <br>- xfce desktop 
  <br>- SEMA	</td>
-    <td><a href="https://drive.google.com/file/d/1nyHvEHqcukYTOrTP8mqAfhH58g5da7KZ/view?usp=sharing" target="_blank" rel="noopener">link</a></td> 
+    <td><a href="https://drive.google.com/file/d/1nyHvEHqcukYTOrTP8mqAfhH58g5da7KZ/view?usp=sharing" target="_blank" rel="noopener"><img src="http://en.greenidvietnam.org.vn//app/Theme/greenid/img/icon-do.png" width="25"/></a></td> 
   </tr>
    <tr>
     <td>Image with 
  <br>- xfce desktop 
  <br>- SEMA
  <br>- Docker	</td>
-    <td><a href="https://drive.google.com/file/d/1OjPXihQwvbFlo1lTfrk_rnTdCM8w4e03/view?usp=sharing" target="_blank" rel="noopener">link</a></td> 
+    <td><a href="https://drive.google.com/file/d/1OjPXihQwvbFlo1lTfrk_rnTdCM8w4e03/view?usp=sharing" target="_blank" rel="noopener"><img src="http://en.greenidvietnam.org.vn//app/Theme/greenid/img/icon-do.png" width="25"/></a></td> 
   </tr>
  
 </table>
