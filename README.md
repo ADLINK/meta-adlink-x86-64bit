@@ -104,7 +104,7 @@ Note: if you would like to deploy the below YOCTO OS images to USB key, please r
   </tr>
   <tr>
     <td>minimal image with SEMA (CLI mode)	</td>
-    <td><a href="https://drive.google.com/file/d/13pJtZcn5QBy_lJGVyP1Ws4dy491MzQy8/view?usp=sharing"><img src="http://en.greenidvietnam.org.vn//app/Theme/greenid/img/icon-do.png" width="30"/></a></td> 
+    <td><a href="https://drive.google.com/file/d/13pJtZcn5QBy_lJGVyP1Ws4dy491MzQy8/view?usp=sharing"><img src="http://en.greenidvietnam.org.vn//app/Theme/greenid/img/icon-do.png" width="25"/></a></td> 
   </tr>
    <tr>
     <td>Image with 
