@@ -92,7 +92,7 @@
 
 ## Dowload a Live OS image for quick evaluation:
 
-There are four OS images(ISO format) we provided and please refer to <a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/02.-How-to-install-Yocto-Linux-to-USB-Drive" width="25" />this</a> if you would like to depoly to USB drive.
+There are four OS images (ISO format) we provided and please refer to <a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/02.-How-to-install-Yocto-Linux-to-USB-Drive" width="25" />this</a> if you would like to depoly to USB drive.
 
 <ul>
 <li>minimal image (CLI mode)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://drive.google.com/file/d/1bh_AH7W4no2DJvavmWP9UDxaJ0GBnn0Y/view?usp=sharing" target="_blank" rel="noopener"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></a></li>
