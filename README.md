@@ -86,8 +86,41 @@
 <br>
 <br>
  
-[Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is to giude you how to build & deploy image
-----
+## [Here](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) is to giude you how to build & deploy image
+
+<br>
+
+## please download OS Live image we built for the quick evaluation: 
+
+<table style="width:100%">
+  <tr>
+    <th>image type</th>
+    <th></th> 
+  </tr>
+  <tr>
+    <td>minimal image (CLI mode)	</td>
+    <td><a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-KL_KLE?lang=en" target="_blank" rel="noopener">link</a></td> 
+  </tr>
+  <tr>
+    <td>minimal image with SEMA (CLI mode)	</td>
+    <td><a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-KL_KLE?lang=en" target="_blank" rel="noopener">link</a></td> 
+  </tr>
+   <tr>
+    <td>Image with 
+ <br>- xfce desktop 
+ <br>- SEMA	</td>
+    <td><a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-KL_KLE?lang=en" target="_blank" rel="noopener">link</a></td> 
+  </tr>
+   <tr>
+    <td>Image with 
+ <br>- xfce desktop 
+ <br>- SEMA
+ <br>- Docker	</td>
+    <td><a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-KL_KLE?lang=en" target="_blank" rel="noopener">link</a></td> 
+  </tr>
+ 
+</table>
+
 
 
 <br>
