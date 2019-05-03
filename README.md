@@ -66,14 +66,14 @@
 </td>
 </tr>
 <tr style="height: 29.8182px;">
-<td style="width: 10px; height: 29.8182px; text-align: center;"><img src="http://www.dafeng-tech.com/Uploads/Picture/2018-03-01/5a97997914266.jpg" alt="" /></td>
+<td style="width: 10px; height: 29.8182px; text-align: center;"><img src="https://material.adlinktech.com/products/images/1647/nanoX-AL_ProductImage_en_20171201_v1.png" alt=""  width="250" /></td>
 <td style="width: 444.182px; height: 29.8182px;">
 <p><strong>nanoX-AL</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType10/nanoX-AL?lang=en" target="_blank" rel="noopener">more details</a>)</p>
 <p>COM Express Mini Size Type 10 Module with Intel Atom&reg; E3900 series, Pentium&reg;, and Celeron&reg; SoC&nbsp;</p>
 </td>
 </tr>
 <tr style="height: 29.8182px;">
-<td style="width: 10px; height: 29.8182px; text-align: center;"><img src="https://material.adlinktech.com/products/images/1645/LEC-AL_ProductImage_en_20171201_v2.png" alt="" width="150" /></td>
+<td style="width: 10px; height: 29.8182px; text-align: center;"><img src="https://material.adlinktech.com/products/images/1645/LEC-AL_ProductImage_en_20171201_v2.png" alt="" width="130" /></td>
 <td style="width: 444.182px; height: 29.8182px;">
 <p><strong>LEC-AL</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/SMARC/LEC-AL?lang=en" target="_blank" rel="noopener">more details</a>)</p>
 <p>SMARC&reg; Short Size Module with Intel Atom&reg; E3900 Series, Pentium&trade; N4200 or Celeron&trade; N3350 Processor&nbsp;</p>
