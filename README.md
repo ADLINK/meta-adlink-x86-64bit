@@ -119,7 +119,7 @@ Note: if you would like to deploy OS image to USB drive, please refer to <a href
  <br>- xfce desktop 
  <br>- SEMA
  <br>- Docker	</td>
-    <td><a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-KL_KLE?lang=en" target="_blank" rel="noopener">link</a></td> 
+    <td><a href="https://drive.google.com/file/d/1OjPXihQwvbFlo1lTfrk_rnTdCM8w4e03/view?usp=sharing" target="_blank" rel="noopener">link</a></td> 
   </tr>
  
 </table>
