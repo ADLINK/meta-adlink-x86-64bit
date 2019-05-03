@@ -92,10 +92,10 @@
 
 ## OS Live image we built for the quick evaluation
 
-Note: if you would like to deploy OS image to USB drive, please refer to <a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/02.-How-to-install-Yocto-Linux-to-USB-Drive" target="_blank" rel="noopener">guideline</a>.
+Note: if you would like to deploy OS image to USB drive, please refer to <a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/02.-How-to-install-Yocto-Linux-to-USB-Drive" target="_blank" rel="noopener">the guideline</a>.
 
 
-<table style="width:100%">
+&nbsp;&nbsp;&nbsp;<table style="width:100%">
   <tr>
     <th>image type</th>
     <th></th> 
@@ -112,7 +112,7 @@ Note: if you would like to deploy OS image to USB drive, please refer to <a href
     <td>Image with 
  <br>- xfce desktop 
  <br>- SEMA	</td>
-    <td><a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-KL_KLE?lang=en" target="_blank" rel="noopener">link</a></td> 
+    <td><a href="https://drive.google.com/file/d/1nyHvEHqcukYTOrTP8mqAfhH58g5da7KZ/view?usp=sharing" target="_blank" rel="noopener">link</a></td> 
   </tr>
    <tr>
     <td>Image with 
