@@ -17,7 +17,7 @@
 </td>
 </tr>
 <tr style="height: 69px;">
-<td style="height: 69px; text-align: center; width: 173.818px;"><img src="https://photos.app.goo.gl/7zPMjesSuXvpYSYb7" width="150" /></td>
+<td style="height: 69px; text-align: center; width: 173.818px;"><img src="https://lh3.googleusercontent.com/ceJ3CxkwfBVY5qG-kwhSoxu3pX75iq4lZg16s8zRa50Grd7k9S7KLlul4skVqEQhmUri4BF3tD6fsJX6Wwudc_JFamyt8dxDVjcDK3GEHjGA3jUlC7w_3ZO1o_JFD5h9g8Itm9S6d9-HE33YOZlVk488ZI1HOpLppvZBfDQv1XmvBBnvcpHc84F1zr0-2FGwoLb2CslwM9U1wBkd46OAgaj-rlJyLiZgBzRgesjYWXxbw7AcM6xdRKHlB1ehV3xivRXWOJurabpsXlj36lNhhEnZXQwuiGxwd-GUgJwZBE_YFwP2Cewo3EROtSPiBjDw1jiyQcZdPL1fWbla0-pqrONV0_OzU3GXhy9ydOHsEn7Fk41MBZs06eTdAvIUW5C-Eu9rruHnFLc8Ot2VgllUeeQYqYw07qoyheWu1qw77JgmwavBxnwfIiEQKFJqf6wLByRumnx0FVQmIvWwP2kf5bFIHwYOS4IF2UCNF5zNdO9end8t8e5Pa-LMnoB74Ql8zTrQSuFTY8cF0RjZ0J-6JsbwkjizWNduC01K3FB_HgkiFqD_GXnaFTCRbgZ0N7V6lV3BJKkf8DEO_LKr1CjeeywOhcRUlgY-ZSXvztSNC7GyegA6zVXD_lWB1fxDB1yWNUb1VuHPbRI8dR7EASulXi3I7wgXNZgaVXO65zRXZ0b9q_JqrRBUGMfH1NVplBCnuyA49rHOq9wXsx5CnRcZvY4=w631-h481-no" width="150" /></td>
 <td style="width: 458.182px; height: 69px;">
 <p><strong>Express-KL/KLE</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-KL_KLE?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
 <p>COM Express Basic Size Type 6 Module with 7th Gen Intel&reg; Core&trade; 7000 series and Intel&reg; Xeon&reg; Processors</p>
