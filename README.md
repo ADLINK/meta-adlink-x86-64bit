@@ -17,14 +17,14 @@
 </td>
 </tr>
 <tr style="height: 69px;">
-<td style="height: 69px; text-align: center; width: 173.818px;"><img src="https://lh3.googleusercontent.com/S5M44vqY-9Kv2X67CVx9pOdCW1p_N3H5SIqRqD2j2HFykwQGJza2AH9P4NTSj3-QAr-PfzSDrp4Bakhq-jbcYJVNhORXfZdx9bK8gDmhtsZFOYvqjH78jjQGtDhjFB94d_SfWMLa-HBoyshiJ0wxKwpAWRIliQ2ay1FsmoYoJ995Jda0uoPcZvJIjJqfXvbbV8mQIeyfQuK46-ImkcJKyQ3Bd-mqvwpwJ1AlEyE1IgPzJKs8r3PHdk8JLa1nnh25LoeCDCE2lzjoDOC84ZdDglYXY3fg8_O4G4h6r9S805PyrcyVa8oy5wdt_JhhOJFNxOu902S27z1tM4hA41-Vhp5YRYH7dQTAaAlJY6Xwk63WZJO0KUNDrVe2Wv8UVrb9mwX0eqT8-M9Ml5iV-1X5IeBv_2-LwQHejx6f-uzQ-WEE-d_x-zGgEw-gMi3GVnDd8Ones-_UKHc0qM3j0gTO8CLrJFQNZBb8c_lNGLftkgnUVEcPUqIXhTvPXCmuLD2klMTlJV_C-VjN3dXdCTy4wnwzDe2pstmG5LJfBV1ajMzTGCBhk0DM8UmcvWmvM5EtypSZMUBOsSIwYPeoq2n44el7ZjeNjNmbRGeEwVsM6Uv724DKoropXnhp_-DEBCXDv7Z_oOfsG7dPXsGjAGwfhccBJ5y0Nw=w599-h457-no" width="150" /></td>
+<td style="height: 69px; text-align: center; width: 173.818px;"><img src="https://photos.app.goo.gl/7zPMjesSuXvpYSYb7" width="150" /></td>
 <td style="width: 458.182px; height: 69px;">
 <p><strong>Express-KL/KLE</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-KL_KLE?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
 <p>COM Express Basic Size Type 6 Module with 7th Gen Intel&reg; Core&trade; 7000 series and Intel&reg; Xeon&reg; Processors</p>
 </td>
 </tr>
 <tr style="height: 29px;">
-<td style="height: 29px; text-align: center; width: 173.818px;"><img src="https://lh3.googleusercontent.com/79mdqoutKhNaIK5IdSNhuh4qx-n2qFjfO92VUUL6lzm8mBONEDVuff0yG2C_dZr1kglT9vIId_YsCQLKqJwd2Z2TamRuzXfTNi5copsw54fBHHNHqURKJM1FUfK-XescbNyHLRl8Hs0rWr5hWrZZSmNGg06MySF9LFyUWIVinJv9IQXea5ObJaWgqAi2MCErTr_MCALB5cu1FZCCQsEC_cHT1HVT9P3InZ-4vKQlZ0EfhBDNT9-zE4mIbqKVBER4CuAu-GnuVwLn0eqPgjrZNHKkFZX11JOWeL-hIhGYaKBqJGjd9bNc8pVhQRwHV2FKrT-pd2ulVJPttv20my4wqDlj-uDPw9rBnvxeffr-awA9FPVnMd5sX5fOLnlpQP00Wj7Hu1leZ2janAgA6kvV77m4f1EZECyorgxcUu-JlzVv4F4x7K1QfI7_6T_cUITyUo9rZoSJwJpkXLSbpQiepCUAZar8CZJ-5ee-bh2QMrdsD_TmHcRUz7_2tExN7y9ZOGzbQx3ZyiPzJxyw49BV8B-LoCV28vuRncPG238Rbx6u7OoSIKeODPYrk7MjdVW-ocoSlCJpDQP3AFwtcibNx7pl7O113Z0CThHEniKtUcGOFyBIW-555oTvvLgrPt2o34kD6ODBwmifPg-KvDczX5-XEfac3A=w631-h481-no" width="150" /></td>
+<td style="height: 29px; text-align: center; width: 173.818px;"><img src="https://photos.app.goo.gl/Hrwcu36atJwMEmek7" width="150" /></td>
 <td style="width: 458.182px; height: 29px;">
 <p><strong>Express-SL/SLE</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-SL_SLE?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
 <p>COM Express Basic Size Type 6 Module with 6th Gen Intel&reg; Core&trade;, Xeon&reg; and Celeron&reg; Processors</p>
