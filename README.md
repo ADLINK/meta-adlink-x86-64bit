@@ -28,6 +28,7 @@ This Layer depends on following layers
 |meta-intel| Orgin/sumo|90af97d23fb2a56187c2fe2a3f4f4190d7cc2605|
 |meta-adlink-x86-64bit|  Origin/sumo| | 
 |meta-adlink-sema| Origin/master||
+|meta-qt5| Origin/sumo|d4e7f73d04e8448d326b6f89908701e304e37d65|
 |meta-secure-core|Origin/sumo|1b35fd45a58ef015b52a3df4b39048f2ac1ffbe3|
 |meta-virtualization|Origin/sumo |ed2038c935777d1336c17989d454f4e9c95fea7f|
 
