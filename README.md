@@ -79,6 +79,13 @@
 <p><strong>SMARC&reg; Short Size Module</strong> with Intel Atom&reg; E3900 Series, Pentium&trade; N4200 or Celeron&trade; N3350 Processor&nbsp;</p>
 </td>
 </tr>
+<tr style="height: 96px;">
+<td style="text-align: center; width: 173.818px; height: 96px;"><img src="https://i.imgur.com/AoDazTm.png" alt="" width="100" /></td>
+<td style="width: 458.182px; height: 96px;">&nbsp;
+<p><strong>Q7-AL</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/Qseven/Q7-AL?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
+<p><strong>Qseven&reg; Standard Size Module</strong> with Intel Atom&reg; E3900, Pentium&reg; N4200 and Celeron&reg; N3350 Processor</p>
+</td>
+</tr>
 </tbody>
 </table>
 
