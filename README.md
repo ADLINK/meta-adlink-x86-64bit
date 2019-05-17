@@ -107,7 +107,7 @@ There are four OS images (ISO format) we provided and please refer to <a href="h
       
 <br>
 
-## Please refer to [Guideline](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
+## Please refer to [User Guide](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
 
 <br> 
  
