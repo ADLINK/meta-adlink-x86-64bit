@@ -106,12 +106,12 @@
 
 <br>
 
-<strong>2. There are four OS images (ISO format) for "Express-DN7 module":</strong> 
+<p><strong>2. There are four OS images (ISO format) for "Express-DN7 module":</strong></p>
 <ul>
-<li>minimal image (CLI mode)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://drive.google.com/file/d/1bh_AH7W4no2DJvavmWP9UDxaJ0GBnn0Y/view?usp=sharing" target="_blank" rel="noopener"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></a></li>
-<li>minimal image with SEMA (CLI mode)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://drive.google.com/file/d/13pJtZcn5QBy_lJGVyP1Ws4dy491MzQy8/view?usp=sharing"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></a></li>
-<li>Image with "xfce desktop" &amp; "SEMA"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://drive.google.com/file/d/1nyHvEHqcukYTOrTP8mqAfhH58g5da7KZ/view?usp=sharing" target="_blank" rel="noopener"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></a></li>
-<li>Image with "xfce desktop" &amp; "SEMA" &amp; "Docker"&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://drive.google.com/file/d/1OjPXihQwvbFlo1lTfrk_rnTdCM8w4e03/view?usp=sharing" target="_blank" rel="noopener"><img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></a></li>
+<li>minimal image (CLI mode)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></li>
+<li>minimal image with SEMA (CLI mode)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></li>
+<li>Image with "xfce desktop" &amp; "SEMA"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></li>
+<li>Image with "xfce desktop" &amp; "SEMA" &amp; "Docker"&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn3.iconfinder.com/data/icons/wireless/512/4-512.png" width="25" /></li>
 </ul>
 
 <br>&nbsp;&nbsp;&nbsp;&nbsp; **Note:** please refer to <a href="https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/02.-How-to-install-Yocto-Image-to-USB-Drive" width="25" />the gudieline to bootup from USB drive</a>
