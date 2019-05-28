@@ -23,7 +23,7 @@ This Layer depends on following layers
 
 |     **meta name**        |             **version**                    |  **commit version**  |
 |:---|:--- |:--- |
-|  poky   |  Origin/sumo-next     |  fe0fda6d371967f1b28cd8e4d3b3aad997676af0   |
+|  poky   |  Origin/sumo-next     |  5ddf7fff992b065ee512878d2fe65f3e35d818cf   |
 |meta-openembedded|Origin/sumo|8760facba1bceb299b3613b8955621ddaa3d4c3f|
 |meta-intel| Orgin/sumo|90af97d23fb2a56187c2fe2a3f4f4190d7cc2605|
 |meta-adlink-x86-64bit|  Origin/sumo| | 
