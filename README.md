@@ -62,28 +62,28 @@
 <td style="width: 173.818px; height: 29px; text-align: center;"><img src="https://i.imgur.com/aJnq7wp.png" width="150" /></td>
 <td style="width: 458.182px; height: 29px;">
 <p><strong>Express-BD7</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD7?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>COM Express Basic Size Type 7 Module</strong> with Up to 16 cores Intel Xeon D and Pentium D SoC</p>
+<p><strong>COM Express Basic Size Type 7 Module</strong> <br/>with Up to 16 cores Intel Xeon D and Pentium D SoC</p>
 </td>
 </tr>
 <tr style="height: 29px;">
 <td style="width: 173.818px; height: 29px; text-align: center;"><img src="https://i.imgur.com/mE9Ybo2.png" width="120" /></td>
 <td style="width: 458.182px; height: 29px;">
 <p><strong>nanoX-AL</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType10/nanoX-AL?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>COM Express Mini Size Type 10 Module</strong> with Intel Atom&reg; E3900 series, Pentium&reg;, and Celeron&reg; SoC&nbsp;</p>
+<p><strong>COM Express Mini Size Type 10 Module</strong> <br/>with Intel Atom&reg; E3900 series, Pentium&reg;, and Celeron&reg; SoC&nbsp;</p>
 </td>
 </tr>
 <tr style="height: 96px;">
 <td style="text-align: center; width: 173.818px; height: 96px;"><img src="https://i.imgur.com/Hb0DlGR.png" width="120" /></td>
 <td style="width: 458.182px; height: 96px;">
 <p><strong>LEC-AL</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/SMARC/LEC-AL?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>SMARC&reg; Short Size Module</strong> with Intel Atom&reg; E3900 Series, Pentium&trade; N4200 or Celeron&trade; N3350 Processor&nbsp;</p>
+<p><strong>SMARC&reg; Short Size Module</strong> <br/>with Intel Atom&reg; E3900 Series, Pentium&trade; N4200 or Celeron&trade; N3350 Processor&nbsp;</p>
 </td>
 </tr>
 <tr style="height: 96px;">
 <td style="text-align: center; width: 173.818px; height: 96px;">&nbsp;&nbsp;<img src="https://i.imgur.com/AoDazTm.png" alt="" width="100" /></td>
 <td style="width: 458.182px; height: 96px;">&nbsp;
 <p><strong>Q7-AL</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/Qseven/Q7-AL?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>Qseven&reg; Standard Size Module</strong> with Intel Atom&reg; E3900, Pentium&reg; N4200 and Celeron&reg; N3350 Processor</p>
+<p><strong>Qseven&reg; Standard Size Module</strong> <br/>with Intel Atom&reg; E3900, Pentium&reg; N4200 and Celeron&reg; N3350 Processor</p>
 </td>
 </tr>
 </tbody>
