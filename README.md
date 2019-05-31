@@ -13,49 +13,49 @@
 <td style="height: 46px; text-align: center; border: 1px solid #cccccc; width: 173.818px;"><img src="https://i.imgur.com/LTbOwHe.png" width="150" /></td>
 <td style="border-color: grey; width: 458.182px; height: 46px;">
 <p><strong>Express-CF/CFE</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-CF_CFE?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>COM Express&reg; Basic Size Type 6 Module</strong> with Up to Hexacore 8th Gen Intel Core&trade; 8000 series and Intel Xeon&reg; Processors</p>
+<p><strong>COM Express&reg; Basic Size Type 6 Module</strong> <br/>with Up to Hexacore 8th Gen Intel Core&trade; 8000 series and Intel Xeon&reg; Processors</p>
 </td>
 </tr>
 <tr style="height: 69px;">
 <td style="height: 69px; text-align: center; width: 173.818px;"><img src="https://i.imgur.com/MOOc3tL.png" width="150" /></td>
 <td style="width: 458.182px; height: 69px;">
 <p><strong>Express-KL/KLE</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-KL_KLE?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>COM Express Basic Size Type 6 Module</strong> with 7th Gen Intel&reg; Core&trade; 7000 series and Intel&reg; Xeon&reg; Processors</p>
+<p><strong>COM Express Basic Size Type 6 Module</strong> <br/>with 7th Gen Intel&reg; Core&trade; 7000 series and Intel&reg; Xeon&reg; Processors</p>
 </td>
 </tr>
 <tr style="height: 29px;">
 <td style="height: 29px; text-align: center; width: 173.818px;"><img src="https://i.imgur.com/DcZeOoc.png" width="150" /></td>
 <td style="width: 458.182px; height: 29px;">
 <p><strong>Express-SL/SLE</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-SL_SLE?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>COM Express Basic Size Type 6 Module</strong> with 6th Gen Intel&reg; Core&trade;, Xeon&reg; and Celeron&reg; Processors</p>
+<p><strong>COM Express Basic Size Type 6 Module</strong> <br/>with 6th Gen Intel&reg; Core&trade;, Xeon&reg; and Celeron&reg; Processors</p>
 </td>
 </tr>
 <tr style="height: 29px;">
 <td style="width: 173.818px; height: 29px; text-align: center;">&nbsp;&nbsp;<img src="https://i.imgur.com/g3MhxhW.png" width="100" /></td>
 <td style="width: 458.182px; height: 29px;">
 <p><strong>cExpress-KL</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-KL?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>COM Express Compact Size Type 6 Module</strong> with Mobile 7th Gen Intel&reg; Core&trade; and Celeron&reg; Processors&nbsp;</p>
+<p><strong>COM Express Compact Size Type 6 Module</strong> <br/>with Mobile 7th Gen Intel&reg; Core&trade; and Celeron&reg; Processors&nbsp;</p>
 </td>
 </tr>
 <tr style="height: 30.7273px;">
 <td style="width: 173.818px; height: 30.7273px; text-align: center;">&nbsp;&nbsp;<img src="https://i.imgur.com/kfauzIu.png" width="100" /></td>
 <td style="width: 458.182px; height: 30.7273px;">
 <p><strong>cExpress-SL</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-SL?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>COM Express Compact Size Type 6 Module</strong> with Mobile 7th Gen Intel&reg; Core&trade; and Celeron&reg; Processors&nbsp;</p>
+<p><strong>COM Express Compact Size Type 6 Module</strong> <br/>with Mobile 7th Gen Intel&reg; Core&trade; and Celeron&reg; Processors&nbsp;</p>
 </td>
 </tr>
 <tr style="height: 29px;">
 <td style="width: 173.818px; height: 29px; text-align: center;">&nbsp;&nbsp;<img src="https://i.imgur.com/4kL8TJd.png" width="100" /></td>
 <td style="width: 458.182px; height: 29px;">
 <p><strong>cExpress-AL</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-AL?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>COM Express Compact Size Type 6 Module</strong> Intel Atom&reg; E3900 series, Pentium&reg;, and Celeron&reg; SoC&nbsp;</p>
+<p><strong>COM Express Compact Size Type 6 Module</strong> <br/>Intel Atom&reg; E3900 series, Pentium&reg;, and Celeron&reg; SoC&nbsp;</p>
 </td>
 </tr>
 <tr style="height: 29px;">
 <td style="width: 173.818px; height: 29px; text-align: center;"><img src="https://i.imgur.com/oqblFbg.png" width="150" /></td>
 <td style="width: 458.182px; height: 29px;">
 <p><strong>Express-DN7</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-DN7?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>COM Express Basic Size Type 7 Module</strong> with Intel Atom&reg; C3000 SoC</p>
+<p><strong>COM Express Basic Size Type 7 Module</strong> <br/>with Intel Atom&reg; C3000 SoC</p>
 </td>
 </tr>
 <tr style="height: 29px;">
