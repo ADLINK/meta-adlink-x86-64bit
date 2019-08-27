@@ -3,7 +3,7 @@
 <br>
 
 
-### Following products are supported:
+### The following products are supported :
 <table style="width: 638px;" align="center">
 <tbody>
 <tr style="height: 22px;">
@@ -121,8 +121,8 @@
 ## Please refer to [User Guide](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
 
 <br> 
- 
- 
+
+
 <br>
 
 Please feel free to send us (email: ryanzj.huang@adlinktech.com) patches for this layer and report bugs of this layer. 
