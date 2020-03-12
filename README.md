@@ -12,6 +12,14 @@
 <tr style="height: 46px;">
 <td style="height: 46px; text-align: center; border: 1px solid #cccccc; width: 173.818px;"><img src="https://i.imgur.com/LTbOwHe.png" width="150" /></td>
 <td style="border-color: grey; width: 458.182px; height: 46px;">
+<p><strong>Express-CFR</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-CFR?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
+<p><strong>COM Express&reg; Basic Size Type 6 Module</strong> <br/>with Hexacore Mobile 9th Gen Intel® Xeon®, Core™, Pentium® and Celeron® Processors</p>
+</td>
+</tr>
+  
+<tr style="height: 46px;">
+<td style="height: 46px; text-align: center; border: 1px solid #cccccc; width: 173.818px;"><img src="https://i.imgur.com/LTbOwHe.png" width="150" /></td>
+<td style="border-color: grey; width: 458.182px; height: 46px;">
 <p><strong>Express-CF/CFE</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-CF_CFE?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
 <p><strong>COM Express&reg; Basic Size Type 6 Module</strong> <br/>with Up to Hexacore 8th Gen Intel Core&trade; 8000 series and Intel Xeon&reg; Processors</p>
 </td>
