@@ -20,12 +20,24 @@ USER="root"
 
 
 #Changing Permission of SEMA
-chmod a+x /usr/local/SEMA/bin/*
+#chmod a+x /usr/local/SEMA/bin/*
+
+
+if [ -x /usr/bin/semautil ]; then
+	modprobe i2c_i801
+	modprobe adl-bmc
+	modprobe adl-bmc-boardinfo
+	modprobe adl-bmc-vm
+	modprobe adl-bmc-wdt
+	modprobe adl-bmc-hwmon
+	modprobe adl-bmc-nvmem
+	modprobe adl-bmc-bklight
+	modprobe gpio-pca953x
+fi
+
 
 if [ -x /usr/bin/startxfce4 ]; then
-   chmod 777 /home/root/Desktop/semagui.desktop
-
-   #removing unwanted applications
+     #removing unwanted applications
    rm /usr/share/applications/exo-mail-reader.desktop
    rm /usr/share/applications/xinput_calibrator.desktop
 fi 
