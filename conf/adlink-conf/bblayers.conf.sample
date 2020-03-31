@@ -19,5 +19,8 @@ BBLAYERS ?= " \
   ${TOPDIR}/../meta-adlink-x86-64bit \
   ${TOPDIR}/../meta-adlink-sema \
   ${TOPDIR}/../meta-qt5 \
+  ${TOPDIR}/../meta-secure-core/meta-tpm \
+  ${TOPDIR}/../meta-secure-core/meta-tpm2 \
+  ${TOPDIR}/../meta-python2 \
 "
 

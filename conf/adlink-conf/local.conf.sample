@@ -154,6 +154,16 @@ SERIAL_CONSOLE = "115200 ttyS0"
 
 LICENSE_FLAGS_WHITELIST = "commercial"
 
+## features
+DISTRO_FEATURES_append = " tpm tpm2"
+DISTRO_FEATURES_append = " virtualization" 
+
+PREFERRED_VERSION_tpm2-tss = "1.4.0"
+## TPM_2.0 tool
+IMAGE_INSTALL_append = " tpm2-tools libtss2 tpm2-abrmd tpm2-tss"
+
+## TPM_1.x tool
+IMAGE_INSTALL_append = " tpm-tools trousers"
 
 #generate the ISO
 IMAGE_FSTYPES = "live iso"

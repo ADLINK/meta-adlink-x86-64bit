@@ -29,6 +29,8 @@ This Layer depends on following layers
 |meta-adlink-x86-64bit| Origin/zeus   | |
 |meta-adlink-sema| Origin/master | 5dd46238e8cca5282d8cf69e34bd2025fdb565c7 |
 |meta-qt5| Origin/zeus |0bdbb344bc0a7261d76d715e570ddc2ecfefae58|
+|meta-secure-core| Origin/master |e8e80fb7c4971bb05e14ec5e329c1435ba485b2b|
+|meta-python2| Origin/zeus |4400f9155ec193d028208cf0c66aeed2ba2b00ab|
 
 <br> 
 
