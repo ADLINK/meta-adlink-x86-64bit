@@ -27,6 +27,7 @@ This Layer depends on following layers
 |meta-openembedded|Origin/zeus|bb65c27a772723dfe2c15b5e1b27bcc1a1ed884c|
 |meta-intel| Orgin/zeus |faced19dda5332cce9164903b250db5aa9b86259|
 |meta-adlink-x86-64bit| Origin/zeus   | |
+|meta-adlink-sema| Origin/master | 5dd46238e8cca5282d8cf69e34bd2025fdb565c7 |
 |meta-qt5| Origin/zeus |0bdbb344bc0a7261d76d715e570ddc2ecfefae58|
 
 <br> 

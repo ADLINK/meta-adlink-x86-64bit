@@ -24,7 +24,7 @@ IMAGE_INSTALL_append = " xserver-xorg xterm xinit-env"
 
 
 ## SEMA applications
-#IMAGE_INSTALL_append = " sema semagui-desktop trolltech startupconfig "
+IMAGE_INSTALL_append = " sema4.0 startupconfig "
                  
 #Tools
 IMAGE_INSTALL_append = " usbotg-setting git wget which busybox bzip2 cmake bash tar gzip kmod ethtool i2c-tools ifupdown inetutils init-ifupdown iw minicom net-tools vim openssh "
