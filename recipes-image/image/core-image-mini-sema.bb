@@ -19,6 +19,6 @@ IMAGE_INSTALL_append = " sema4.0 startupconfig"
 
 
 #Tools
-IMAGE_INSTALL_append = " lshw ntp ntpdate libstdc++ git wget which busybox bzip2 cmake bash tar gzip kmod ethtool i2c-tools ifupdown inetutils init-ifupdown iw minicom net-tools vim openssh kernel-modules  "
+IMAGE_INSTALL_append = " lshw ntp ntpdate libstdc++ git wget which busybox bzip2 cmake bash tar gzip kmod ethtool i2c-tools ifupdown inetutils init-ifupdown iw minicom net-tools vim openssh "
 
 export IMAGE_BASENAME = "adlink-mini-x86"
