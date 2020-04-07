@@ -20,7 +20,7 @@ USER="root"
 
 
 #Changing Permission of SEMA
-#chmod a+x /usr/local/SEMA/bin/*
+chmod a+x /usr/bin/semautil
 
 
 if [ -x /usr/bin/semautil ]; then
