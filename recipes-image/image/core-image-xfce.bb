@@ -15,7 +15,7 @@ export IMAGE_BASENAME = "adlink-xfce-x86"
 
 ### XFCE Tools
 
-IMAGE_INSTALL_append = " garcon sysprof xfce4-screenshooter ristretto xfce4-taskmanager xfce4-appfinder xfce-dusk-gtk3 xfceshutdown thunar-volman "
+IMAGE_INSTALL_append = " garcon sysprof xfce4-screenshooter ristretto xfce4-taskmanager xfce4-appfinder xfce-dusk-gtk3 xfceshutdown thunar-volman epiphany"
 
 
 
