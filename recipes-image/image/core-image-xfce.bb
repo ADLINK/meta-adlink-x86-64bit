@@ -39,3 +39,5 @@ IMAGE_INSTALL_append = " tpm2-tools libtss2 tpm2-abrmd tpm2-tss"
 ## TPM_1.x tool
 IMAGE_INSTALL_append = " tpm-tools trousers"
 
+IMAGE_INSTALL_append = " camera-setting"
+
