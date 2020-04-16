@@ -23,14 +23,14 @@
 
 |     **meta name**        |             **version**                    |  **commit version**  |
 |:---|:--- |:--- |
-|  poky   |  Origin/zeus  | 94f6b31befda5c496f65e863a6f8152b42d7ebf0 |
-|meta-openembedded|Origin/zeus|bb65c27a772723dfe2c15b5e1b27bcc1a1ed884c|
-|meta-intel| Orgin/zeus |faced19dda5332cce9164903b250db5aa9b86259|
-|meta-adlink-x86-64bit| Origin/zeus   |3612240947d3f368aedcd003796e9cbb334b794b |
-|meta-adlink-sema| Orgin | d2f7ed215b0e3773f4e51a89b64a5f2233a65f32 |
-|meta-qt5| Origin/zeus |0bdbb344bc0a7261d76d715e570ddc2ecfefae58|
-|meta-secure-core| Origin/master |e8e80fb7c4971bb05e14ec5e329c1435ba485b2b|
-|meta-python2| Origin/zeus |4400f9155ec193d028208cf0c66aeed2ba2b00ab|
+|  poky   |  zeus  | 94f6b31befda5c496f65e863a6f8152b42d7ebf0 |
+|meta-openembedded|zeus|bb65c27a772723dfe2c15b5e1b27bcc1a1ed884c|
+|meta-intel| /zeus |faced19dda5332cce9164903b250db5aa9b86259|
+|meta-adlink-x86-64bit| zeus   |3612240947d3f368aedcd003796e9cbb334b794b |
+|meta-adlink-sema| master | d2f7ed215b0e3773f4e51a89b64a5f2233a65f32 |
+|meta-qt5| zeus |0bdbb344bc0a7261d76d715e570ddc2ecfefae58|
+|meta-secure-core| master |e8e80fb7c4971bb05e14ec5e329c1435ba485b2b|
+|meta-python2| zeus |4400f9155ec193d028208cf0c66aeed2ba2b00ab|
 
 <br> 
 
