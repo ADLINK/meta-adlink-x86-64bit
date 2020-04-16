@@ -9,7 +9,7 @@
 |:---|:--- |
 |Com Express Type 6 - Basic Size | Express-CF/CFE, Express-KL/KLE, Express-SL/SLE      |
 | COM Express Type 6 - Compact Size | cExpress-WL, cExpress-KL, cExpress-SL, cExpress-AL |
-| COM Express Type 7               | Express-DN7, Express-DB7 |
+| COM Express Type 7               | Express-DN7, Express-DB7, Express-DB74 |
 | COM Express Type 10            | nanoX-AL   |
 | SMARC                            | LEC-AL |
 | Qseven                           | Q7-AL |
