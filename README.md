@@ -140,7 +140,7 @@
 
 <br>
 
-## Please refer to [User Guide](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
+### Please refer to [wiki](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for Yocto BSP building
 
 <br> 
 
