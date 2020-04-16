@@ -69,7 +69,9 @@
 <tr style="height: 29px;">
 <td style="width: 173.818px; height: 29px; text-align: center;"><img src="https://i.imgur.com/aJnq7wp.png" width="150" /></td>
 <td style="width: 458.182px; height: 29px;">
-<p><strong>Express-BD7</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD7?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
+<p><strong>Express-
+  
+  </strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD7?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
 <p><strong>COM Express Basic Size Type 7 Module</strong> <br/>with Up to 16 cores Intel Xeon D and Pentium D SoC</p>
 </td>
 </tr>
@@ -78,13 +80,6 @@
 <td style="width: 458.182px; height: 29px;">
 <p><strong>Express-DN74</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD74?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
 <p><strong>COM Express Basic Size Type 7 Module</strong> <br/>with Intel® Xeon® D SoC and 4 SODIMMs</p>
-</td>
-</tr>
-<tr style="height: 29px;">
-<td style="width: 173.818px; height: 29px; text-align: center;"><img src="https://i.imgur.com/aJnq7wp.png" width="150" /></td>
-<td style="width: 458.182px; height: 29px;">
-<p><strong>Express-BD7</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD7?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
-<p><strong>COM Express Basic Size Type 7 Module</strong> <br/>with Up to 16 cores Intel Xeon D and Pentium D SoC</p>
 </td>
 </tr>
 <tr style="height: 29px;">
