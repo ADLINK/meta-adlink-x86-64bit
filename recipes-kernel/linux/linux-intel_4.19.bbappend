@@ -10,6 +10,9 @@ SRC_URI_append = " file://otg.cfg \
       		   ${@bb.utils.contains('DISTRO_FEATURES', 'tpm', 'file://tpm.scc', '', d)} \
    	           ${@bb.utils.contains('DISTRO_FEATURES', 'tpm2', 'file://tpm2.scc', '', d)} \		   	
 "
+SRCREV_machine = "74ec6e67203d727c4d1259c0a5d19a40933748a7"
+LINUX_VERSION = "4.19.87"
+
 #c3800 soc kernel  configuration
 # Additional Kernel Features to enable QAT, DPDK and QEMU-KVM
 KERNEL_FEATURES_append = " features/qat/qat.scc"
