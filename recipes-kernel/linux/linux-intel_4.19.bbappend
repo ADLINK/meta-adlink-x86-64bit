@@ -2,11 +2,10 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 SRC_URI_append = " file://otg.cfg \
 		   file://S4_support.cfg \
 		   file://Sema.cfg \
-		   file://ipu.cfg \
 		   file://0001-Allocate-FB-for-HDMI-DP-VGA-at-boot-time-even-device.patch \
 		   file://0001-Removed-trace_printk-to-avoid-warning-while-booting.patch \
 		   file://0001-SMbus.patch \	
-		   file://0001-OV2740-Camera-module-support.patch \	
+		   file://0001-USB-OTG-default-mode-set.patch \	
       		   ${@bb.utils.contains('DISTRO_FEATURES', 'tpm', 'file://tpm.scc', '', d)} \
    	           ${@bb.utils.contains('DISTRO_FEATURES', 'tpm2', 'file://tpm2.scc', '', d)} \		   	
 "
