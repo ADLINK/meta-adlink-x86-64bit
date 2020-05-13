@@ -142,11 +142,6 @@ PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 CONF_VERSION = "1"
 
 
-######################################################################################
-####  ADLINK SPECIFIC CONFIGURATIONS                                              ####
-####                                                                              ####
-######################################################################################
-
 ## console settings
 SYSLINUX_OPTS = "serial 0 115200"
 SERIAL_CONSOLE = "115200 ttyS0"
