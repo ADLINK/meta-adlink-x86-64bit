@@ -39,6 +39,12 @@
 
 <br>
 
+### Supported Hardware List: 
+* see the [list](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/master#the-following-products-are-supported-) for more details
+
+<br>
+
+### 
 
 
 Please feel free to send us (email: ryanzj.huang@adlinktech.com) patches for this layer and report bugs of this layer. 
