@@ -3,7 +3,7 @@
 <br>
 
 
-### Yocto ISO Images for the quick evaluation**
+### Yocto ISO Images for the quick evaluation
 
 * xfce Desktop environment + [SEMA 4.0](https://adlink-epm.github.io/sema-doc/#/) (image size: 2.5 GB) [download link](https://hq0epm0west0us0storage.blob.core.windows.net/public/COM%20X86/Images/Yocto/adlink-xfce-x86-intel-corei7-64-20200506054002.iso)
 * minimal image with commandine mode + [SEMA 4.0](https://adlink-epm.github.io/sema-doc/#/) (image size: 1.3 GB) [download link](https://hq0epm0west0us0storage.blob.core.windows.net/public/COM%20X86/Images/Yocto/adlink-mini-x86-intel-corei7-64-20200507014241.iso)
@@ -11,7 +11,7 @@
 
 <br>
 
-### Zeus Branch details**
+### Zeus Branch details
 
 
 |     **meta name**        |             **version**                    |  **commit version**  |
@@ -27,20 +27,20 @@
 
 <br> 
 
-### How to build Yocto Image:
+### How to build Yocto Image
 * see [the documentation](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/01.-Build-Yocto-Image) for the more details
  
 <br>
 
 
-### how to flash ISO image to your storage:
+### how to flash ISO image to your storage
 * [Boot from USB drive](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/02.-How-to-install-Yocto-Image-to-USB-Drive)
 * [Boot from eMMC/SD Card](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/03.-How-to-install-Yocto-Image-to-eMMC-&-SD-Card)
 * [Boot from SATA drive](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/04.-How-to-install-Yocto-Image-to-SATA-Drive)
 
 <br> 
 
-### Supported Hardware List: 
+### Supported Hardware List
 * see [the list](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/master#the-following-products-are-supported-) for more details
 
 <br>
