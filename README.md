@@ -25,7 +25,7 @@
 |:---|:--- |:--- |
 |  poky   |  zeus  | 94f6b31befda5c496f65e863a6f8152b42d7ebf0 |
 |meta-openembedded|zeus|bb65c27a772723dfe2c15b5e1b27bcc1a1ed884c|
-|meta-intel| /zeus |faced19dda5332cce9164903b250db5aa9b86259|
+|meta-intel| zeus |faced19dda5332cce9164903b250db5aa9b86259|
 |meta-adlink-x86-64bit| zeus   |3612240947d3f368aedcd003796e9cbb334b794b |
 |meta-adlink-sema| master | d2f7ed215b0e3773f4e51a89b64a5f2233a65f32 |
 |meta-qt5| zeus |0bdbb344bc0a7261d76d715e570ddc2ecfefae58|
