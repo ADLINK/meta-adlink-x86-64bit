@@ -10,6 +10,14 @@
 <th style="height: 22px; width: 632px; text-align: center; border: 1px solid #cccccc;" colspan="2">Module Name</th>
 </tr>
 <tr style="height: 46px;">
+<td style="height: 46px; text-align: center; border: 1px solid #cccccc; width: 173.818px;"><img src="https://cdn.adlinktech.com/webupd/products/images/1776/cExpress-WL-F.jpg" width="150" /></td>
+<td style="border-color: grey; width: 458.182px; height: 46px;">
+<p><strong>cExpress-WL</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-WL?lang=en">More Details</a>)</p>
+<p><strong>COM Express Type 6 Compact</strong> <br/>with Up to Quadcore Intel® Core™ and Celeron® Processors</p>
+</td>
+</tr>
+  
+<tr style="height: 46px;">
 <td style="height: 46px; text-align: center; border: 1px solid #cccccc; width: 173.818px;"><img src="https://i.imgur.com/LTbOwHe.png" width="150" /></td>
 <td style="border-color: grey; width: 458.182px; height: 46px;">
 <p><strong>Express-CFR</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-CFR?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
@@ -45,6 +53,14 @@
 <p><strong>COM Express Compact Size Type 6 Module</strong> <br/>with Mobile 7th Gen Intel&reg; Core&trade; and Celeron&reg; Processors&nbsp;</p>
 </td>
 </tr>
+<tr style="height: 29px;">
+<td style="width: 173.818px; height: 29px; text-align: center;">&nbsp;&nbsp;<img src="https://cdn.adlinktech.com/webupd/products/images/1793/480x320_Express-SL2_F.jpg" width="100" /></td>
+<td style="width: 458.182px; height: 29px;">
+<p><strong>Express-KL2</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType2/Express-KL2?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
+<p><strong>COM Express Type 2 Module</strong> <br/>with Mobile 7th Gen Intel® Xeon® and Core™ Processors (formerly codename: Kaby Lake)</p>
+</td>
+</tr>
+
 <tr style="height: 30.7273px;">
 <td style="width: 173.818px; height: 30.7273px; text-align: center;">&nbsp;&nbsp;<img src="https://i.imgur.com/kfauzIu.png" width="100" /></td>
 <td style="width: 458.182px; height: 30.7273px;">
@@ -69,14 +85,14 @@
 <tr style="height: 29px;">
 <td style="width: 173.818px; height: 29px; text-align: center;"><img src="https://i.imgur.com/aJnq7wp.png" width="150" /></td>
 <td style="width: 458.182px; height: 29px;">
-<p><strong>Express-DB7</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD7?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
+<p><strong>Express-BD7</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD7?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
 <p><strong>COM Express Basic Size Type 7 Module</strong> <br/>with Up to 16 cores Intel Xeon D and Pentium D SoC</p>
 </td>
 </tr>
   <tr style="height: 29px;">
 <td style="width: 173.818px; height: 29px; text-align: center;"><img src="https://i.imgur.com/oqblFbg.png" width="150" /></td>
 <td style="width: 458.182px; height: 29px;">
-<p><strong>Express-DN74</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD74?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
+<p><strong>Express-BD74</strong>&nbsp;(<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD74?lang=en" target="_blank" rel="noopener">More Details</a>)</p>
 <p><strong>COM Express Basic Size Type 7 Module</strong> <br/>with Intel® Xeon® D SoC and 4 SODIMMs</p>
 </td>
 </tr>
