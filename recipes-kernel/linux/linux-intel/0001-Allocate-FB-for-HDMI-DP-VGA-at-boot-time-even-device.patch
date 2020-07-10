@@ -1,0 +1,39 @@
+From 21188d5d85fcefc05598b07aea24779745a378da Mon Sep 17 00:00:00 2001
+From: Dinesh kumar <dineshkumar.varadarajan@adlinktech.com>
+Date: Fri, 8 Feb 2019 14:58:01 +0530
+Subject: [PATCH] Allocate FB for HDMI/DP/VGA at boot time even device not
+ connected.So, later Display Device can be plugged
+
+---
+ drivers/gpu/drm/drm_fb_helper.c | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+diff --git a/drivers/gpu/drm/drm_fb_helper.c b/drivers/gpu/drm/drm_fb_helper.c
+index 1692e78..d2a22b3 100644
+--- a/drivers/gpu/drm/drm_fb_helper.c
++++ b/drivers/gpu/drm/drm_fb_helper.c
+@@ -1811,12 +1811,18 @@ static int drm_fb_helper_single_fb_probe(struct drm_fb_helper *fb_helper,
+ 	}
+ 
+ 	if (crtc_count == 0 || sizes.fb_width == -1 || sizes.fb_height == -1) {
+-		DRM_INFO("Cannot find any crtc or sizes\n");
+ 
+ 		/* First time: disable all crtc's.. */
+-		if (!fb_helper->deferred_setup && !READ_ONCE(fb_helper->dev->master))
++		/*if (!fb_helper->deferred_setup && !READ_ONCE(fb_helper->dev->master))
+ 			restore_fbdev_mode(fb_helper);
+-		return -EAGAIN;
++		return -EAGAIN;*/
++
++		/* Assume VGA/HDMI cable just fell out
++		   and will come back later. */
++	       DRM_INFO("Cannot find any crtc or sizes - going 1024x768\n");
++		sizes.fb_width = sizes.surface_width = 1024;
++		sizes.fb_height = sizes.surface_height = 768;
++
+ 	}
+ 
+ 	/* Handle our overallocation */
+-- 
+1.9.1
+

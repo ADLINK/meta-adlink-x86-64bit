@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Name=suspend
+Comment=suspend the machine safely
+Exec=echo mem > /sys/power/state 
+Icon=system-suspend
+Terminal=false
+Categories=Utility;
+StartupNotify=XFCE;
+Categories=X-XFCE;X-Xfce-Toplevel;
+
+
+Name[en_IN]=suspend.desktop

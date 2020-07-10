@@ -1,0 +1,229 @@
+From c90b1ca751389538ac7e9c2edda9bfa8a35823be Mon Sep 17 00:00:00 2001
+From: Dinesh kumar <dineshkumar.varadarajan@adlinktech.com>
+Date: Mon, 19 Nov 2018 12:18:18 +0530
+Subject: [PATCH] Removed trace_printk() to avoid warning while booting
+
+---
+ drivers/media/pci/intel/ici/ici-isys.c | 10 +++++-----
+ drivers/media/pci/intel/ipu-isys.c     |  8 ++++----
+ drivers/media/pci/intel/ipu-psys.c     |  8 ++++----
+ drivers/media/pci/intel/ipu.c          | 22 +++++++++++-----------
+ 4 files changed, 24 insertions(+), 24 deletions(-)
+
+diff --git a/drivers/media/pci/intel/ici/ici-isys.c b/drivers/media/pci/intel/ici/ici-isys.c
+index 466659baec24..be698e39bc67 100644
+--- a/drivers/media/pci/intel/ici/ici-isys.c
++++ b/drivers/media/pci/intel/ici/ici-isys.c
+@@ -895,17 +895,17 @@ static int isys_probe(struct ipu_bus_device *adev)
+ 	unsigned long attrs;
+ #endif
+ 
+-	trace_printk("B|%d|TMWK\n", current->pid);
++	//trace_printk("B|%d|TMWK\n", current->pid);
+ 
+ 	/* Has the domain been attached? */
+ 	if (!mmu || !isp->pkg_dir_dma_addr) {
+-		trace_printk("E|TMWK\n");
++		//trace_printk("E|TMWK\n");
+ 		return -EPROBE_DEFER;
+ 	}
+ 
+ 	isys = devm_kzalloc(&adev->dev, sizeof(*isys), GFP_KERNEL);
+ 	if (!isys) {
+-		trace_printk("E|TMWK\n");
++		//trace_printk("E|TMWK\n");
+ 		return -ENOMEM;
+ 	}
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(4, 8, 0)
+@@ -987,7 +987,7 @@ static int isys_probe(struct ipu_bus_device *adev)
+ 	if (rval)
+ 		goto out_remove_pkg_dir_shared_buffer;
+ 
+-	trace_printk("E|TMWK\n");
++	//trace_printk("E|TMWK\n");
+ 	return 0;
+ 
+ out_remove_pkg_dir_shared_buffer:
+@@ -1004,7 +1004,7 @@ static int isys_probe(struct ipu_bus_device *adev)
+ 		release_firmware(isys->fw);
+ 	ipu_trace_uninit(&adev->dev);
+ 
+-	trace_printk("E|TMWK\n");
++	//trace_printk("E|TMWK\n");
+ 
+ 	mutex_destroy(&isys->mutex);
+ 	mutex_destroy(&isys->stream_mutex);
+diff --git a/drivers/media/pci/intel/ipu-isys.c b/drivers/media/pci/intel/ipu-isys.c
+index 2f65fc134ac2..cbe3eab1c367 100644
+--- a/drivers/media/pci/intel/ipu-isys.c
++++ b/drivers/media/pci/intel/ipu-isys.c
+@@ -1166,11 +1166,11 @@ static int isys_probe(struct ipu_bus_device *adev)
+ 	unsigned long attrs;
+ #endif
+ 
+-	trace_printk("B|%d|TMWK\n", current->pid);
++	//trace_printk("B|%d|TMWK\n", current->pid);
+ 
+ 	/* Has the domain been attached? */
+ 	if (!mmu || !isp->pkg_dir_dma_addr) {
+-		trace_printk("E|TMWK\n");
++		//trace_printk("E|TMWK\n");
+ 		return -EPROBE_DEFER;
+ 	}
+ 
+@@ -1266,7 +1266,7 @@ static int isys_probe(struct ipu_bus_device *adev)
+ 	if (rval)
+ 		goto out_remove_pkg_dir_shared_buffer;
+ 
+-	trace_printk("E|TMWK\n");
++	//trace_printk("E|TMWK\n");
+ 	return 0;
+ 
+ out_remove_pkg_dir_shared_buffer:
+@@ -1282,7 +1282,7 @@ static int isys_probe(struct ipu_bus_device *adev)
+ 		release_firmware(isys->fw);
+ 	ipu_trace_uninit(&adev->dev);
+ 
+-	trace_printk("E|TMWK\n");
++	//trace_printk("E|TMWK\n");
+ 
+ 	mutex_destroy(&isys->mutex);
+ 	mutex_destroy(&isys->stream_mutex);
+diff --git a/drivers/media/pci/intel/ipu-psys.c b/drivers/media/pci/intel/ipu-psys.c
+index 7118f472dd18..5cff478cf60b 100644
+--- a/drivers/media/pci/intel/ipu-psys.c
++++ b/drivers/media/pci/intel/ipu-psys.c
+@@ -1303,11 +1303,11 @@ static int ipu_psys_probe(struct ipu_bus_device *adev)
+ 	unsigned int minor;
+ 	int i, rval = -E2BIG;
+ 
+-	trace_printk("B|%d|TMWK\n", current->pid);
++	//trace_printk("B|%d|TMWK\n", current->pid);
+ 
+ 	/* Has the domain been attached? */
+ 	if (!mmu) {
+-		trace_printk("E|TMWK\n");
++		//trace_printk("E|TMWK\n");
+ 		return -EPROBE_DEFER;
+ 	}
+ 
+@@ -1475,7 +1475,7 @@ static int ipu_psys_probe(struct ipu_bus_device *adev)
+ 
+ 	dev_info(&adev->dev, "psys probe minor: %d\n", minor);
+ 
+-	trace_printk("E|TMWK\n");
++	//trace_printk("E|TMWK\n");
+ 	return 0;
+ 
+ out_release_fw_com:
+@@ -1509,7 +1509,7 @@ static int ipu_psys_probe(struct ipu_bus_device *adev)
+ 	ipu_trace_uninit(&adev->dev);
+ 	mutex_unlock(&ipu_psys_mutex);
+ 
+-	trace_printk("E|TMWK\n");
++	//trace_printk("E|TMWK\n");
+ 	return rval;
+ }
+ 
+diff --git a/drivers/media/pci/intel/ipu.c b/drivers/media/pci/intel/ipu.c
+index e59a281ca8b6..8394251058e7 100644
+--- a/drivers/media/pci/intel/ipu.c
++++ b/drivers/media/pci/intel/ipu.c
+@@ -326,7 +326,7 @@ static int ipu_pci_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 	unsigned int dma_mask = IPU_DMA_MASK;
+ 	int rval;
+ 
+-	trace_printk("B|%d|TMWK\n", current->pid);
++//	trace_printk("B|%d|TMWK\n", current->pid);
+ 
+ 	isp = devm_kzalloc(&pdev->dev, sizeof(*isp), GFP_KERNEL);
+ 	if (!isp)
+@@ -339,7 +339,7 @@ static int ipu_pci_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 	if (rval) {
+ 		dev_err(&pdev->dev, "Failed to enable CI ISP device (%d)\n",
+ 			rval);
+-		trace_printk("E|TMWK\n");
++	//	trace_printk("E|TMWK\n");
+ 		return rval;
+ 	}
+ 
+@@ -354,7 +354,7 @@ static int ipu_pci_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 	if (rval) {
+ 		dev_err(&pdev->dev, "Failed to I/O memory remapping (%d)\n",
+ 			rval);
+-		trace_printk("E|TMWK\n");
++	//	trace_printk("E|TMWK\n");
+ 		return rval;
+ 	}
+ 	dev_info(&pdev->dev, "physical base address 0x%llx\n", phys);
+@@ -362,7 +362,7 @@ static int ipu_pci_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 	iomap = pcim_iomap_table(pdev);
+ 	if (!iomap) {
+ 		dev_err(&pdev->dev, "Failed to iomap table (%d)\n", rval);
+-		trace_printk("E|TMWK\n");
++	//	trace_printk("E|TMWK\n");
+ 		return -ENODEV;
+ 	}
+ 
+@@ -383,13 +383,13 @@ static int ipu_pci_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 						   DMA_BIT_MASK(dma_mask));
+ 	if (rval) {
+ 		dev_err(&pdev->dev, "Failed to set DMA mask (%d)\n", rval);
+-		trace_printk("E|TMWK\n");
++	//	trace_printk("E|TMWK\n");
+ 		return rval;
+ 	}
+ 
+ 	rval = ipu_pci_config_setup(pdev);
+ 	if (rval) {
+-		trace_printk("E|TMWK\n");
++	//	trace_printk("E|TMWK\n");
+ 		return rval;
+ 	}
+ 
+@@ -399,13 +399,13 @@ static int ipu_pci_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 					 IRQF_SHARED, IPU_NAME, isp);
+ 	if (rval) {
+ 		dev_err(&pdev->dev, "Requesting irq failed(%d)\n", rval);
+-		trace_printk("E|TMWK\n");
++	//	trace_printk("E|TMWK\n");
+ 		return rval;
+ 	}
+ 
+ 	rval = ipu_buttress_init(isp);
+ 	if (rval) {
+-		trace_printk("E|TMWK\n");
++	//	trace_printk("E|TMWK\n");
+ 		return rval;
+ 	}
+ 
+@@ -414,7 +414,7 @@ static int ipu_pci_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 	rval = request_firmware(&isp->cpd_fw, isp->cpd_fw_name, &pdev->dev);
+ 	if (rval) {
+ 		dev_err(&isp->pdev->dev, "Requesting signed firmware failed\n");
+-		trace_printk("E|TMWK\n");
++	//	trace_printk("E|TMWK\n");
+ 		return rval;
+ 	}
+ 
+@@ -505,7 +505,7 @@ static int ipu_pci_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 	dev_info(&pdev->dev, "IPU driver verion %d.%d\n", IPU_MAJOR_VERSION,
+ 		 IPU_MINOR_VERSION);
+ 
+-	trace_printk("E|TMWK\n");
++	//trace_printk("E|TMWK\n");
+ 	return 0;
+ 
+ out_ipu_bus_del_devices:
+@@ -513,7 +513,7 @@ static int ipu_pci_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 	ipu_buttress_exit(isp);
+ 	release_firmware(isp->cpd_fw);
+ 
+-	trace_printk("E|TMWK\n");
++	//trace_printk("E|TMWK\n");
+ 	return rval;
+ }
+ 
+-- 
+2.18.0
+
