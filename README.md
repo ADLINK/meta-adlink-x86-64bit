@@ -27,8 +27,8 @@
 
 <br> 
 
-### How to build Yocto BSP:
-* see [the documentation](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for the more details
+### How to build Yocto Image:
+* see [the documentation](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/01.-Build-Yocto-Image) for the more details
  
 <br>
 
