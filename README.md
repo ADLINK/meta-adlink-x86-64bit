@@ -2,21 +2,6 @@
 
 <br>
 
- ### Supported Hardware
-
-|      **Module Type**                  |       **Module Name**                    |
-|:---|:--- |
-|Com Express Type 6 - Basic Size | Express-CF/CFE, Express-KL/KLE, Express-SL/SLE      |
-| COM Express Type 6 - Compact Size | cExpress-WL, cExpress-KL, cExpress-SL, cExpress-AL |
-| COM Express Type 7               | Express-DN7, Express-DB7, Express-DB74 |
-| COM Express Type 10            | nanoX-AL   |
-| SMARC                            | LEC-AL |
-| Qseven                           | Q7-AL |
-
-&nbsp;&nbsp; **Note:** This BSP provides hardware specific settings, libraries and applications
-<br>
-<br>
-
 
 **Yocto ISO Images for the quick evaluation**
 
@@ -24,6 +9,7 @@
 * minimal image with commandine mode + [SEMA 4.0](https://adlink-epm.github.io/sema-doc/#/) (image size: 1.3 GB) [download link](https://hq0epm0west0us0storage.blob.core.windows.net/public/COM%20X86/Images/Yocto/adlink-mini-x86-intel-corei7-64-20200507014241.iso)
 
 
+<br>
 
 **Zeus Branch details**
 
@@ -53,6 +39,7 @@
 * [Boot from SATA drive](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/04.-How-to-install-Yocto-Image-to-SATA-Drive)
 
 <br> 
+
 ### Supported Hardware List: 
 * see [the list](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/master#the-following-products-are-supported-) for more details
 
