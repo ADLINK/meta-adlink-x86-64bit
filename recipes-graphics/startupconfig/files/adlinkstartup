@@ -31,6 +31,7 @@ if [ -x /usr/bin/semautil ]; then
 	modprobe adl-bmc-wdt
 	modprobe adl-bmc-hwmon
 	modprobe adl-bmc-nvmem
+	modprobe adl-bmc-i2c	
 	modprobe adl-bmc-bklight
 	modprobe gpio-pca953x
 fi
