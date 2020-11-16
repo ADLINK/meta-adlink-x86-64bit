@@ -2,7 +2,7 @@
 
 <br>
 
- **Elkhart lake & Tiger Lake will be ready by mid of Dec.**
+ **Elkhart lake & Tiger Lake will be ready by end of Dec.**
  
 
 <br>
