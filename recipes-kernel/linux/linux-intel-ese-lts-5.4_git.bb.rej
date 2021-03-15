@@ -1,0 +1,9 @@
+--- intel-embedded-system-enabling/meta-intel-embedded-system-enabling/meta-intel-ese-bsp/recipes-kernel/linux/linux-intel-ese-lts-5.4_git.bb	2020-11-10 10:44:55.000000000 +0800
++++ intel-embedded-system-enabling/meta-intel-embedded-system-enabling/meta-intel-ese-bsp/recipes-kernel/linux/linux-intel-ese-lts-5.4_git.bb	2020-11-10 11:05:49.000000000 +0800
+@@ -28,3 +28,6 @@
+ 
+ # Ethernet patches
+ SRC_URI_append = " file://ethernet-5.4.scc"
++
++# Network Proxy
++SRC_URI_append = " file://bsp/networkproxy.scc"

@@ -1,0 +1,9 @@
+patch rt-ethernet-5.4/0001-Revert-WORKAROUND-net-stmmac-use-DMA-INTM-0-for-TGL-.patch
+patch rt-ethernet-5.4/0002-Revert-REVERTME-net-stmmac-use-napi-to-process-both-.patch
+patch rt-ethernet-5.4/0003-Revert-REVERTME-net-stmmac-use-DMA-Bus-Mode-INTM-MOD.patch
+patch rt-ethernet-5.4/0004-REVERTME-net-stmmac-use-napi-to-process-TX-RX-and-us.patch
+patch rt-ethernet-5.4/0005-net-stmmac-Do-not-restart-aneg-in-common-resume-func.patch
+patch rt-ethernet-5.4/0006-net-stmmac-Fix-WOL-issues-on-EHL-after-wakeup-from-S.patch
+patch rt-ethernet-5.4/0007-net-phy-marvell-Fix-WOL-issues-on-EHL-after-wake-fro.patch
+patch rt-ethernet-5.4/0008-net-stmmac-Changed-mode_to_use-to-MTL_QUEUE_DCB-duri.patch
+patch rt-ethernet-5.4/0001-net-stmmac-Fix-PHY-latency-value-obtained-from-the-c.patch

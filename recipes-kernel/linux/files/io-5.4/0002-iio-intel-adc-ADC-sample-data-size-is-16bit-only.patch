@@ -1,0 +1,59 @@
+From dd3607b8f11b65a60c8b33fc35cd9f2f548d74d8 Mon Sep 17 00:00:00 2001
+From: Raymond Tan <raymond.tan@intel.com>
+Date: Tue, 23 Jun 2020 01:43:04 +0800
+Subject: [PATCH 2/3] iio: intel-adc: ADC sample data size is 16bit only
+
+Elkarth Lake PSE ADC is a 16-bit ADC controller. The driver shall mask
+the correct 16-bit data from the FIFO register, instead of taking all
+its contents as RAW data, that contains other fields.
+
+Signed-off-by: Raymond Tan <raymond.tan@intel.com>
+---
+ drivers/iio/adc/intel-adc.c | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+diff --git a/drivers/iio/adc/intel-adc.c b/drivers/iio/adc/intel-adc.c
+index 6cdedc0..70ec063 100644
+--- a/drivers/iio/adc/intel-adc.c
++++ b/drivers/iio/adc/intel-adc.c
+@@ -152,6 +152,12 @@
+ #define ADC_VREF_UV		1600000
+ #define ADC_DEFAULT_CONVERSION_TIMEOUT_MS 5000
+ 
++/* ADC FIFO Data */
++#define ADC_FIFO_DATA_SAMPLE_MASK	GENMASK(15, 0)
++#define ADC_FIFO_DATA_CNL_MASK		GENMASK(18, 16)
++#define ADC_FIFO_DATA_TYPE_MASK		BIN(23)
++#define ADC_FIFO_DATA_TYPE_DATA		0
++#define ADC_FIFO_DATA_TYPE_TIMESTAMP	1
+ 
+ #define PSE_ADC_D0I3C 0x1000
+ #define PSE_ADC_CGSR 0x1004
+@@ -296,7 +302,6 @@ static int intel_adc_read_raw(struct iio_dev *iio,
+ 
+ 		intel_adc_enable(adc);
+ 
+-
+ 		ret = intel_adc_single_channel_conversion(adc, channel, val);
+ 		if (ret) {
+ 			intel_adc_disable(adc);
+@@ -378,10 +383,13 @@ static irqreturn_t intel_adc_irq(int irq, void *_adc)
+ 	if (!status)
+ 		return IRQ_NONE;
+ 
+-	intel_adc_writel(adc->regs, ADC_IMSC, ADC_INTR_ALL_MASK);
+-	adc->value = intel_adc_readl(adc->regs, ADC_FIFO_DATA);
++	/* Support for SAMPLE DONE INTR for now only */
++	if (status & ADC_INTR_SMPL_DONE_INTR) {
++		intel_adc_writel(adc->regs, ADC_IMSC, ADC_INTR_ALL_MASK);
++		adc->value = intel_adc_readl(adc->regs, ADC_FIFO_DATA) & ADC_FIFO_DATA_SAMPLE_MASK;
+ 
+-	complete(&adc->completion);
++		complete(&adc->completion);
++	}
+ 
+ 	return IRQ_HANDLED;
+ }
+-- 
+2.7.4
+

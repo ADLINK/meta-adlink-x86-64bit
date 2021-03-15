@@ -1,0 +1,923 @@
+From ee176366d12f61fc3444f16ac7ed600eea6bb00e Mon Sep 17 00:00:00 2001
+From: Raymond Tan <raymond.tan@intel.com>
+Date: Fri, 24 Jan 2020 01:03:04 +0800
+Subject: [PATCH] REVERT-ME: Temporary enable D0i3 flow for PSE IOs
+
+The current hacks use kernel existing runtime power managment
+insfrastructure to put the devices into D0i3 and follow by D3
+which is default for all PCI devices.
+
+Proper design is still under discussion involving Wysocki, Rafael J.
+
+Signed-off-by: Tan, Raymond <raymond.tan@intel.com>
+---
+ drivers/counter/intel-qep.c                |  65 ++++++++++++++
+ drivers/i2c/busses/i2c-designware-pcidrv.c |  61 +++++++++++++
+ drivers/iio/adc/intel-adc.c                | 112 +++++++++++++++++++++--
+ drivers/net/can/m_can/m_can_pci.c          |  69 +++++++++++++++
+ drivers/pwm/pwm-dwc.c                      |  69 ++++++++++++++-
+ drivers/spi/spi-dw-pci.c                   |  94 +++++++++++++++++++-
+ drivers/tty/serial/8250/8250_lpss.c        | 137 +++++++++++++++++++++++++++++
+ 7 files changed, 596 insertions(+), 11 deletions(-)
+
+diff --git a/drivers/counter/intel-qep.c b/drivers/counter/intel-qep.c
+index 2da7fd7..53fa5a0 100644
+--- a/drivers/counter/intel-qep.c
++++ b/drivers/counter/intel-qep.c
+@@ -29,6 +29,15 @@
+ #define INTEL_QEPINT_STAT	0x20
+ #define INTEL_QEPINT_MASK	0x24
+ 
++#define INTEL_QEP_D0I3C	0x1000
++#define INTEL_QEP_CGSR	0x1004
++
++#define INTEL_QEP_D0I3_CIP BIT(0)
++#define INTEL_QEP_D0I3_EN BIT(2)
++#define INTEL_QEP_D0I3_RR BIT(3)
++#define INTEL_QEP_CGSR_CG BIT(16)
++
++
+ /* QEPCON */
+ #define INTEL_QEPCON_EN		BIT(0)
+ #define INTEL_QEPCON_FLT_EN	BIT(1)
+@@ -792,6 +801,39 @@ static int intel_qep_resume(struct device *dev)
+ #ifdef CONFIG_PM
+ static int intel_qep_runtime_suspend(struct device *dev)
+ {
++	struct pci_dev *pdev = container_of(dev, struct pci_dev, dev);
++	struct intel_qep *qep = pci_get_drvdata(pdev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++	unsigned long j0,j1,delay;
++
++	delay = msecs_to_jiffies(100);
++	j0 = jiffies;
++	j1 = j0 + delay;
++
++	cgsr_reg = intel_qep_readl(qep->regs, INTEL_QEP_CGSR);
++	intel_qep_writel(qep->regs, INTEL_QEP_CGSR, INTEL_QEP_CGSR_CG);
++
++	d0i3c_reg = intel_qep_readl(qep->regs, INTEL_QEP_D0I3C);
++
++	if (d0i3c_reg & INTEL_QEP_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++		intel_qep_writel(qep->regs, INTEL_QEP_D0I3C, INTEL_QEP_D0I3_EN);
++		d0i3c_reg = intel_qep_readl(qep->regs, INTEL_QEP_D0I3C);
++	}
++
++	while (time_before(jiffies, j1)) {
++		d0i3c_reg = intel_qep_readl(qep->regs, INTEL_QEP_D0I3C);
++		if (!(d0i3c_reg & INTEL_QEP_D0I3_CIP)) {
++			break;
++		}
++	}
++
++	if (d0i3c_reg & INTEL_QEP_D0I3_CIP) {
++		dev_info(dev, "%s: timeout waiting CIP to be cleared", __func__);
++	}
++
+ 	return 0;
+ }
+ 
+@@ -799,6 +841,29 @@ static int intel_qep_runtime_resume(struct device *dev)
+ {
+ 	struct pci_dev *pdev = container_of(dev, struct pci_dev, dev);
+ 	struct intel_qep *qep = pci_get_drvdata(pdev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++
++	cgsr_reg = intel_qep_readl(qep->regs, INTEL_QEP_CGSR);
++
++	if (cgsr_reg & INTEL_QEP_CGSR_CG)
++		intel_qep_writel(qep->regs, INTEL_QEP_CGSR, (cgsr_reg & ~INTEL_QEP_CGSR_CG));
++
++	d0i3c_reg = intel_qep_readl(qep->regs, INTEL_QEP_D0I3C);
++
++	if (d0i3c_reg & INTEL_QEP_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++
++		if (d0i3c_reg & INTEL_QEP_D0I3_EN)
++			d0i3c_reg &= ~INTEL_QEP_D0I3_EN;
++
++		if (d0i3c_reg & INTEL_QEP_D0I3_RR)
++			d0i3c_reg |= INTEL_QEP_D0I3_RR;
++
++		intel_qep_writel(dev, INTEL_QEP_D0I3C, d0i3c_reg);
++		d0i3c_reg = intel_qep_readl(dev, INTEL_QEP_D0I3C);
++	}
+ 
+ 	intel_qep_init(qep, false);
+ 
+diff --git a/drivers/i2c/busses/i2c-designware-pcidrv.c b/drivers/i2c/busses/i2c-designware-pcidrv.c
+index 050adda..6c1f965 100644
+--- a/drivers/i2c/busses/i2c-designware-pcidrv.c
++++ b/drivers/i2c/busses/i2c-designware-pcidrv.c
+@@ -27,6 +27,14 @@
+ 
+ #define DRIVER_NAME "i2c-designware-pci"
+ 
++#define PSE_I2C_D0I3C 0x1000
++#define PSE_I2C_CGSR 0x1004
++
++#define PSE_I2C_D0I3_CIP BIT(0)
++#define PSE_I2C_D0I3_EN BIT(2)
++#define PSE_I2C_D0I3_RR BIT(3)
++#define PSE_I2C_CGSR_CG BIT(16)
++
+ enum dw_pci_ctl_id_t {
+ 	medfield,
+ 	merrifield,
+@@ -183,10 +191,40 @@ static struct dw_pci_controller dw_pci_controllers[] = {
+ static int i2c_dw_pci_suspend(struct device *dev)
+ {
+ 	struct dw_i2c_dev *i_dev = dev_get_drvdata(dev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++	unsigned long j0,j1,delay;
+ 
+ 	i_dev->suspended = true;
+ 	i_dev->disable(i_dev);
+ 
++	delay = msecs_to_jiffies(100);
++	j0 = jiffies;
++	j1 = j0 + delay;
++
++	cgsr_reg = dw_readl(i_dev, PSE_I2C_CGSR);
++	dw_writel(i_dev, PSE_I2C_CGSR_CG, PSE_I2C_CGSR);
++
++	d0i3c_reg = dw_readl(i_dev, PSE_I2C_D0I3C);
++
++	if (d0i3c_reg & PSE_I2C_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++		dw_writel(i_dev, PSE_I2C_D0I3_EN, PSE_I2C_D0I3C);
++		d0i3c_reg = dw_readl(i_dev, PSE_I2C_D0I3C);
++	}
++
++	while (time_before(jiffies, j1)) {
++		d0i3c_reg = dw_readl(i_dev, PSE_I2C_D0I3C);
++		if (!(d0i3c_reg & PSE_I2C_D0I3_CIP)) {
++			break;
++		}
++	}
++
++	if (d0i3c_reg & PSE_I2C_D0I3_CIP) {
++		dev_info(dev, "%s: timeout waiting CIP to be cleared", __func__);
++	}
++
+ 	return 0;
+ }
+ 
+@@ -194,6 +232,29 @@ static int i2c_dw_pci_resume(struct device *dev)
+ {
+ 	struct dw_i2c_dev *i_dev = dev_get_drvdata(dev);
+ 	int ret;
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++
++	cgsr_reg = dw_readl(i_dev, PSE_I2C_CGSR);
++
++	if (cgsr_reg & PSE_I2C_CGSR_CG)
++		dw_writel(i_dev, (cgsr_reg & ~PSE_I2C_CGSR_CG), PSE_I2C_CGSR);
++
++	d0i3c_reg = dw_readl(i_dev, PSE_I2C_D0I3C);
++
++	if (d0i3c_reg & PSE_I2C_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++
++		if (d0i3c_reg & PSE_I2C_D0I3_EN)
++			d0i3c_reg &= ~PSE_I2C_D0I3_EN;
++
++		if (d0i3c_reg & PSE_I2C_D0I3_RR)
++			d0i3c_reg |= PSE_I2C_D0I3_RR;
++
++		dw_writel(i_dev, d0i3c_reg, PSE_I2C_D0I3C);
++		d0i3c_reg = dw_readl(i_dev, PSE_I2C_D0I3C);
++	}
+ 
+ 	ret = i_dev->init(i_dev);
+ 	i_dev->suspended = false;
+diff --git a/drivers/iio/adc/intel-adc.c b/drivers/iio/adc/intel-adc.c
+index 9c834cb..79e34fb 100644
+--- a/drivers/iio/adc/intel-adc.c
++++ b/drivers/iio/adc/intel-adc.c
+@@ -149,6 +149,16 @@
+ #define ADC_VREF_UV		1600000
+ #define ADC_DEFAULT_CONVERSION_TIMEOUT_MS 5000
+ 
++
++#define PSE_ADC_D0I3C 0x1000
++#define PSE_ADC_CGSR 0x1004
++
++#define PSE_ADC_D0I3_CIP BIT(0)
++#define PSE_ADC_D0I3_EN BIT(2)
++#define PSE_ADC_D0I3_RR BIT(3)
++#define PSE_ADC_CGSR_CG BIT(16)
++
++
+ struct intel_adc {
+ 	struct completion completion;
+ 	void __iomem *regs;
+@@ -200,12 +210,6 @@ static int intel_adc_single_channel_conversion(struct intel_adc *adc,
+ 	u32 ctrl;
+ 	u32 reg;
+ 
+-	ctrl = intel_adc_readl(adc->regs, ADC_CONV_CTRL);
+-	ctrl |= ADC_CONV_CTRL_CONV_MODE;
+-	ctrl &= ~ADC_CONV_CTRL_NUM_SMPL_MASK;
+-	ctrl |= ADC_CONV_CTRL_NUM_SMPL(1);
+-	intel_adc_writel(adc->regs, ADC_CONV_CTRL, ctrl);
+-
+ 	reg = intel_adc_readl(adc->regs, ADC_CONFIG1);
+ 	reg &= ~ADC_CONFIG1_CNL_SEL_MASK;
+ 	reg |= ADC_CONFIG1_CNL_SEL(channel->scan_index);
+@@ -217,11 +221,18 @@ static int intel_adc_single_channel_conversion(struct intel_adc *adc,
+ 
+ 	intel_adc_writel(adc->regs, ADC_CONFIG1, reg);
+ 
++	ctrl = intel_adc_readl(adc->regs, ADC_CONV_CTRL);
++	ctrl |= ADC_CONV_CTRL_CONV_MODE;
++	ctrl &= ~ADC_CONV_CTRL_NUM_SMPL_MASK;
++	ctrl |= ADC_CONV_CTRL_NUM_SMPL(1);
++	intel_adc_writel(adc->regs, ADC_CONV_CTRL, ctrl);
++	
+ 	ctrl |= ADC_CONV_CTRL_REQ;
+ 	intel_adc_writel(adc->regs, ADC_CONV_CTRL, ctrl);
+ 
+ 	/* enable sample done IRQ event */
+ 	reg = intel_adc_readl(adc->regs, ADC_IMSC);
++	printk("adc IMSC = 0x%x", reg);
+ 	reg &= ~ADC_INTR_SMPL_DONE_INTR;
+ 	intel_adc_writel(adc->regs, ADC_IMSC, reg);
+ 
+@@ -238,6 +249,12 @@ static int intel_adc_read_raw(struct iio_dev *iio,
+ 	struct intel_adc *adc = iio_priv(iio);
+ 	int shift;
+ 	int ret;
++	u32 reg;
++
++	pm_runtime_get_sync(iio->dev.parent);
++
++	reg = intel_adc_readl(adc->regs, ADC_PWR_STAT);
++	printk("adc ADC_PWR_STAT = 0x%x", reg);
+ 
+ 	switch (mask) {
+ 	case IIO_CHAN_INFO_RAW:
+@@ -264,6 +281,8 @@ static int intel_adc_read_raw(struct iio_dev *iio,
+ 		break;
+ 	}
+ 
++	pm_runtime_put_sync(iio->dev.parent);
++
+ 	return ret;
+ }
+ 
+@@ -389,7 +408,7 @@ static int intel_adc_probe(struct pci_dev *pci, const struct pci_device_id *id)
+ 
+ 	pm_runtime_set_autosuspend_delay(&pci->dev, 1000);
+ 	pm_runtime_use_autosuspend(&pci->dev);
+-	pm_runtime_put_autosuspend(&pci->dev);
++	pm_runtime_put_noidle(&pci->dev);
+ 	pm_runtime_allow(&pci->dev);
+ 
+ 	return 0;
+@@ -407,6 +426,82 @@ static void intel_adc_remove(struct pci_dev *pci)
+ 	pci_free_irq_vectors(pci);
+ }
+ 
++static int intel_adc_runtime_suspend(struct device *dev)
++{
++	struct pci_dev *pdev = container_of(dev, struct pci_dev, dev);
++	struct intel_adc *adc = pci_get_drvdata(pdev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++	unsigned long j0,j1,delay;
++
++	delay = msecs_to_jiffies(100);
++	j0 = jiffies;
++	j1 = j0 + delay;
++
++	cgsr_reg = intel_adc_readl(adc->regs, PSE_ADC_CGSR);
++	intel_adc_writel(adc->regs, PSE_ADC_CGSR, PSE_ADC_CGSR_CG);
++
++	d0i3c_reg = intel_adc_readl(adc->regs, PSE_ADC_D0I3C);
++
++	if (d0i3c_reg & PSE_ADC_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++		intel_adc_writel(adc->regs, PSE_ADC_D0I3C, PSE_ADC_D0I3_EN);
++		d0i3c_reg = intel_adc_readl(adc->regs, PSE_ADC_D0I3C);
++	}
++
++	while (time_before(jiffies, j1)) {
++		d0i3c_reg = intel_adc_readl(adc->regs, PSE_ADC_D0I3C);
++		if (!(d0i3c_reg & PSE_ADC_D0I3_CIP)) {
++			break;
++		}
++	}
++
++	if (d0i3c_reg & PSE_ADC_D0I3_CIP) {
++		dev_info(dev, "%s: timeout waiting CIP to be cleared", __func__);
++	}
++
++	return 0;
++}
++
++static int intel_adc_runtime_resume(struct device *dev)
++{
++	struct pci_dev *pdev = container_of(dev, struct pci_dev, dev);
++	struct intel_adc *adc = pci_get_drvdata(pdev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++
++	cgsr_reg = intel_adc_readl(adc->regs, PSE_ADC_CGSR);
++
++	if (cgsr_reg & PSE_ADC_CGSR_CG) {
++		dev_info(dev, "%s Clock Gated, release now...", __func__);
++		intel_adc_writel(adc->regs, PSE_ADC_CGSR, (cgsr_reg & ~PSE_ADC_CGSR_CG));
++	}
++
++	d0i3c_reg = intel_adc_readl(adc->regs, PSE_ADC_D0I3C);
++
++	if (d0i3c_reg & PSE_ADC_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++
++		if (d0i3c_reg & PSE_ADC_D0I3_EN)
++			d0i3c_reg &= ~PSE_ADC_D0I3_EN;
++
++		if (d0i3c_reg & PSE_ADC_D0I3_RR)
++			d0i3c_reg |= PSE_ADC_D0I3_RR;
++
++		intel_adc_writel(adc->regs, PSE_ADC_D0I3C, d0i3c_reg);
++		d0i3c_reg = intel_adc_readl(adc->regs, PSE_ADC_D0I3C);
++	}
++
++	return 0;
++}
++
++static const struct dev_pm_ops intel_adc_pm_ops = {
++	SET_RUNTIME_PM_OPS(intel_adc_runtime_suspend,
++			   intel_adc_runtime_resume, NULL)
++};
++
+ static const struct pci_device_id intel_adc_id_table[] = {
+ 	{ PCI_VDEVICE(INTEL, 0x4bb8), },
+ 	{  } /* Terminating Entry */
+@@ -418,6 +513,9 @@ static struct pci_driver intel_adc_driver = {
+ 	.probe		= intel_adc_probe,
+ 	.remove		= intel_adc_remove,
+ 	.id_table	= intel_adc_id_table,
++	.driver = {
++		.pm = &intel_adc_pm_ops,
++	}
+ };
+ module_pci_driver(intel_adc_driver);
+ 
+diff --git a/drivers/net/can/m_can/m_can_pci.c b/drivers/net/can/m_can/m_can_pci.c
+index d44b0ac..3f94645 100644
+--- a/drivers/net/can/m_can/m_can_pci.c
++++ b/drivers/net/can/m_can/m_can_pci.c
+@@ -28,6 +28,14 @@
+ #define M_CAN_CLOCK_FREQ_EHL		100000000
+ #define CTL_CSR_INT_CTL_OFFSET		0x508
+ 
++#define M_CAN_D0I3C	0x8000
++#define M_CAN_CGSR	0x8004
++
++#define M_CAN_D0I3_CIP BIT(0)
++#define M_CAN_D0I3_EN BIT(2)
++#define M_CAN_D0I3_RR BIT(3)
++#define M_CAN_CGSR_CG BIT(16)
++
+ struct m_can_pci_priv {
+ 	void __iomem *base;
+ 	void __iomem *mram_base;
+@@ -184,11 +192,72 @@ static __maybe_unused int m_can_pci_resume(struct device *dev)
+ 
+ static int __maybe_unused m_can_pci_runtime_suspend(struct device *dev)
+ {
++	struct pci_dev *pdev = container_of(dev, struct pci_dev, dev);
++	struct net_device *ndev = pci_get_drvdata(pdev);
++	struct m_can_classdev *mcan_class = netdev_priv(ndev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++	unsigned long j0,j1,delay;
++
++	delay = msecs_to_jiffies(100);
++	j0 = jiffies;
++	j1 = j0 + delay;
++
++	cgsr_reg = iomap_read_reg(mcan_class, M_CAN_CGSR);
++	iomap_write_reg(mcan_class, M_CAN_CGSR, M_CAN_CGSR_CG);
++
++	d0i3c_reg = iomap_read_reg(mcan_class, M_CAN_D0I3C);
++
++	if (d0i3c_reg & M_CAN_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++		iomap_write_reg(mcan_class, M_CAN_D0I3C, M_CAN_D0I3_EN);
++		d0i3c_reg = iomap_read_reg(mcan_class, M_CAN_D0I3C);
++	}
++
++	while (time_before(jiffies, j1)) {
++		d0i3c_reg = iomap_read_reg(mcan_class, M_CAN_D0I3C);
++		if (!(d0i3c_reg & M_CAN_D0I3_CIP)) {
++			break;
++		}
++	}
++
++	if (d0i3c_reg & M_CAN_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c timeout waiting CIP to be cleared", __func__);
++	}
++
+ 	return 0;
+ }
+ 
+ static int __maybe_unused m_can_pci_runtime_resume(struct device *dev)
+ {
++	struct pci_dev *pdev = container_of(dev, struct pci_dev, dev);
++	struct net_device *ndev = pci_get_drvdata(pdev);
++	struct m_can_classdev *mcan_class = netdev_priv(ndev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++
++	cgsr_reg = iomap_read_reg(mcan_class, M_CAN_CGSR);
++
++	if (cgsr_reg & M_CAN_CGSR_CG)
++		iomap_write_reg(mcan_class, M_CAN_CGSR, (cgsr_reg & ~M_CAN_CGSR_CG));
++
++	d0i3c_reg = iomap_read_reg(mcan_class, M_CAN_D0I3C);
++
++	if (d0i3c_reg & M_CAN_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++
++		if (d0i3c_reg & M_CAN_D0I3_EN)
++			d0i3c_reg &= ~M_CAN_D0I3_EN;
++
++		if (d0i3c_reg & M_CAN_D0I3_RR)
++			d0i3c_reg |= M_CAN_D0I3_RR;
++
++		iomap_write_reg(mcan_class, M_CAN_D0I3C, d0i3c_reg);
++		d0i3c_reg = iomap_read_reg(mcan_class, M_CAN_D0I3C);
++	}
++
+ 	return 0;
+ }
+ 
+diff --git a/drivers/pwm/pwm-dwc.c b/drivers/pwm/pwm-dwc.c
+index 68298dd..2defe8f 100644
+--- a/drivers/pwm/pwm-dwc.c
++++ b/drivers/pwm/pwm-dwc.c
+@@ -41,6 +41,14 @@
+ #define DWC_TIM_CTRL_INT_MASK	BIT(2)
+ #define DWC_TIM_CTRL_PWM	BIT(3)
+ 
++#define DWC_TIM_D0I3C	0x2000
++#define DWC_TIM_CGSR	0x2004
++
++#define DWC_TIM_D0I3_CIP BIT(0)
++#define DWC_TIM_D0I3_EN BIT(2)
++#define DWC_TIM_D0I3_RR BIT(3)
++#define DWC_TIM_CGSR_CG BIT(16)
++
+ struct dwc_pwm_driver_data {
+ 	unsigned long clk_period_ns;
+ 	int npwm;
+@@ -318,15 +326,74 @@ static int dwc_pci_resume(struct device *dev)
+ #ifdef CONFIG_PM
+ static int dwc_pci_runtime_suspend(struct device *dev)
+ {
+-	/*
++	struct pci_dev *pdev = container_of(dev, struct pci_dev, dev);
++	struct dwc_pwm *dwc = pci_get_drvdata(pdev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++
++	unsigned long j0,j1,delay;
++	delay = msecs_to_jiffies(100);
++	j0 = jiffies;
++	j1 = j0 + delay;
++
++	cgsr_reg = dwc_readl(dwc->base, DWC_TIM_CGSR);
++	dwc_writel(dwc->base, DWC_TIM_CGSR_CG, DWC_TIM_CGSR);
++
++	d0i3c_reg = dwc_readl(dwc->base, DWC_TIM_D0I3C);
++
++	if (d0i3c_reg & DWC_TIM_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++		dwc_writel(dwc->base, DWC_TIM_D0I3_EN, DWC_TIM_D0I3C);
++		d0i3c_reg = dwc_readl(dwc->base, DWC_TIM_D0I3C);
++	}
++
++	while (time_before(jiffies, j1)) {
++		d0i3c_reg = dwc_readl(dwc->base, DWC_TIM_D0I3C);
++		if (!(d0i3c_reg & DWC_TIM_D0I3_CIP)) {
++			break;
++		}
++	}
++
++	if (d0i3c_reg & DWC_TIM_D0I3_CIP) {
++		dev_info(dev, "%s: timeout waiting CIP to be cleared", __func__);
++	}
++		/*
+ 	 * The PCI core will handle transition to D3 automatically. We only
+ 	 * need to provide runtime PM hooks for that to happen.
+ 	 */
++
+ 	return 0;
+ }
+ 
+ static int dwc_pci_runtime_resume(struct device *dev)
+ {
++	struct pci_dev *pdev = container_of(dev, struct pci_dev, dev);
++	struct dwc_pwm *dwc = pci_get_drvdata(pdev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++
++	cgsr_reg = dwc_readl(dwc->base, DWC_TIM_CGSR);
++
++	if (cgsr_reg & DWC_TIM_CGSR_CG)
++		dwc_writel(dwc->base, (cgsr_reg & ~DWC_TIM_CGSR_CG), DWC_TIM_CGSR);
++
++	d0i3c_reg = dwc_readl(dwc->base, DWC_TIM_D0I3C);
++
++	if (d0i3c_reg & DWC_TIM_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++
++		if (d0i3c_reg & DWC_TIM_D0I3_EN)
++			d0i3c_reg &= ~DWC_TIM_D0I3_EN;
++
++		if (d0i3c_reg & DWC_TIM_D0I3_RR)
++			d0i3c_reg |= DWC_TIM_D0I3_RR;
++
++		dwc_writel(dwc->base, d0i3c_reg, DWC_TIM_D0I3C);
++		d0i3c_reg = dwc_readl(dwc->base, DWC_TIM_D0I3C);
++	}
++
+ 	return 0;
+ }
+ #endif
+diff --git a/drivers/spi/spi-dw-pci.c b/drivers/spi/spi-dw-pci.c
+index 12c131b..528d4d6 100644
+--- a/drivers/spi/spi-dw-pci.c
++++ b/drivers/spi/spi-dw-pci.c
+@@ -16,6 +16,15 @@
+ 
+ #define DRIVER_NAME "dw_spi_pci"
+ 
++#define PSE_SPI_D0I3C 0x1000
++#define PSE_SPI_CGSR 0x1004
++
++#define PSE_SPI_D0I3_CIP BIT(0)
++#define PSE_SPI_D0I3_EN BIT(2)
++#define PSE_SPI_D0I3_RR BIT(3)
++#define PSE_SPI_CGSR_CG BIT(16)
++
++
+ struct spi_pci_desc {
+ 	int	(*setup)(struct dw_spi *);
+ 	u16	num_cs;
+@@ -47,6 +56,7 @@ static int spi_pci_probe(struct pci_dev *pdev, const struct pci_device_id *ent)
+ 	struct spi_pci_desc *desc = (struct spi_pci_desc *)ent->driver_data;
+ 	int pci_bar = 0;
+ 	int ret;
++	u32 d0i3c_reg;
+ 
+ 	ret = pcim_enable_device(pdev);
+ 	if (ret)
+@@ -96,6 +106,11 @@ static int spi_pci_probe(struct pci_dev *pdev, const struct pci_device_id *ent)
+ 		return ret;
+ 	}
+ 
++	/* Clear those RR bit if set */
++	d0i3c_reg = dw_readl(dws, PSE_SPI_D0I3C);
++	if (d0i3c_reg & PSE_SPI_D0I3_RR)
++		dw_writel(dws, PSE_SPI_D0I3_RR, PSE_SPI_D0I3C);
++
+ 	/* PCI hook and SPI hook use the same drv data */
+ 	pci_set_drvdata(pdev, dws);
+ 
+@@ -122,14 +137,14 @@ static void spi_pci_remove(struct pci_dev *pdev)
+ }
+ 
+ #ifdef CONFIG_PM_SLEEP
+-static int spi_suspend(struct device *dev)
++static int dw_spi_suspend(struct device *dev)
+ {
+ 	struct dw_spi *dws = dev_get_drvdata(dev);
+ 
+ 	return dw_spi_suspend_host(dws);
+ }
+ 
+-static int spi_resume(struct device *dev)
++static int dw_spi_resume(struct device *dev)
+ {
+ 	struct dw_spi *dws = dev_get_drvdata(dev);
+ 
+@@ -137,7 +152,80 @@ static int spi_resume(struct device *dev)
+ }
+ #endif
+ 
+-static SIMPLE_DEV_PM_OPS(dw_spi_pm_ops, spi_suspend, spi_resume);
++#if CONFIG_PM
++static int dw_spi_runtime_suspend(struct device *dev)
++{
++	struct dw_spi *dws = dev_get_drvdata(dev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++	unsigned long j0,j1,delay;
++
++	delay = msecs_to_jiffies(100);
++	j0 = jiffies;
++	j1 = j0 + delay;
++
++
++	cgsr_reg = dw_readl(dws, PSE_SPI_CGSR);
++	dw_writel(dws, PSE_SPI_CGSR, PSE_SPI_D0I3_RR);
++
++	d0i3c_reg = dw_readl(dws, PSE_SPI_D0I3C);
++
++	if (d0i3c_reg & PSE_SPI_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++		dw_writel(dws, PSE_SPI_D0I3C, PSE_SPI_D0I3_EN);
++		d0i3c_reg = dw_readl(dws, PSE_SPI_D0I3C);
++	}
++
++	while (time_before(jiffies, j1)) {
++		d0i3c_reg = dw_readl(dws, PSE_SPI_D0I3C);
++		if (!(d0i3c_reg & PSE_SPI_D0I3_CIP)) {
++			break;
++		}
++	}
++
++	if (d0i3c_reg & PSE_SPI_D0I3_CIP)
++		dev_info(dev, "%s: timeout waiting CIP to be cleared", __func__);
++
++	return 0;
++}
++
++static int dw_spi_runtime_resume(struct device *dev)
++{
++	struct dw_spi *dws = dev_get_drvdata(dev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++
++	cgsr_reg = dw_readl(dws, PSE_SPI_CGSR);
++
++	if (cgsr_reg & PSE_SPI_CGSR_CG)
++		dw_writel(dws, (cgsr_reg & ~PSE_SPI_CGSR_CG), PSE_SPI_CGSR);
++
++	d0i3c_reg = dw_readl(dws, PSE_SPI_D0I3C);
++
++	if (d0i3c_reg & PSE_SPI_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++
++		if (d0i3c_reg & PSE_SPI_D0I3_EN)
++			d0i3c_reg &= ~PSE_SPI_D0I3_EN;
++
++		if (d0i3c_reg & PSE_SPI_D0I3_RR)
++			d0i3c_reg |= PSE_SPI_D0I3_RR;
++
++		dw_writel(dws, d0i3c_reg, PSE_SPI_D0I3C);
++		d0i3c_reg = dw_readl(dws, PSE_SPI_D0I3C);
++	}
++
++	return 0;
++}
++#endif
++
++static const struct dev_pm_ops dw_spi_pm_ops = {
++	SET_RUNTIME_PM_OPS(dw_spi_runtime_suspend, dw_spi_runtime_resume, NULL)
++	SET_SYSTEM_SLEEP_PM_OPS(dw_spi_suspend, dw_spi_resume)
++};
++
+ 
+ static const struct pci_device_id pci_ids[] = {
+ 	/* Intel MID platform SPI controller 0 */
+diff --git a/drivers/tty/serial/8250/8250_lpss.c b/drivers/tty/serial/8250/8250_lpss.c
+index 0c54223..0bfa35a 100644
+--- a/drivers/tty/serial/8250/8250_lpss.c
++++ b/drivers/tty/serial/8250/8250_lpss.c
+@@ -10,6 +10,8 @@
+ #include <linux/module.h>
+ #include <linux/pci.h>
+ #include <linux/rational.h>
++#include <linux/pm_runtime.h>
++
+ 
+ #include <linux/dmaengine.h>
+ #include <linux/dma/dw.h>
+@@ -45,6 +47,25 @@
+ #define BYT_TX_OVF_INT			0x820
+ #define BYT_TX_OVF_INT_MASK		BIT(1)
+ 
++#define LPSS8250_D0I3C 0x1000
++#define LPSS8250_CGSR 0x1004
++
++#define LPSS8250_D0I3_CIP BIT(0)
++#define LPSS8250_D0I3_EN BIT(2)
++#define LPSS8250_D0I3_RR BIT(3)
++#define LPSS8250_CGSR_CG BIT(16)
++
++
++static inline void lpss8250_writel(void __iomem *base, u32 offset, u32 value)
++{
++	writel(value, base + offset);
++}
++
++static inline u32 lpss8250_readl(void __iomem *base, u32 offset)
++{
++	return readl(base + offset);
++}
++
+ struct lpss8250;
+ 
+ struct lpss8250_board {
+@@ -62,6 +83,7 @@ struct lpss8250 {
+ 	struct dw_dma_chip dma_chip;
+ 	struct dw_dma_slave dma_param;
+ 	u8 dma_maxburst;
++  unsigned long base;
+ };
+ 
+ static inline struct lpss8250 *to_lpss8250(struct dw8250_port_data *data)
+@@ -277,6 +299,7 @@ static int lpss8250_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 	struct uart_8250_port uart;
+ 	struct lpss8250 *lpss;
+ 	int ret;
++	struct device *dev = &pdev->dev;
+ 
+ 	ret = pcim_enable_device(pdev);
+ 	if (ret)
+@@ -310,6 +333,8 @@ static int lpss8250_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 	if (!uart.port.membase)
+ 		return -ENOMEM;
+ 
++  lpss->base = uart.port.membase;
++
+ 	if (lpss->board->setup) {
+ 		ret = lpss->board->setup(lpss, &uart.port);
+ 		if (ret)
+@@ -329,6 +354,13 @@ static int lpss8250_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ 	lpss->data.line = ret;
+ 
+ 	pci_set_drvdata(pdev, lpss);
++
++        pm_runtime_set_autosuspend_delay(dev, -1);
++        pm_runtime_use_autosuspend(dev);
++        pm_runtime_put_noidle(dev);
++        pm_runtime_allow(dev);
++
++
+ 	return 0;
+ 
+ err_exit:
+@@ -341,12 +373,18 @@ static int lpss8250_probe(struct pci_dev *pdev, const struct pci_device_id *id)
+ static void lpss8250_remove(struct pci_dev *pdev)
+ {
+ 	struct lpss8250 *lpss = pci_get_drvdata(pdev);
++	struct device *dev = &pdev->dev;
++
++	pm_runtime_get_sync(dev);
+ 
+ 	serial8250_unregister_port(lpss->data.line);
+ 
+ 	if (lpss->board->exit)
+ 		lpss->board->exit(lpss);
+ 	pci_free_irq_vectors(pdev);
++
++	pm_runtime_disable(dev);
++	pm_runtime_put_noidle(dev);
+ }
+ 
+ static const struct lpss8250_board byt_board = {
+@@ -367,6 +405,97 @@ static const struct lpss8250_board qrk_board = {
+ 	.exit = qrk_serial_exit,
+ };
+ 
++#ifdef CONFIG_PM_SLEEP
++static int lpss8250_suspend(struct device *dev)
++{
++	struct lpss8250 *lpss = dev_get_drvdata(dev);
++
++	serial8250_suspend_port(lpss->data.line);
++
++	return 0;
++}
++
++static int lpss8250_resume(struct device *dev)
++{
++	struct lpss8250 *lpss = dev_get_drvdata(dev);
++
++	serial8250_resume_port(lpss->data.line);
++
++	return 0;
++}
++#endif /* CONFIG_PM_SLEEP */
++
++#ifdef CONFIG_PM
++static int lpss8250_runtime_suspend(struct device *dev)
++{
++	struct lpss8250 *lpss = dev_get_drvdata(dev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++	unsigned long j0,j1,delay;
++
++	delay = msecs_to_jiffies(100);
++	j0 = jiffies;
++	j1 = j0 + delay;
++
++	cgsr_reg = lpss8250_readl(lpss->base, LPSS8250_CGSR);
++	lpss8250_writel(lpss->base, LPSS8250_CGSR, LPSS8250_CGSR_CG);
++
++	d0i3c_reg = lpss8250_readl(lpss->base, LPSS8250_D0I3C);
++
++	if (d0i3c_reg & LPSS8250_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++		lpss8250_writel(lpss->base, LPSS8250_D0I3C, LPSS8250_D0I3_EN);
++		d0i3c_reg = lpss8250_readl(lpss->base, LPSS8250_D0I3C);
++	}
++
++	while (time_before(jiffies, j1)) {
++		d0i3c_reg = lpss8250_readl(lpss->base, LPSS8250_D0I3C);
++		if (!(d0i3c_reg & LPSS8250_D0I3_CIP)) {
++			break;
++		}
++	}
++
++	if (d0i3c_reg & LPSS8250_D0I3_CIP) {
++		dev_info(dev, "%s: timeout waiting CIP to be cleared", __func__);
++	}
++
++	return 0;
++}
++
++static int lpss8250_runtime_resume(struct device *dev)
++{
++	struct lpss8250 *lpss = dev_get_drvdata(dev);
++	u32 d0i3c_reg;
++	u32 cgsr_reg;
++
++	cgsr_reg = lpss8250_readl(lpss->base, LPSS8250_CGSR);
++
++	if (cgsr_reg & LPSS8250_CGSR_CG) {
++		dev_info(dev, "%s Clock Gated, release now...", __func__);
++		lpss8250_writel(lpss->base, LPSS8250_CGSR, (cgsr_reg & ~LPSS8250_CGSR_CG));
++	}
++
++	d0i3c_reg = lpss8250_readl(lpss->base, LPSS8250_D0I3C);
++
++	if (d0i3c_reg & LPSS8250_D0I3_CIP) {
++		dev_info(dev, "%s d0i3c CIP detected", __func__);
++	} else {
++
++		if (d0i3c_reg & LPSS8250_D0I3_EN)
++			d0i3c_reg &= ~LPSS8250_D0I3_EN;
++
++		if (d0i3c_reg & LPSS8250_D0I3_RR)
++			d0i3c_reg |= LPSS8250_D0I3_RR;
++
++		lpss8250_writel(lpss->base, LPSS8250_D0I3C, d0i3c_reg);
++		d0i3c_reg = lpss8250_readl(lpss->base, LPSS8250_D0I3C);
++	}
++
++	return 0;
++}
++#endif /* CONFIG_PM */
++
+ static const struct pci_device_id pci_ids[] = {
+ 	{ PCI_DEVICE_DATA(INTEL, QRK_UARTx, &qrk_board) },
+ 	{ PCI_DEVICE_DATA(INTEL, EHL_UART0, &ehl_board) },
+@@ -385,11 +514,19 @@ static const struct pci_device_id pci_ids[] = {
+ };
+ MODULE_DEVICE_TABLE(pci, pci_ids);
+ 
++static const struct dev_pm_ops lpss8250_pm_ops = {
++	SET_SYSTEM_SLEEP_PM_OPS(lpss8250_suspend, lpss8250_resume)
++	SET_RUNTIME_PM_OPS(lpss8250_runtime_suspend, lpss8250_runtime_resume, NULL)
++};
++
+ static struct pci_driver lpss8250_pci_driver = {
+ 	.name           = "8250_lpss",
+ 	.id_table       = pci_ids,
+ 	.probe          = lpss8250_probe,
+ 	.remove         = lpss8250_remove,
++	.driver					= {
++		.pm		= &lpss8250_pm_ops,
++	}
+ };
+ 
+ module_pci_driver(lpss8250_pci_driver);
+-- 
+2.7.4
+

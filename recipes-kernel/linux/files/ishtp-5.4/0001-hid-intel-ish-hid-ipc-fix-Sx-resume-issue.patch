@@ -1,0 +1,101 @@
+From ba083fdd880abbba8896a56acc9f8cde2c4f85c1 Mon Sep 17 00:00:00 2001
+From: Even Xu <even.xu@intel.com>
+Date: Tue, 11 Feb 2020 13:01:23 +0800
+Subject: [PATCH] hid: intel-ish-hid: ipc: fix Sx resume issue
+
+During system resume from Sx, fw will reset itself.
+On some platforms, such as EHL, NO_D3 flag isn't enough to
+distingush this case. So add fw status check to double confirm if
+need go through full initialization.
+
+Signed-off-by: Even Xu <even.xu@intel.com>
+Signed-off-by: Wei Jiang <wei.w.jiang@intel.com>
+---
+ drivers/hid/intel-ish-hid/ipc/hw-ish.h  |  1 +
+ drivers/hid/intel-ish-hid/ipc/ipc.c     | 27 +++++++++++++++++++++++++++
+ drivers/hid/intel-ish-hid/ipc/pci-ish.c |  7 +++++--
+ 3 files changed, 33 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/hid/intel-ish-hid/ipc/hw-ish.h b/drivers/hid/intel-ish-hid/ipc/hw-ish.h
+index 905e1bc..cdda28c 100644
+--- a/drivers/hid/intel-ish-hid/ipc/hw-ish.h
++++ b/drivers/hid/intel-ish-hid/ipc/hw-ish.h
+@@ -78,6 +78,7 @@ enum {
+ irqreturn_t ish_irq_handler(int irq, void *dev_id);
+ struct ishtp_device *ish_dev_init(struct pci_dev *pdev);
+ int ish_hw_start(struct ishtp_device *dev);
++void ish_set_host_ready(struct ishtp_device *dev);
+ void ish_device_disable(struct ishtp_device *dev);
+ int ish_disable_dma(struct ishtp_device *dev);
+ 
+diff --git a/drivers/hid/intel-ish-hid/ipc/ipc.c b/drivers/hid/intel-ish-hid/ipc/ipc.c
+index 8f8dfdf..ac1582a 100644
+--- a/drivers/hid/intel-ish-hid/ipc/ipc.c
++++ b/drivers/hid/intel-ish-hid/ipc/ipc.c
+@@ -179,6 +179,13 @@ static void ish_set_host_rdy(struct ishtp_device *dev)
+ 	ish_reg_write(dev, IPC_REG_HOST_COMM, host_status);
+ }
+ 
++static bool ish_chk_host_rdy(struct ishtp_device *dev)
++{
++	uint32_t host_status = ish_reg_read(dev, IPC_REG_HOST_COMM);
++
++	return (host_status & IPC_HOSTCOMM_READY_BIT);
++}
++
+ /**
+  * ish_clr_host_rdy() - Indicate host not ready
+  * @dev: ISHTP device pointer
+@@ -843,6 +850,26 @@ int ish_hw_start(struct ishtp_device *dev)
+ }
+ 
+ /**
++ * ish_set_host_ready() - reconfig ipc host registers
++ * @dev: ishtp device pointer
++ *
++ * Set host to ready state
++ * This API is called in some case:
++ *    fw is still on, but ipc is powered down.
++ *    such as OOB case.
++ *
++ * Return: 0 for success else error fault code
++ */
++void ish_set_host_ready(struct ishtp_device *dev)
++{
++	if (ish_chk_host_rdy(dev))
++		return;
++
++	ish_set_host_rdy(dev);
++	set_host_ready(dev);
++}
++
++/**
+  * ish_ipc_get_header() -Get doorbell value
+  * @dev: ishtp device pointer
+  * @length: length of message
+diff --git a/drivers/hid/intel-ish-hid/ipc/pci-ish.c b/drivers/hid/intel-ish-hid/ipc/pci-ish.c
+index 9c8cefe..22087c6 100644
+--- a/drivers/hid/intel-ish-hid/ipc/pci-ish.c
++++ b/drivers/hid/intel-ish-hid/ipc/pci-ish.c
+@@ -212,13 +212,16 @@ static void __maybe_unused ish_resume_handler(struct work_struct *work)
+ {
+ 	struct pci_dev *pdev = to_pci_dev(ish_resume_device);
+ 	struct ishtp_device *dev = pci_get_drvdata(pdev);
++	uint32_t fwsts = dev->ops->get_fw_status(dev);
+ 	int ret;
+ 
+-	/* Check the NO_D3 flag to distinguish the resume paths */
+-	if (pdev->dev_flags & PCI_DEV_FLAGS_NO_D3) {
++	/* Check the NO_D3 flag and fw status to distinguish the resume paths */
++	if ((pdev->dev_flags & PCI_DEV_FLAGS_NO_D3) && IPC_IS_ISH_ILUP(fwsts)) {
+ 		pdev->dev_flags &= ~PCI_DEV_FLAGS_NO_D3;
+ 		disable_irq_wake(pdev->irq);
+ 
++		ish_set_host_ready(dev);
++
+ 		ishtp_send_resume(dev);
+ 
+ 		/* Waiting to get resume response */
+-- 
+2.7.4
+

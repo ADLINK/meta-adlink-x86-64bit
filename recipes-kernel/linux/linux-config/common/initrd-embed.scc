@@ -1,0 +1,2 @@
+# For embedding initramfs files into kernel
+kconf non-hardware initrd-embed.cfg

@@ -1,0 +1,5 @@
+patch gfx-5.4/0001-drm-i915-Add-Add-Wa_14010685332.patch
+patch gfx-5.4/32b8272accefcb98c3c4411718323092fec313af.patch
+patch gfx-5.4/reset_port_sync_mode_state.patch
+patch gfx-5.4/0001-drm-i915-gt-Sanitize-RPS-interrupts-upon-resume.patch
+patch gfx-5.4/0002-drm-i915-gt-Apply-sanitiization-just-before-resume.patch

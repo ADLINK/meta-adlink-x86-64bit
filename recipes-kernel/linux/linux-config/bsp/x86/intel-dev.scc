@@ -1,0 +1,24 @@
+define KFEATURE_DESCRIPTION "Intel Reference Board feature set"
+define KFEATURE_COMPATIBILITY board
+
+kconf hardware blockdevice.cfg
+kconf hardware wireless.cfg
+kconf hardware ethernet.cfg
+kconf hardware intel-dev.cfg
+kconf hardware usb.cfg
+kconf hardware audio.cfg
+kconf non-hardware yocto.cfg
+kconf hardware simics-wa.cfg
+
+kconf non-hardware kexec.cfg
+kconf non-hardware nfsd.cfg
+kconf non-hardware console.cfg
+kconf non-hardware filesystems.cfg
+kconf non-hardware debug-format.cfg
+
+kconf non-hardware lsm.cfg
+kconf hardware tcc.cfg
+kconf non-hardware test.cfg
+kconf non-hardware kernel-compress.cfg
+
+kconf non-hardware hybrid.cfg

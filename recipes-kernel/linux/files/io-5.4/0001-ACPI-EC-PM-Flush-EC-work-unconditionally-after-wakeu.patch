@@ -1,0 +1,44 @@
+From 1a65238c5eed3633e2a58230a4f0d6b34dd6f3f8 Mon Sep 17 00:00:00 2001
+From: "D, Lakshmi Sowjanya" <lakshmi.sowjanya.d@intel.com>
+Date: Tue, 29 Sep 2020 13:32:46 +0530
+Subject: [PATCH 1/1] ACPI: EC: PM: Flush EC work unconditionally after wakeup
+
+"ACPI: EC: PM: Avoid flushing EC work when EC
+GPE is inactive") is reported to cause some power button wakeup
+events to be missed on some systems, so modify acpi_ec_dispatch_gpe()
+to call acpi_ec_flush_work() unconditionally to effectively reverse
+the changes made by that commit.
+
+Fixes: "ACPI: EC: PM: Avoid flushing EC work when EC GPE is inactive")
+
+HSD:1508153371 [EHL][B0][PO][Linux_IO][Power_Management] EHL CRB board
+not able to wake from s0ix using power button
+
+Signed-off-by: D, Lakshmi Sowjanya <lakshmi.sowjanya.d@intel.com>
+---
+ drivers/acpi/ec.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+diff --git a/drivers/acpi/ec.c b/drivers/acpi/ec.c
+index 57eacdcbf820..3a5f7ce30069 100644
+--- a/drivers/acpi/ec.c
++++ b/drivers/acpi/ec.c
+@@ -1984,12 +1984,11 @@ bool acpi_ec_dispatch_gpe(void)
+ 	 * to allow the caller to process events properly after that.
+ 	 */
+ 	ret = acpi_dispatch_gpe(NULL, first_ec->gpe);
+-	if (ret == ACPI_INTERRUPT_HANDLED) {
++	if (ret == ACPI_INTERRUPT_HANDLED)
+ 		pm_pr_dbg("EC GPE dispatched\n");
+ 
+-		/* Flush the event and query workqueues. */
+-		acpi_ec_flush_work();
+-	}
++	/* Flush the event and query workqueues. */
++	acpi_ec_flush_work();
+ 
+ 	return false;
+ }
+-- 
+2.17.1
+

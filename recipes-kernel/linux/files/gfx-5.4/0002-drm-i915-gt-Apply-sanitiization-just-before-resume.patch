@@ -1,0 +1,32 @@
+From 21d8fcc48871b55fc3d4646b3fafafa13545c417 Mon Sep 17 00:00:00 2001
+From: Chris Wilson <chris@chris-wilson.co.uk>
+Date: Thu, 26 Dec 2019 11:18:34 +0000
+Subject: [PATCH 2/2] drm/i915/gt: Apply sanitiization just before resume
+
+Bring sanitization completely underneath the umbrella of intel_gt, and
+perform it exclusively after suspend and before the next resume.
+
+Signed-off-by: Chris Wilson <chris@chris-wilson.co.uk>
+Acked-by: Andi Shyti <andi.shyti@intel.com>
+Link: https://patchwork.freedesktop.org/patch/msgid/20191226111834.2545953-1-chris@chris-wilson.co.uk
+Signed-off-by: James Xiong <james.xiong@intel.com>
+---
+ drivers/gpu/drm/i915/gt/intel_gt.c | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/drivers/gpu/drm/i915/gt/intel_gt.c b/drivers/gpu/drm/i915/gt/intel_gt.c
+index c39b21c8d328..4c8fcfe5391f 100644
+--- a/drivers/gpu/drm/i915/gt/intel_gt.c
++++ b/drivers/gpu/drm/i915/gt/intel_gt.c
+@@ -35,8 +35,6 @@ void intel_gt_init_early(struct intel_gt *gt, struct drm_i915_private *i915)
+ void intel_gt_init_hw_early(struct intel_gt *gt, struct i915_ggtt *ggtt)
+ {
+ 	gt->ggtt = ggtt;
+-
+-	intel_gt_sanitize(gt, false);
+ }
+ 
+ static void init_unused_ring(struct intel_gt *gt, u32 base)
+-- 
+2.17.1
+

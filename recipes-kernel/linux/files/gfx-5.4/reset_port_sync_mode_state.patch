@@ -1,0 +1,27 @@
+drm/i915: fix mipi dsi panel initialization issue
+
+diff --git a/drivers/gpu/drm/i915/display/intel_display.c b/drivers/gpu/drm/i915/display/intel_display.c
+index 28db23607a26ec2d63da7947dc014d1727694cd1..3e45cf18c30f4247ddd9343d981cc153f53985a2 100644
+--- a/drivers/gpu/drm/i915/display/intel_display.c
++++ b/drivers/gpu/drm/i915/display/intel_display.c
+@@ -12597,6 +12597,12 @@ static bool c8_planes_changed(const struct intel_crtc_state *new_crtc_state)
+ 	return !old_crtc_state->c8_planes != !new_crtc_state->c8_planes;
+ }
+ 
++static void reset_port_sync_mode_state(struct intel_crtc_state *crtc_state)
++{
++	crtc_state->master_transcoder = INVALID_TRANSCODER;
++	crtc_state->sync_mode_slaves_mask = 0;
++}
++
+ static int intel_crtc_atomic_check(struct intel_atomic_state *state,
+ 				   struct intel_crtc *crtc)
+ {
+@@ -13133,6 +13139,7 @@ intel_crtc_prepare_cleared_state(struct intel_crtc_state *crtc_state)
+ 	if (IS_G4X(dev_priv) ||
+ 	    IS_VALLEYVIEW(dev_priv) || IS_CHERRYVIEW(dev_priv))
+ 		saved_state->wm = crtc_state->wm;
++	reset_port_sync_mode_state(saved_state);
+ 
+ 	memcpy(crtc_state, saved_state, sizeof(*crtc_state));
+ 	kfree(saved_state);

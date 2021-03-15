@@ -1,0 +1,80 @@
+From 156ca7a86aabcb12e8b9bd13dab73b904d46667c Mon Sep 17 00:00:00 2001
+From: "Tan, Raymond" <raymond.tan@intel.com>
+Date: Tue, 3 Mar 2020 13:31:32 +0800
+Subject: [PATCH] REVERT-ME: i2c-designware-pci: Split PM and RPM function
+ implementation
+
+Avoid UNIVERSAL_DEV_PM_OPS which shares both PM and RPM
+callback implementation, preparing for D0i3 implementation.
+
+Signed-off-by: Tan, Raymond <raymond.tan@intel.com>
+---
+ drivers/i2c/busses/i2c-designware-pcidrv.c | 35 ++++++++++++++++++++++++++----
+ 1 file changed, 31 insertions(+), 4 deletions(-)
+
+diff --git a/drivers/i2c/busses/i2c-designware-pcidrv.c b/drivers/i2c/busses/i2c-designware-pcidrv.c
+index 6c1f965..5ccc33f 100644
+--- a/drivers/i2c/busses/i2c-designware-pcidrv.c
++++ b/drivers/i2c/busses/i2c-designware-pcidrv.c
+@@ -187,10 +187,33 @@ static struct dw_pci_controller dw_pci_controllers[] = {
+ 	},
+ };
+ 
+-#ifdef CONFIG_PM
++#ifdef CONFIG_PM_SLEEP
+ static int i2c_dw_pci_suspend(struct device *dev)
+ {
+ 	struct dw_i2c_dev *i_dev = dev_get_drvdata(dev);
++
++	i_dev->suspended = true;
++	i_dev->disable(i_dev);
++
++	return 0;
++}
++
++static int i2c_dw_pci_resume(struct device *dev)
++{
++	struct dw_i2c_dev *i_dev = dev_get_drvdata(dev);
++	int ret;
++
++	ret = i_dev->init(i_dev);
++	i_dev->suspended = false;
++
++	return ret;
++}
++#endif
++
++#ifdef CONFIG_PM
++static int i2c_dw_pci_runtime_suspend(struct device *dev)
++{
++	struct dw_i2c_dev *i_dev = dev_get_drvdata(dev);
+ 	u32 d0i3c_reg;
+ 	u32 cgsr_reg;
+ 	unsigned long j0,j1,delay;
+@@ -228,7 +251,7 @@ static int i2c_dw_pci_suspend(struct device *dev)
+ 	return 0;
+ }
+ 
+-static int i2c_dw_pci_resume(struct device *dev)
++static int i2c_dw_pci_runtime_resume(struct device *dev)
+ {
+ 	struct dw_i2c_dev *i_dev = dev_get_drvdata(dev);
+ 	int ret;
+@@ -263,8 +286,12 @@ static int i2c_dw_pci_resume(struct device *dev)
+ }
+ #endif
+ 
+-static UNIVERSAL_DEV_PM_OPS(i2c_dw_pm_ops, i2c_dw_pci_suspend,
+-			    i2c_dw_pci_resume, NULL);
++static const struct dev_pm_ops i2c_dw_pm_ops = {
++	SET_SYSTEM_SLEEP_PM_OPS(i2c_dw_pci_suspend,
++				i2c_dw_pci_resume)
++	SET_RUNTIME_PM_OPS(i2c_dw_pci_runtime_suspend, i2c_dw_pci_runtime_resume,
++				NULL)
++};
+ 
+ static u32 i2c_dw_get_clk_rate_khz(struct dw_i2c_dev *dev)
+ {
+-- 
+2.7.4
+

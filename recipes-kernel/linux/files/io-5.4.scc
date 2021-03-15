@@ -1,0 +1,49 @@
+patch io-5.4/ehl-er4/0001-serial-8250_dwlib-Basic-RS485-support.patch
+patch io-5.4/ehl-er4/0002-serial-Preliminary-support-for-9-bit-transfer-mode-w.patch
+patch io-5.4/ehl-er4/0003-serial-8250_dwlib-Support-for-9-bit-transfer-mode.patch
+patch io-5.4/ehl-er4/0004-serial-8250-dwlib-Unsetting-default-DE_POL-and-RE_PO.patch
+
+patch io-5.4/0001-Revert-HACK-scsi-ufs-Add-module-parameters-max_gear-.patch
+patch io-5.4/0002-HACK-scsi-ufs-Add-module-parameters-max_gear-dflt_hs.patch
+patch io-5.4/0001-counter-intel-qep-Enable-clock-divisor.patch
+patch io-5.4/0001-drivers-ptp-Add-PSE-Time-Aware-GPIO-Driver.patch
+patch io-5.4/0001-Configure-pin-function-before-perout-request.patch
+patch io-5.4/0002-Added-an-Example-to-adjust-frequency-for-output.patch
+patch io-5.4/0003-Added-single-shot-output-mode-support-for-TGPIO.patch
+patch io-5.4/0004-Added-TGPIO-pin-check-before-input-event-read.patch
+patch io-5.4/0005-Added-an-example-to-poll-for-edges.patch
+patch io-5.4/0006-Added-support-to-get-TGPIO-System-Clock-Offset.patch
+patch io-5.4/0007-Added-single-shot-output-mode-option-for-TGPIO-pin.patch
+patch io-5.4/0008-ptp-ptp-intel-tgpio-Add-COMPV-GPIO-Mode-for-PSE-TGPI.patch
+patch io-5.4/0009-selftests-ptp-Added-COMPV-GPIO-Input-Mode-for-TGPIO.patch
+patch io-5.4/0010-ptp-intel-tgpio-Reset-pin-configuration-when-disabli.patch
+patch io-5.4/0001-Temporary-ptp-Introduce-PTP_PINDESC_INPUTPOLL-for-In.patch
+patch io-5.4/0001-ptp-intel-tgpio-Enable-RPM-and-PM-for-PSE-TGPIO.patch
+patch io-5.4/0001-gpio-gpio-ehl-pse-Introduce-the-Elkhart-Lake-Program.patch
+patch io-5.4/0001-pinctrl-elkhartlake-pinctrl-Realign-each-GPIO-group-.patch
+patch io-5.4/0001-mfd-intel-ehl-gpio-Introduce-MFD-framework-to-PSE-GP.patch
+patch io-5.4/0001-counter-intel-qep-Avoid-race-condition-of-reading-QE.patch
+patch io-5.4/0001-spi-spi-dw-pci-Ensure-spi_set_clk-is-called-for-ever.patch
+patch io-5.4/0001-PSE-I2C-support-for-SS-FS-and-FP.patch
+patch io-5.4/0001-serial-8250-dwlib-Fix-TX-RX-ADDR-setting-in-9-bit-mo.patch
+patch io-5.4/0001-serial-8250-Enable-RS485-Hardware-Full-Duplex.patch
+patch io-5.4/0001-usb-dwc3-Allow-Elkhart-Lake-to-utilize-DSM-method-fo.patch
+
+patch io-5.4/0026-spi-dw-Add-Elkhart-Lake-PSE-DMA-support.patch
+patch io-5.4/0027-serial-8250_lpss-Enable-Elkhart-Lake-PSE-UART-with-D.patch
+
+patch io-5.4/0001-iio-intel-adc-Use-completion-object-to-read-from-FIF.patch
+patch io-5.4/0002-iio-intel-adc-ADC-sample-data-size-is-16bit-only.patch
+patch io-5.4/0001-iio-intel-adc-Implement-IIO-events-for-thresholding-.patch
+patch io-5.4/0002-iio-intel-adc-Enable-LOOP_MODE-with-triggered-buffer.patch
+patch io-5.4/0003-iio-intel-adc-Enable-PSE-DMA-as-flow-controller.patch
+
+patch io-5.4/0001-Calling-power-management-calls-without-entering-crit.patch
+
+patch io-5.4/0001-serial-8250-dwlib-9-bit-data-transfer-mode-negative-.patch
+
+patch io-5.4/0001-i2c-busses-Support-for-High-Speed-mode.patch
+patch io-5.4/0001-Hack-spi-PSE-DMA-with-Vtd.patch
+patch io-5.4/0001-HACK-scs-ufs-To-avoid-using-no_auto_hibern8-1-in-boo.patch
+patch io-5.4/0001-GPIO-Fix-for-PSE-GPIO-generating-only-one-event-as-i.patch
+patch io-5.4/0001-ACPI-EC-PM-Flush-EC-work-unconditionally-after-wakeu.patch

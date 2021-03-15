@@ -1,0 +1,2 @@
+# For embedding firmware files into kernel
+kconf non-hardware fw-embed.cfg

@@ -1,0 +1,8 @@
+patch ishtp-5.4/0003-misc-intel-ish-client-add-intel-ishtp-clients-driver.patch
+patch ishtp-5.4/0001-REVERT-ME-Temporary-enable-D0i3-flow-for-PSE-IOs.patch
+patch ishtp-5.4/0001-REVERT-ME-i2c-designware-pci-Split-PM-and-RPM-functi.patch
+patch ishtp-5.4/0001-hid-intel-ish-hid-ipc-finish-power-flow-for-EHL-OOB.patch
+patch ishtp-5.4/0001-hid-intel-ish-hid-ipc-fix-Sx-resume-issue.patch
+patch ishtp-5.4/0001-hid-change-default-name-to-pseFw.bin.patch
+patch ishtp-5.4/0002-hid-intel-ish-hid-ishtp-enable-fw-to-host-dma.patch
+patch ishtp-5.4/0001-hid-intel-ish-hid-ipc-enable-PME-wake-for-OOB-use-ca.patch

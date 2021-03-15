@@ -1,0 +1,70 @@
+From c2ea0a2b7411ff397ad8f0cef2c6143ada5f0e43 Mon Sep 17 00:00:00 2001
+From: Chris Wilson <chris@chris-wilson.co.uk>
+Date: Sat, 2 May 2020 18:35:12 +0100
+Subject: [PATCH 1/2] drm/i915/gt: Sanitize RPS interrupts upon resume
+
+Currently we clear and disable the RPS pm interrupts on module load, and
+presume that they remain disabled forevermore. However, the mask is
+cleared on suspend and so after resume they may start showing up again
+unexepectedly.
+
+Closes: https://gitlab.freedesktop.org/drm/intel/-/issues/1811
+Fixes: 8e99299a04bc ("drm/i915/gt: Track use of RPS interrupts in flags")
+Signed-off-by: Chris Wilson <chris@chris-wilson.co.uk>
+Cc: Andi Shyti <andi@etezian.org>
+Reviewed-by: Andi Shyti <andi@etezian.org>
+Link: https://patchwork.freedesktop.org/patch/msgid/20200502173512.32353-1-chris@chris-wilson.co.uk
+Signed-off-by: James Xiong <james.xiong@intel.com>
+---
+ drivers/gpu/drm/i915/gt/intel_gt_pm.c | 2 ++
+ drivers/gpu/drm/i915/gt/intel_rps.c   | 6 ++++--
+ drivers/gpu/drm/i915/gt/intel_rps.h   | 1 +
+ 3 files changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/gpu/drm/i915/gt/intel_gt_pm.c b/drivers/gpu/drm/i915/gt/intel_gt_pm.c
+index 154f76432384..88ca885dcaf4 100644
+--- a/drivers/gpu/drm/i915/gt/intel_gt_pm.c
++++ b/drivers/gpu/drm/i915/gt/intel_gt_pm.c
+@@ -172,6 +172,8 @@ void intel_gt_sanitize(struct intel_gt *gt, bool force)
+ 		if (engine->reset.finish)
+ 			engine->reset.finish(engine);
+ 
++	intel_rps_sanitize(&gt->rps);
++
+ 	intel_uncore_forcewake_put(gt->uncore, FORCEWAKE_ALL);
+ 	intel_runtime_pm_put(gt->uncore->rpm, wakeref);
+ }
+diff --git a/drivers/gpu/drm/i915/gt/intel_rps.c b/drivers/gpu/drm/i915/gt/intel_rps.c
+index f56d8cb5985b..8cad33a19f96 100644
+--- a/drivers/gpu/drm/i915/gt/intel_rps.c
++++ b/drivers/gpu/drm/i915/gt/intel_rps.c
+@@ -1808,10 +1808,12 @@ void intel_rps_init(struct intel_rps *rps)
+ 
+ 	if (INTEL_GEN(i915) >= 8)
+ 		rps->pm_intrmsk_mbz |= GEN8_PMINTR_DISABLE_REDIRECT_TO_GUC;
++}
+ 
+-	if (INTEL_GEN(i915) >= 6)
++void intel_rps_sanitize(struct intel_rps *rps)
++{
++	if (INTEL_GEN(rps_to_i915(rps)) >= 6)
+ 		rps_disable_interrupts(rps);
+-
+ }
+ 
+ u32 intel_get_cagf(struct intel_rps *rps, u32 rpstat)
+diff --git a/drivers/gpu/drm/i915/gt/intel_rps.h b/drivers/gpu/drm/i915/gt/intel_rps.h
+index 43bf88939a51..3709dce250ab 100644
+--- a/drivers/gpu/drm/i915/gt/intel_rps.h
++++ b/drivers/gpu/drm/i915/gt/intel_rps.h
+@@ -13,6 +13,7 @@ struct i915_request;
+ 
+ void intel_rps_init_early(struct intel_rps *rps);
+ void intel_rps_init(struct intel_rps *rps);
++void intel_rps_sanitize(struct intel_rps *rps);
+ 
+ void intel_rps_driver_register(struct intel_rps *rps);
+ void intel_rps_driver_unregister(struct intel_rps *rps);
+-- 
+2.17.1
+
