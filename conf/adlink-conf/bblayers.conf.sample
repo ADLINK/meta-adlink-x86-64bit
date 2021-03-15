@@ -5,22 +5,32 @@ POKY_BBLAYERS_CONF_VERSION = "2"
 BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
+# bbapend does not work with meson
+BBMASK_append = " meta-qt5/recipes-multimedia/gstreamer/"
+
 BBLAYERS ?= " \
   ${TOPDIR}/../poky/meta \
   ${TOPDIR}/../poky/meta-poky \
   ${TOPDIR}/../poky/meta-yocto-bsp \
+  ${TOPDIR}/../meta-security \
   ${TOPDIR}/../meta-openembedded/meta-oe \
-  ${TOPDIR}/../meta-openembedded/meta-xfce \
-  ${TOPDIR}/../meta-openembedded/meta-gnome \
-  ${TOPDIR}/../meta-openembedded/meta-multimedia \
+  ${TOPDIR}/../meta-openembedded/meta-filesystems \
+  ${TOPDIR}/../meta-openembedded/meta-perl \
   ${TOPDIR}/../meta-openembedded/meta-python \
+  ${TOPDIR}/../meta-openembedded/meta-multimedia \
   ${TOPDIR}/../meta-openembedded/meta-networking \
   ${TOPDIR}/../meta-intel \
-  ${TOPDIR}/../meta-adlink-x86-64bit \
-  ${TOPDIR}/../meta-adlink-sema \
+  ${TOPDIR}/../meta-virtualization \
+  ${TOPDIR}/../meta-clang \
   ${TOPDIR}/../meta-qt5 \
-  ${TOPDIR}/../meta-secure-core/meta-tpm \
-  ${TOPDIR}/../meta-secure-core/meta-tpm2 \
-  ${TOPDIR}/../meta-python2 \
-"
+  "
+
+#ADLINK: add meta-xfce, sema
+BBLAYERS_append = " ${TOPDIR}/../meta-openembedded/meta-xfce"
+BBLAYERS_append = " ${TOPDIR}/../meta-openembedded/meta-gnome"
+BBLAYERS_append = " ${TOPDIR}/../meta-adlink-x86-64bit"
+BBLAYERS_append = " ${TOPDIR}/../meta-adlink-sema"
+
+#ADLINK: add tpm,tmp2 tools
+BBLAYERS_append = " ${TOPDIR}/../meta-security/meta-tpm"
 
