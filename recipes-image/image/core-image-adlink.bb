@@ -43,16 +43,8 @@ IMAGE_INSTALL_append = " python3-pyserial"
 ## For multimedia
 IMAGE_INSTALL_append = " gstreamer1.0-plugins-ugly gstreamer1.0-libav"
 
-## TPM_1.x & TPM_2.0 tool
-#PREFERRED_VERSION_tpm2-tss = "1.4.0"
-#IMAGE_INSTALL_append = " packagegroup-security-tpm"
-## TPM_2.0 tool
-#IMAGE_INSTALL_append = " tpm2-tools libtss2 tpm2-abrmd tpm2-tss"
-
+#TPM_2.0
 IMAGE_INSTALL_append = " packagegroup-security-tpm2"
-
-## TPM_1.x tool
-#IMAGE_INSTALL_append = " tpm-tools trousers"
 
 ## Linux ptp
 IMAGE_INSTALL_append = " linuxptp"
@@ -63,17 +55,11 @@ IMAGE_INSTALL_append = " rpcbind nfs-utils-mount nfs-utils-client nfs-utils"
 ## CIFS supported
 IMAGE_INSTALL_append = " cifs-utils"
 
-## Add terminus-font
-#IMAGE_INSTALL_append = " terminus-font"
-
 ## For time zone setting
 IMAGE_INSTALL_append = " tzdata"
 
 ## For IBECC test
 IMAGE_INSTALL_append = " devmem2"
-
-## Add network manager, this will conflict with connman
-#IMAGE_INSTALL_append = " networkmanager"
 
 ## Remove mender
 INHERIT_remove = "mender-full"

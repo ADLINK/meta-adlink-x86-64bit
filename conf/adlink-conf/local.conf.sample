@@ -14,27 +14,6 @@
 #
 # Machine Selection
 #
-# You need to select a specific machine to target the build with. There are a selection
-# of emulated machines available which can boot and run in the QEMU emulator:
-#
-#MACHINE ?= "qemuarm"
-#MACHINE ?= "qemuarm64"
-#MACHINE ?= "qemumips"
-#MACHINE ?= "qemumips64"
-#MACHINE ?= "qemuppc"
-#MACHINE ?= "qemux86"
-#MACHINE ?= "qemux86-64"
-#
-# There are also the following hardware board target machines included for 
-# demonstration purposes:
-#
-#MACHINE ?= "beaglebone-yocto"
-#MACHINE ?= "genericx86"
-#MACHINE ?= "genericx86-64"
-#MACHINE ?= "edgerouter"
-#
-# This sets the default machine to be qemux86-64 if no other machine is selected:
-#MACHINE ??= "qemux86-64"
 MACHINE ??= "intel-corei7-64"
 
 # Take note that as we are building 3rd party ingredient.
@@ -118,7 +97,6 @@ PACKAGE_CLASSES ?= "package_rpm"
 # you can build the SDK packages for architectures other than the machine you are
 # running the build on (i.e. building i686 packages on an x86_64 host).
 # Supported values are i686 and x86_64
-#SDKMACHINE ?= "i686"
 SDKMACHINE ?= "x86_64"
 
 #
@@ -276,9 +254,6 @@ PACKAGECONFIG_append_pn-qemu-system-native = " sdl"
 CONF_VERSION = "1"
 
 #============================= ADLINK =============================
-#BB_NUMBER_THREADS = "8"
-#BB_NUMBER_PARSE_THREADS = "8"
-#PARALLEL_MAKE = "-j 8"
 
 export IMAGE_BASENAME = "adlink-x86-cEL"
 DISTRO_FEATURES_append = " polkit"
