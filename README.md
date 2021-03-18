@@ -13,7 +13,7 @@
 <tr style="height: 46px;">
 <td style="height: 46px; text-align: center; border: 1px solid #cccccc; width: 173.818px;"><img src="https://cdn.adlinktech.com/webupd/products/images/1880/cExpress-EL-F_web2.jpg" width="150" /></td>
 <td style="border-color: grey; width: 458.182px; height: 46px;">
-<p><strong>cExpress-EL</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-WL?lang=en">More Details</a>)</p>
+<p><strong>cExpress-EL</strong> (<a href="https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-EL?lang=en">More Details</a>)</p>
 <p><strong>COM Express Type 6 Compact</strong> <br/>with Next Generation Intel Atom® Processor SoC</p>
 </td>
 </tr>
