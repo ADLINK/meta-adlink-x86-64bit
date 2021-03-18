@@ -18,7 +18,7 @@
 | Poky                  | Dunfell     | 861cfcd52f0b769772c3726530210f2f43c3449b |
 | meta-openembedded     | Dunfell     | f2d02cb71eaff8eb285a1997b30be52486c160ae |
 | meta-intel            | Dunfell     | 7fe349c03bad8a2609429b6783c0909d2aef3694 |
-| meta-adlink-x86-64bit | Dunfell     | af096f2d6dfb160edd7b393618dcf858d5f56476 |
+| meta-adlink-x86-64bit | Dunfell     | 34130d85b1df3a27f90fdf6c672e8ff79e0117f9 |
 | meta-adlink-sema      | Dunfell     | TBD                                      |
 | meta-qt5              | Dunfell     | 0d8eb956015acdea7e77cd6672d08dce18061510 |
 | meta-security         | Dunfell     | c74cc97641fd93e0e7a4383255e9a0ab3deaf9d7 |
