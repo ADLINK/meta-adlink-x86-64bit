@@ -5,7 +5,7 @@
 
 ### Yocto ISO Images for the quick evaluation
 
-* xfce Desktop environment [download link](https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/COMe/Intel/images/Yocto/Intel-x86-x64-Yocto-dunfell-v1.0-20210318.tar.xz)  (TBD)
+* xfce Desktop environment image: [download link](https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/COMe/Intel/images/Yocto/Intel-x86-x64-Yocto-dunfell-v1.0-20210318.tar.xz)
 * minimal image with commandine mode + [SEMA 4.0](https://adlink-epm.github.io/sema-doc/#/) (image size: 1.3 GB) [download link]() (TBD)
 
 <br>
