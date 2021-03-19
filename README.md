@@ -6,7 +6,7 @@
 ### Yocto ISO Images for the quick evaluation
 
 * xfce Desktop environment image: [download link](https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/COMe/Intel/images/Yocto/Intel-x86-x64-Yocto-dunfell-v1.0-20210318.tar.xz)
-* minimal image with commandine mode: (TBD)
+* minimal image with commandine mode: [download link](https://hq0epm0west0us0storage.blob.core.windows.net/development/cExpress-EL/Yocto/CCOE/adlink-mini-x86-cEL-intel-corei7-64.hddimg)
 
 <br>
 
