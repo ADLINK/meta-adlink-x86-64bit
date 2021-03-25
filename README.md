@@ -19,7 +19,7 @@
 |  poky   |  zeus  | 94f6b31befda5c496f65e863a6f8152b42d7ebf0 |
 |meta-openembedded|zeus|bb65c27a772723dfe2c15b5e1b27bcc1a1ed884c|
 |meta-intel| zeus |faced19dda5332cce9164903b250db5aa9b86259|
-|meta-adlink-x86-64bit| zeus   |c08c2e222cd582aab38f734f15c97fc7e40fbbf7 |
+|meta-adlink-x86-64bit| zeus   |aba78229236bd6fe7dbea191e0575063022aa8f8 |
 |meta-adlink-sema| sema4.0 | 740d616643d0c4829f6e15a30cf869e11a561da5 |
 |meta-qt5| zeus |0bdbb344bc0a7261d76d715e570ddc2ecfefae58|
 |meta-secure-core| master |e8e80fb7c4971bb05e14ec5e329c1435ba485b2b|
