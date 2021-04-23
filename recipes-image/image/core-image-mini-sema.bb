@@ -23,7 +23,7 @@ IMAGE_INSTALL_append = " git curl wget which busybox bzip2 cmake bash tar gzip k
 IMAGE_INSTALL_append = " packagegroup-security-tpm2"
 
 ## SEMA applications
-IMAGE_INSTALL_append = " sema4.0"
+IMAGE_INSTALL_append = " sema"
 
 
 export IMAGE_BASENAME = "adlink-mini-x86-cEL"

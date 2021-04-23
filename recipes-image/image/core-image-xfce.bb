@@ -23,7 +23,7 @@ IMAGE_INSTALL_append = " garcon sysprof xfce4-screenshooter ristretto xfce4-task
 IMAGE_INSTALL_remove = "icewm"
 
 ## SEMA applications
-IMAGE_INSTALL_append = " sema4.0"
+IMAGE_INSTALL_append = " sema"
 
 ## For additional tools/packages
 IMAGE_INSTALL_append = " libstdc++ kernel-modules kernel-devsrc packagegroup-base alsa-utils packagegroup-core-full-cmdline"
