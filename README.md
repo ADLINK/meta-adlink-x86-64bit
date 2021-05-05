@@ -33,7 +33,7 @@
 | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **SMARC**   | **LEC-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/SMARC/LEC-AL?lang=en))<BR>ntel Atom® E3900 Series, Pentium™ N4200 or Celeron™ N3350 Processor | [zeus](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/zeus) |
 
-
+<BR>
 
 * **Q7 Modules**
 
@@ -41,9 +41,9 @@
 | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **Qseven**  | **Q7-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/Qseven/Q7-AL?lang=en))<BR>Intel Atom® E3900, Pentium® N4200 and Celeron® N3350 Processor | [zeus](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/zeus) |
 
+<BR>
 
-
-**Panel PC & Monitor**
+* **Panel PC & Monitor**
 
 | Type        | Hardware name                                                | Supported Branch                                             |
 | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
