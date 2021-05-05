@@ -9,7 +9,7 @@
 * **COM Express Modules**
 
 | Module Type                        | Module Name                                                  | Supported Branch                                             |
-| ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ---------------------------------- | ------------------------------------------------------------ | :------------------------------------------------------------: |
 | **COM Express® Type 6 Compact**    | **cExpress-EL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-EL?lang=en))<BR>Next Generation Intel Atom® Processor SoC | [dunfell](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/dunfell) |
 |                                    | **cExpress-WL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-WL?lang=en))<BR>Up to Quadcore Intel® Core™ and Celeron® Processors | [zeus](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/zeus) |
 |                                    | **cExpress-KL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-KL?lang=en))<BR>Mobile 7th Gen Intel® Core™ and Celeron® Processors | [zeus](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/zeus) |
@@ -30,7 +30,7 @@
 * **SMARC Modules**
 
 | Module Type | Module Name                                                  | Supported Branch                                             |
-| ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ----------- | ------------------------------------------------------------ | :------------------------------------------------------------: |
 | **SMARC**   | **LEC-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/SMARC/LEC-AL?lang=en))<BR>ntel Atom® E3900 Series, Pentium™ N4200 or Celeron™ N3350 Processor | [zeus](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/zeus) |
 
 <BR>
@@ -38,7 +38,7 @@
 * **Q7 Modules**
 
 | Module Type | Module Name                                                  | Supported Branch                                             |
-| ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ----------- | ------------------------------------------------------------ | :------------------------------------------------------------: |
 | **Qseven**  | **Q7-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/Qseven/Q7-AL?lang=en))<BR>Intel Atom® E3900, Pentium® N4200 and Celeron® N3350 Processor | [zeus](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/zeus) |
 
 <BR>
@@ -46,7 +46,7 @@
 * **Panel PC & Monitor**
 
 | Type        | Hardware name                                                | Supported Branch                                             |
-| ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ----------- | ------------------------------------------------------------ | :------------------------------------------------------------: |
 | Smart Panel | **SP-AL Series** [(More Details)](https://www.adlinktech.com/Products/Panel_PCs_Monitors/SmartPanel/SP-AL_Series?lang=en)<BR>Intel Atom® x5-E3930/x7-E3950 processor | [dunfell](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/dunfell) |
 
 
