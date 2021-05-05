@@ -47,7 +47,7 @@
 
 | Type        | Hardware name                                                | Supported Branch                                             |
 | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Smart Panel | **SP-KL Series** [(More Details)](https://www.adlinktech.com/Products/Panel_PCs_Monitors/SmartPanel/SP-KL_Series?lang=en)<BR>Intel® Core™ i7-7600U/i5-7300U/i3-7100U processors | [dunfell](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/dunfell) |
+| Smart Panel | **SP-AL Series** [(More Details)](https://www.adlinktech.com/Products/Panel_PCs_Monitors/SmartPanel/SP-AL_Series?lang=en)<BR>Intel Atom® x5-E3930/x7-E3950 processor | [dunfell](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/dunfell) |
 
 
 
