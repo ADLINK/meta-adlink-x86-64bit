@@ -25,7 +25,7 @@
 |                                    | **Express-BD74** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD74?lang=en))<BR>ntel® Xeon® D SoC and 4 SODIMMs | [zeus](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/zeus) |
 |                                    | **nanoX-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType10/nanoX-AL?lang=en))<BR>Intel Atom® E3900 series, Pentium®, and Celeron® SoC | [zeus](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/zeus) |
 
-
+<BR>
 
 * **SMARC Modules**
 
