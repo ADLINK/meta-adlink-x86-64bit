@@ -45,9 +45,9 @@
 
 * **Panel PC & Monitor**
 
-| Type        | Hardware name                                                | Supported Branch                                             |
-| ----------- | ------------------------------------------------------------ | :------------------------------------------------------------: |
-| Smart Panel | **SP-AL Series** [(More Details)](https://www.adlinktech.com/Products/Panel_PCs_Monitors/SmartPanel/SP-AL_Series?lang=en)<BR>Intel Atom® x5-E3930/x7-E3950 processor | [dunfell](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/dunfell) |
+| Type        | Hardware name                                                | Supported Branch                                             | Download image |
+| ----------- | ------------------------------------------------------------ | :----------------------------------------------------------: | :------------: |
+| Smart Panel | **SP-AL Series** [(More Details)](https://www.adlinktech.com/Products/Panel_PCs_Monitors/SmartPanel/SP-AL_Series?lang=en)<BR>Intel Atom® x5-E3930/x7-E3950 processor | [dunfell](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/dunfell) | [click here](https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SmartPanel/core-image-weston-intel-corei7-64-20210504012317.zip) |
 
 
 
