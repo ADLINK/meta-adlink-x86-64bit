@@ -55,6 +55,7 @@ index 9ea51b6c769b..7208c3f70482 100644
  	} else if (IS_HASWELL(i915) || IS_BROADWELL(i915)) {
  		hsw_disable_pc8(i915);
  	}
+}
 -- 
 2.21.0
 

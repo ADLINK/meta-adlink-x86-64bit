@@ -9,6 +9,7 @@ DEPENDS += " \
 SRC_URI = "\
     file://adlinkstartup \
     file://adlinkstartup.service \
+    file://10-intel.conf\
 "
 
 inherit pkgconfig systemd update-rc.d useradd
@@ -26,13 +27,13 @@ USERADD_PARAM_${PN} = "--system -M -d /var/lib/adlink -s /bin/false -g root root
 
 do_install() {
     install -d "${D}${sysconfdir}/init.d"
+    install -d "${D}/usr/share/X11/xorg.conf.d"
     install -m 0755 "${WORKDIR}/adlinkstartup" "${D}${sysconfdir}/init.d/adlinkstartup"
-
+    install -m 0644 "${WORKDIR}/10-intel.conf" "${D}/usr/share/X11/xorg.conf.d/10-intel.conf"
     if ${@bb.utils.contains("DISTRO_FEATURES", 'systemd', 'true', 'false', d)}; then
        
        install -d "${D}${sbindir}"
        install -m 0755 "${WORKDIR}/adlinkstartup" "${D}${sbindir}/adlinkstartup"       
-
        install -d "${D}${systemd_unitdir}/system"
        install -m 0644 "${WORKDIR}/adlinkstartup.service" "${D}${systemd_unitdir}/system/adlinkstartup.service"
     fi
@@ -43,6 +44,7 @@ FILES_${PN} += "\
     ${datadir}/dbus-1/system-services/com.intel.adlink.Tabrmd.service \
     ${sbindir}/adlinkstartup \
     ${systemd_unitdir}/system/adlinkstartup.service \
+    /usr/share/X11/xorg.conf.d/10-intel.conf \
 "
 
 

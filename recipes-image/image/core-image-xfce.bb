@@ -23,7 +23,7 @@ IMAGE_INSTALL_append = " garcon sysprof xfce4-screenshooter ristretto xfce4-task
 IMAGE_INSTALL_remove = "icewm"
 
 ## SEMA applications
-IMAGE_INSTALL_append = " sema"
+IMAGE_INSTALL_append = " sema4.0"
 
 ## For additional tools/packages
 IMAGE_INSTALL_append = " libstdc++ kernel-modules kernel-devsrc packagegroup-base alsa-utils packagegroup-core-full-cmdline"
@@ -64,4 +64,4 @@ IMAGE_INSTALL_append = " devmem2"
 ## Remove mender
 INHERIT_remove = "mender-full"
 
-APPEND += "video=eDP-1:d"
+APPEND += "video=eDP-1:d rootwait i915.enable_psr=0 console=ttyS0,115200 console=tty0 irqpoll tpm_tis.interrupts=0"
