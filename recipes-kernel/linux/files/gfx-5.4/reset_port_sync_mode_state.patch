@@ -25,3 +25,4 @@ index 28db23607a26ec2d63da7947dc014d1727694cd1..3e45cf18c30f4247ddd9343d981cc153
  
  	memcpy(crtc_state, saved_state, sizeof(*crtc_state));
  	kfree(saved_state);
+}
