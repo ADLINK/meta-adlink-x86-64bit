@@ -1,2 +1,1 @@
-patch ethernet-5.4/0001-Revert-net-stmmac-Temporary-WA-to-check-TSN-capable.patch
-patch ethernet-5.4/0001-net-stmmac-Fix-PHY-latency-value-obtained-from-the-c.patch
+patch ethernet-5.4/0001-igc-probe-main-tsn.patch
