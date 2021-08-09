@@ -40,3 +40,15 @@ SRC_URI_append = " file://wdt.cfg"
 
 # Hdmi Hot Plug
 SRC_URI_append = " file://hdmi_hotplug.cfg"
+
+# Additional Kernel Features to support Intel C38XX Soc
+KERNEL_FEATURES_append = " features/x2apic/x2apic.scc"
+KERNEL_FEATURES_append = " features/vfio/vfio.scc"
+KERNEL_FEATURES_append = " features/numa/numa.scc"
+KERNEL_FEATURES_append = " features/mtd/mtd.scc"
+KERNEL_FEATURES_append = " features/iommu/iommu.scc"
+KERNEL_FEATURES_append = " features/intel-txt/intel-txt.scc"
+
+# IXGBE & IXGBEVF Ethernet drivers
+IMAGE_INSTALL_append = " ixgbe"
+IMAGE_INSTALL_append = " ixgbevf"
