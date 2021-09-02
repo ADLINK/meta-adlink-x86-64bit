@@ -1,0 +1,27 @@
+
+#
+# ============================= ADLINK =============================
+#
+MACHINE = "intel-corei7-64"
+
+# Take note that as we are building 3rd party ingredient.
+# We need the LICENSE_FLAGS below.
+LICENSE_FLAGS_WHITELIST += "commercial"
+
+# Add tools-testapps tools-sdk to EXTRA_IMAGE_FEATURES
+EXTRA_IMAGE_FEATURES += "tools-testapps tools-sdk"
+
+DISTRO_FEATURES_append = " utils debug"
+
+# Adlink packagegroup which will then detemine to include TPM2.0 tools
+CORE_IMAGE_EXTRA_INSTALL += "packagegroup-adlink powerbtn-counter camera-tool"
+
+RELEASE_NAME ?= "${@'%s' % (lambda dt: (dt.date.today().__str__()))(__import__('datetime')) if (d.getVar('BUILDTAG', True) is None) else '%s' % d.getVar('BUILDTAG')}"
+IMAGE_BUILDINFO_VARS_append = " RELEASE_NAME"
+
+INHERIT += "image-buildinfo rm_work"
+
+IMAGE_FSTYPES = "live hddimg iso"
+
+#APPEND_prepend = "console=ttyS1,115200"
+#SERIAL_CONSOLES_append = " 115200;ttyS1"
