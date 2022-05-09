@@ -1,0 +1,38 @@
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+# bbapend does not work with meson
+BBMASK_append = " meta-qt5/recipes-multimedia/gstreamer/"
+
+BBLAYERS ?= " \
+  ${TOPDIR}/../poky/meta \
+  ${TOPDIR}/../poky/meta-poky \
+  ${TOPDIR}/../poky/meta-yocto-bsp \
+  ${TOPDIR}/../meta-security \
+  ${TOPDIR}/../meta-openembedded/meta-oe \
+  ${TOPDIR}/../meta-openembedded/meta-filesystems \
+  ${TOPDIR}/../meta-openembedded/meta-perl \
+  ${TOPDIR}/../meta-openembedded/meta-python \
+  ${TOPDIR}/../meta-openembedded/meta-multimedia \
+  ${TOPDIR}/../meta-openembedded/meta-networking \
+  ${TOPDIR}/../meta-intel \
+  ${TOPDIR}/../meta-virtualization \
+  ${TOPDIR}/../meta-clang \
+  ${TOPDIR}/../meta-qt5 \
+  ${TOPDIR}/../meta-intel-iot-bsp \
+  ${TOPDIR}/../meta-intel-iot-main \    
+  "
+
+#ADLINK: add meta-xfce, sema
+BBLAYERS_append = " ${TOPDIR}/../meta-openembedded/meta-xfce"
+BBLAYERS_append = " ${TOPDIR}/../meta-openembedded/meta-gnome"
+BBLAYERS_append = " ${TOPDIR}/../meta-adlink-x86-64bit"
+BBLAYERS_append = " ${TOPDIR}/../meta-adlink-sema"
+
+#ADLINK: add tpm,tmp2 tools
+BBLAYERS_append = " ${TOPDIR}/../meta-security/meta-tpm"
+
