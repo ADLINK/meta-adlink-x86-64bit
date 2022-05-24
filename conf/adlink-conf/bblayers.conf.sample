@@ -22,7 +22,6 @@ BBLAYERS ?= " \
   ${TOPDIR}/../meta-intel \
   ${TOPDIR}/../meta-virtualization \
   ${TOPDIR}/../meta-clang \
-  ${TOPDIR}/../meta-qt5 \
   ${TOPDIR}/../meta-intel-iot-bsp \
   ${TOPDIR}/../meta-intel-iot-main \    
   "
