@@ -10,7 +10,7 @@
 | Poky                  | Hardknott  | 1adce7ef9630212639d09e62f68eba016d59666d |
 | meta-openembedded     | Hardknott  | 24f4e6e8d0556540e882e6f0933d1247f64d0666 |
 | meta-intel            | Hardknott  | d8584ea9d7c5207b6c08abbbedbd1b7f64a4fe4b |
-| meta-adlink-x86-64bit | Hardknott  | e45e37663a574d55d7171bbfb408fa26e8d5389d |
+| meta-adlink-x86-64bit | Hardknott  | 5e6794041b5a55755a051ca8577c6bad2c13d0c2 |
 | meta-adlink-sema      | Hardknott  | 9a7aa013685c19d76d97d8615c218b7156539844 |
 | meta-security         | Hardknott  | c40e1e84da9624b9096a463dbed3b301c01c268e |
 | meta-virtualization   | Master     | d03d2d78954ee20374a625ff70a4a1e613caf326 |
