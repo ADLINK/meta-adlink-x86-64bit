@@ -35,4 +35,5 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-intel-ese-lts-5.4"
 KERNEL_PACKAGE_NAME:pn-linux-intel-ese-lts-5.4 = "kernel"
 
 
+BBMASK = "meta-intel-iot-main/backports/hardknott/recipes-devtools/"
 
