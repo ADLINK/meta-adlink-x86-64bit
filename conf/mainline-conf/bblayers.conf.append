@@ -26,4 +26,4 @@ BBLAYERS_append = " ${TOPDIR}/../meta-security/meta-tpm"
 
 # bbapend does not work with meson
 BBMASK += "meta-qt5/recipes-multimedia/gstreamer"
-
+BBMASK += "linux-firmware_git.bbappend"
