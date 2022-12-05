@@ -6,7 +6,7 @@
 ### Yocto ISO Images for the quick evaluation
 
 
-* minimal image with command-line mode: [download link](https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-EL/Images/adlink-xfce-x86-intel-corei7-64.zip)
+* image with desktop xfce mode: [download link](https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-EL/Images/adlink-xfce-x86-intel-corei7-64.zip)
 
 <br>
 
