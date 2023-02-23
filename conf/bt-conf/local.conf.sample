@@ -1,0 +1,37 @@
+
+MACHINE ??= "intel-corei7-64"
+DEVICE_NAME="Bay-Trail"
+LICENSE_FLAGS_WHITELIST += "commercial"
+USER_CLASSES ?= "buildstats image-mklibs"
+DL_DIR ?= "${TOPDIR}/downloads"
+DISTRO ?= "poky"
+PACKAGE_CLASSES ?= "package_rpm"
+SDKMACHINE ?= "x86_64"
+EXTRA_IMAGE_FEATURES ?= "debug-tweaks tools-testapps"
+
+# By default disable interactive patch resolution (tasks will just fail instead):
+PATCHRESOLVE = "noop"
+
+# CONF_VERSION is increased each time build/conf/ changes incompatibly and is used to
+# track the version of this file when it was generated. This can safely be ignored if
+# this doesn't mean anything to you.
+CONF_VERSION = "1"
+
+
+IMAGE_INSTALL_append = " bmap-tools"
+IMAGE_INSTALL_append = " devmem2"
+#Tools
+
+# Test Tools
+IMAGE_INSTALL_append = " alsa-utils alsa-tools evtest ethtool fbset fb-test fbida fio glmark2 haveged hdparm hostapd i2c-tools iozone3 iptables iproute2 iperf3 libsocketcan \
+lmbench memtester mmc-utils net-tools spidev-test stress-ng stressapptest sysbench v4l-utils"
+
+
+## SEMA applications
+IMAGE_INSTALL:append = " semaec4.0"
+
+PREFERRED_PROVIDER_virtual/kernel ="linux-intel"
+PREFERRED_VERSION_linux-intel="5.4%"
+
+BBMASK = " meta-adlink-x86-64bit/recipes-kernel/linux-firmware/"
+
