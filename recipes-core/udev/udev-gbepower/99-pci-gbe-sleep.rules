@@ -1,0 +1,3 @@
+ACTION=="add", ATTRS{device}=="0x4ba0", RUN+="/bin/sh -c 'systemctl stop snmpd'", RUN+="/bin/sh -c 'echo auto > /sys/devices/pci0000\:00/0000\:00\:1d.1/power/control'" 
+
+ACTION=="add", ATTRS{device}=="0x4bb0", RUN+="/bin/sh -c 'systemctl stop snmpd'", RUN+="/bin/sh -c 'echo auto > /sys/devices/pci0000\:00/0000\:00\:1d.2/power/control'"

@@ -1,0 +1,2 @@
+#SATA enable min_power for ALPM
+SUBSYSTEM=="scsi_host", KERNEL=="host*", ATTR{link_power_management_policy}="min_power"

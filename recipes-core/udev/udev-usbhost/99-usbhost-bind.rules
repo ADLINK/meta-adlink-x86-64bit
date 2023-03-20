@@ -1,0 +1,1 @@
+ACTION=="unbind", DEVPATH=="/devices/pci0000:00/0000:00:14.0", SUBSYSTEM=="pci", RUN+="/bin/sh -c 'echo 0000:00:14.0 > /sys/bus/pci/drivers/xhci_hcd/bind'"

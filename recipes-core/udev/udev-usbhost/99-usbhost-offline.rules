@@ -1,0 +1,1 @@
+ACTION=="offline", SUBSYSTEM=="usb", DEVPATH=="/devices/pci0000:00/0000:00:14.0/usb*",  RUN+="/bin/sh -c 'echo 0000:00:14.0 > /sys/bus/pci/devices/0000:00:14.0/driver/unbind'"
