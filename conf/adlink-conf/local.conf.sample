@@ -30,3 +30,5 @@ lmbench memtester mmc-utils net-tools spidev-test stress-ng stressapptest "
 PREFERRED_PROVIDER_virtual/kernel = "linux-intel"
 
 PREFERRED_VERSION_linux-intel = "5.15%"
+
+BBMASK += "iotg-yocto-ese-main/recipes-multimedia/onevpl-intel-gpu/"
