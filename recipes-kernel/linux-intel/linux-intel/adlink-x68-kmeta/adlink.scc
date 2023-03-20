@@ -1,0 +1,4 @@
+kconf hardware bsp/ehl.cfg
+kconf hardware bsp/ethernet.cfg
+kconf hardware bsp/gpio.cfg
+kcnof hardware bsp/net-phy.cfg
