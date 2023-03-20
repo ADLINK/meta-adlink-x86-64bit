@@ -1,9 +1,9 @@
 
 
-DISTRO_FEATURES += " systemd x11 virtualisation opengl vulkan"
-DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+DISTRO_FEATURES:append = " systemd x11 virtualisation opengl vulkan"
+#DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
 VIRTUAL-RUNTIME_init_manager = "systemd"
-VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+#VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 
 IMAGE_FSTYPES = " wic.bmap wic.gz"
 DISK_SIGNATURE_UUID = ""
@@ -91,7 +91,7 @@ KERNEL_MODULE_AUTOLOAD:append = " configfs uhid"
 IMAGE_INSTALL:append = " os-release"
 
 # Remove initscripts from the image altogether.
-VIRTUAL-RUNTIME_initscripts = ""
+#VIRTUAL-RUNTIME_initscripts = ""
 
 ###################
 # OpenVINO PACKAGES
