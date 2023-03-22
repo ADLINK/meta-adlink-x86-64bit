@@ -37,3 +37,7 @@ KERNEL_PACKAGE_NAME:pn-linux-intel-ese-lts-5.4 = "kernel"
 
 BBMASK = "meta-intel-iot-main/backports/hardknott/recipes-devtools/"
 
+#TSN
+BBMASK += "meta-intel-iot-main/recipes-connectivity/libbpf/libbpf_git.bb"
+DISTRO_FEATURE:append = "libc-abi-breaker-xdp"
+
