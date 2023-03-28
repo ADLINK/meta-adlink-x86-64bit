@@ -24,11 +24,9 @@ IMAGE_INSTALL:append = " devmem2"
 #Tools
 
 # Test Tools
-IMAGE_INSTALL:append = " alsa-utils alsa-tools ethtool fbset fb-test fio glmark2 haveged hdparm hostapd i2c-tools iozone3 iptables iproute2 iperf3 libsocketcan \
+IMAGE_INSTALL:append = " alsa-utils alsa-tools ethtool tcpdump linuxptp fio glmark2 haveged hdparm hostapd i2c-tools iozone3 iptables iproute2 iperf3 libsocketcan \
 lmbench memtester mmc-utils net-tools spidev-test stress-ng stressapptest "
 
-PREFERRED_PROVIDER_virtual/kernel = "linux-intel"
 
-PREFERRED_VERSION_linux-intel = "5.15%"
 
 BBMASK += "iotg-yocto-ese-main/recipes-multimedia/onevpl-intel-gpu/"

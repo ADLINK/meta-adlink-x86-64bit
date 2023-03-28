@@ -1,17 +1,15 @@
 
 
-DISTRO_FEATURES:append = " systemd x11 virtualisation opengl vulkan"
-#DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
-VIRTUAL-RUNTIME_init_manager = "systemd"
-#VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+DISTRO_FEATURES:append = " systemd x11 virtualization opengl vulkan"
+
 
 IMAGE_FSTYPES = " wic.bmap wic.gz"
 DISK_SIGNATURE_UUID = ""
 
 WKS_ADLINK_ROOT_FS = "ext4"
 WKS_FILE:intel-corei7-64 = "adlink-efidisk.wks.in"
-WKS_ADLINK_ROOT_SIZE_MB = "6146"
-WKS_ADLINK_DATA_SIZE_MB = "1024"
+WKS_ADLINK_ROOT_SIZE_MB = "8192"
+WKS_ADLINK_DATA_SIZE_MB = "2048"
 WKS_ADLINK_SWAP_SIZE_MB = "1024"
 WKS_ADLINK_BOOT_SIZE_MB = "128"
 
@@ -57,8 +55,6 @@ IMAGE_INSTALL:append = " ocl-icd "
 # Enable freeglut for elkhart-lake
 IMAGE_INSTALL:append = " freeglut"
 
-EXTRA_OECONF:append:pn-tpm2-tss = " --with-tctidefaultmodule=libtss2-tcti-tabrmd.so"
-
 # Add multimedia components
 DISTRO_FEATURES:append = " pulseaudio"
 
@@ -71,15 +67,14 @@ MACHINE_FEATURES:append = " tpm"
 # X11-related
 IMAGE_INSTALL:append = " xinput"
 
-# Install TSN tool
-IMAGE_INSTALL:append = " ethtool iproute2 iproute2-tc iperf3 tcpdump linuxptp stress-ng"
+
 
 
 # use openssh instead of dropbear
 IMAGE_FEATURES:append = " ssh-server-openssh"
 
-# default kernel (virtual provider set in multiconfig with internal overrides)
-IMAGE_INSTALL:append = " kernel-image kernel-modules"
+
+IMAGE_INSTALL:append = " kernel-base kernel-devsrc kernel-modules"
 
 #Add usb_modeswitch support
 IMAGE_INSTALL:append = " usb-modeswitch"
@@ -90,8 +85,6 @@ KERNEL_MODULE_AUTOLOAD:append = " configfs uhid"
 # OS-release info
 IMAGE_INSTALL:append = " os-release"
 
-# Remove initscripts from the image altogether.
-#VIRTUAL-RUNTIME_initscripts = ""
 
 ###################
 # OpenVINO PACKAGES
@@ -136,9 +129,6 @@ IMAGE_INSTALL:append = " audio-hda-load"
 # usb mouse wakeup and SATA PM and GBE and Serial PM
 IMAGE_INSTALL:append = " udev-usbpower udev-satapower udev-gbepower udev-serialpower"
 
-
-# Enable tpm2-abrmd service
-SYSTEMD_AUTO_ENABLE:pn-tpm2-abrmd = "enable"
 
 
 # Additional serial consoles
