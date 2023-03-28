@@ -1,4 +1,6 @@
-kconf hardware bsp/ehl.cfg
+kconf hardware bsp/usb.cfg
 kconf hardware bsp/ethernet.cfg
-kconf hardware bsp/gpio.cfg
-kcnof hardware bsp/net-phy.cfg
+kconf hardware bsp/blockdevice.cfg
+kconf hardware bsp/intel-dev.cfg
+kconf hardware bsp/module-compress.cfg
+kconf hardware bsp/external-gpus.cfg
