@@ -22,4 +22,5 @@ BBLAYERS ?= " \
  
 BBLAYERS:append = "${TOPDIR}/../iotg-yocto-ese-main "
 BBLAYERS:append = "${TOPDIR}/../meta-adlink-x86-64bit "
+BBLAYERS:append = "${TOPDIR}/../iotg-yocto-ese-bsp "
 
