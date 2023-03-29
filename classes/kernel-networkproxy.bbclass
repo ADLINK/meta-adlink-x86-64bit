@@ -1,5 +1,5 @@
 # make a networkproxy enabled kernel variant called <kernel recipe name>-networkproxy
-FILESEXTRAPATHS_prepend := "${LAYERDIR-ese-bsp}/recipes-kernel/linux/linux-config:"
+FILESEXTRAPATHS:prepend := "${LAYERDIR-ese-bsp}/recipes-kernel/linux/linux-config:"
 python networkproxy_virtclass_handler() {
     d.appendVar('PN', '-networkproxy')
     d.appendVar('LINUX_KERNEL_TYPE', '-networkproxy')
