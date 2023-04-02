@@ -27,6 +27,6 @@ IMAGE_INSTALL:append = " devmem2"
 IMAGE_INSTALL:append = " alsa-utils alsa-tools ethtool tcpdump linuxptp fio glmark2 haveged hdparm hostapd i2c-tools iozone3 iptables iproute2 iperf3 libsocketcan \
 lmbench memtester mmc-utils net-tools spidev-test stress-ng stressapptest "
 
-
+KERNEL_VERSION_SANITY_SKIP="1"
 
 BBMASK += "iotg-yocto-ese-main/recipes-multimedia/onevpl-intel-gpu/"
