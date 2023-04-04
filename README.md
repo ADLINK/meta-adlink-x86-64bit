@@ -15,3 +15,7 @@
 | meta-virtualization   | Kirkstone  | a517e15529980f8401b25c99a2d7720ac2d8baae |
 
 <br>
+### How to build Yocto Image
+* see [the documentation](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/01.-Build-Yocto-Image) for the more details
+
+<br>
