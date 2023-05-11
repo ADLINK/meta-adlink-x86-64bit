@@ -8,7 +8,7 @@ DL_DIR ?= "${TOPDIR}/downloads"
 DISTRO ?= "poky"
 PACKAGE_CLASSES ?= "package_rpm"
 SDKMACHINE ?= "x86_64"
-EXTRA_IMAGE_FEATURES ?= "debug-tweaks tools-testapps"
+EXTRA_IMAGE_FEATURES ?= "debug-tweaks tools-testapps tools-sdk "
 
 # By default disable interactive patch resolution (tasks will just fail instead):
 PATCHRESOLVE = "noop"
@@ -25,7 +25,7 @@ IMAGE_INSTALL:append = " devmem2"
 
 # Test Tools
 IMAGE_INSTALL:append = " alsa-utils alsa-tools ethtool tcpdump linuxptp fio glmark2 haveged hdparm hostapd i2c-tools iozone3 iptables iproute2 iperf3 libsocketcan \
-lmbench memtester mmc-utils net-tools spidev-test stress-ng stressapptest "
+lmbench memtester mmc-utils net-tools spidev-test stress-ng stressapptest kernel-devsrc "
 
 KERNEL_VERSION_SANITY_SKIP="1"
 
