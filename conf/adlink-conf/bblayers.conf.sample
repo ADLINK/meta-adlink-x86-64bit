@@ -18,9 +18,11 @@ BBLAYERS ?= " \
   ${TOPDIR}/../meta-openembedded/meta-multimedia \                   
   ${TOPDIR}/../meta-virtualization \   
   ${TOPDIR}/../meta-intel \    
+  ${TOPDIR}/../meta-openembedded/meta-perl \
+  ${TOPDIR}/../meta-security \     
  "
  
 BBLAYERS:append = "${TOPDIR}/../iotg-yocto-ese-main "
 BBLAYERS:append = "${TOPDIR}/../meta-adlink-x86-64bit "
 BBLAYERS:append = "${TOPDIR}/../iotg-yocto-ese-bsp "
-
+BBLAYERS:append = "${TOPDIR}/../meta-security/meta-tpm"

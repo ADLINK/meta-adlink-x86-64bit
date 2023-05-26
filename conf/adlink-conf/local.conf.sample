@@ -19,6 +19,11 @@ PATCHRESOLVE = "noop"
 CONF_VERSION = "2"
 
 
+DISTRO_FEATURES:append = " security"
+DISTRO_FEATURES:append = " tpm"
+
+IMAGE_INSTALL:append = " tpm2-tools tpm2-tss tpm2-abrmd"
+
 IMAGE_INSTALL:append = " bmap-tools"
 IMAGE_INSTALL:append = " devmem2"
 #Tools
