@@ -48,4 +48,4 @@
 
 ## 4. Documentation
 
-Refer to the [wiki](https://github.com/ADLINK/meta-adlink-intel/wiki) page for instructions on building the Yocto as well as flashing the image.
+Refer to the [wiki](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) page for instructions on building the Yocto as well as flashing the image.
