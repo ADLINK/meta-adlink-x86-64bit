@@ -18,25 +18,39 @@
 
 <br> 
 
-### How to build Yocto Image
-* see [the documentation](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/01.-Build-Yocto-Image) for the more details
+### The following Modules are supported:
+
+
+| **Module Name**         | 
+| :-----------------------| 
+**cExpress-EL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-EL?lang=en))<BR>
+**cExpress-WL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-WL?lang=en))<BR>
+**cExpress-KL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-KL?lang=en))<BR>
+**cExpress-SL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-SL?lang=en))<BR>
+**cExpress-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6Compact/cExpress-AL?lang=en))<BR>
+**Express-CFR** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-CFR?lang=en))<BR>
+**Express-CF/CFE** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-CF_CFE?lang=en))<BR>
+**Express-KL/KLE** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-KL_KLE?lang=en))<BR>
+**Express-SL/SLE** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-SL_SLE?lang=en))<BR> 
+**Express-RLP** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-RLP?lang=en))<BR> 
+**Express-RLP** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType6/Express-ADP?lang=en))<BR> 
+**Express-DN7** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-DN7?lang=en))<BR>
+**Express-BD7** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD7?lang=en))<BR>
+**Express-BD74** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType7/Express-BD74?lang=en))<BR>
+**Express-KL2** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType2/Express-KL2?lang=en))<BR>
+**Express-SL2** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType2/Express-SL2?lang=en))<BR>
+**nanoX-EL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType10/nanoX-EL?lang=en))<BR>
+**nanoX-BT** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType10/nanoX-BT?lang=en))<BR>
+**nanoX-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType10/nanoX-AL?lang=en))<BR> 
+**LEC-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/SMARC/LEC-AL?lang=en))<BR>
+**Q7-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/Qseven/Q7-AL?lang=en))<BR>
+### How to build Yocto and Flashing Image
+* see [the documentation](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) for the more details
 
 <br>
 
 
-### how to flash ISO image to your storage
-* [Boot from USB drive](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/02.-How-to-install-Yocto-Image-to-USB-Drive)
-* [Boot from eMMC/SD Card](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/03.-How-to-install-Yocto-Image-to-eMMC-&-SD-Card)
-* [Boot from SATA drive](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki/04.-How-to-install-Yocto-Image-to-SATA-Drive)
-
-<br> 
-
-### Supported Hardware List
-* see [the list](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/master#the-following-products-are-supported-) for more details
-
-<br>
-
-Please feel free to send us (email: ryanzj.huang@adlinktech.com) patches for this layer and report bugs of this layer. 
+Please feel free to send us (email: kothandaraman.k@adlinktech.com) patches for this layer and report bugs of this layer. 
 <br>For hardware support, please contact your local representative.
 
 
