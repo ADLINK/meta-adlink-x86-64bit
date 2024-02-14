@@ -31,4 +31,4 @@ This Configuration is based on kernel 5.15.x version
 
 # 4. Software Documentation
 
-Fill-up the content
+Refer to the [wiki](https://github.com/ADLINK/meta-adlink-x86-64bit/wiki) page for instructions on building the Yocto as well as flashing the image.
