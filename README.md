@@ -16,11 +16,11 @@ You can follow the same steps to build your own customized BSP based on your int
 
 # 2. Available Branches
 
-1. [Kirkstone](https://github.com/kkraman02/meta-adlink-x86-64bit/tree/kirkstone)
-2. [Hardkott](https://github.com/kkraman02/meta-adlink-x86-64bit/tree/hardknott)
-3. [Zeus](https://github.com/kkraman02/meta-adlink-x86-64bit/tree/zeus)
-4. [Sumo](https://github.com/kkraman02/meta-adlink-x86-64bit/tree/sumo)
-5. [Dunfell](https://github.com/kkraman02/meta-adlink-x86-64bit/tree/dunfell)
+1. [Kirkstone](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/kirkstone)
+2. [Hardkott](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/hardknott)
+3. [Zeus](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/zeus)
+4. [Sumo](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/sumo)
+5. [Dunfell](https://github.com/ADLINK/meta-adlink-x86-64bit/tree/dunfell)
 
 # 3. Adlink Supported Configuration/Patches
 
