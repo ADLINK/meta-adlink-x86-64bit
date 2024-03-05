@@ -46,6 +46,7 @@
 **nanoX-BT** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType10/nanoX-BT?lang=en))<BR>
 **nanoX-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/COMExpressType10/nanoX-AL?lang=en))<BR> 
 **LEC-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/SMARC/LEC-AL?lang=en))<BR>
+**LEC-EL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/SMARC/LEC-EL?lang=en))<BR>
 **Q7-AL** ([More Details](https://www.adlinktech.com/Products/Computer_on_Modules/Qseven/Q7-AL?lang=en))<BR>
 
 
